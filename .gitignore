@@ -1,0 +1,47 @@
+# Dependencies
+node_modules
+.pnp
+.pnp.js
+
+# Build outputs
+dist
+build
+*.css.map
+*.js.map
+
+# Turbo
+.turbo
+
+# Testing
+coverage
+.nyc_output
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode
+.idea
+*.swp
+*.swo
+
+# Storybook
+storybook-static
+
+# Changesets
+.changeset/*.md
+!.changeset/README.md
+
+# Logs
+*.log
+npm-debug.log*
+pnpm-debug.log*
+
+# Token build artifacts
+packages/tokens/dist

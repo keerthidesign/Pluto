@@ -1,0 +1,36 @@
+{
+  "name": "@pluto/tokens",
+  "version": "0.1.0",
+  "description": "Design tokens for the Pluto Design System — DTCG-compliant, multi-brand, multi-theme",
+  "keywords": ["design-tokens", "dtcg", "style-dictionary", "design-system"],
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./css": "./dist/css/tokens.css",
+    "./css/themes/*": "./dist/css/themes/*.css",
+    "./json": "./dist/json/tokens.json",
+    "./figma": "./dist/figma/tokens.json"
+  },
+  "files": ["dist"],
+  "scripts": {
+    "build": "node style-dictionary.config.js && tsc --project tsconfig.json",
+    "build:watch": "nodemon --watch src --ext json --exec 'node style-dictionary.config.js'",
+    "typecheck": "tsc --noEmit",
+    "clean": "rimraf dist",
+    "validate": "node scripts/validate.mjs",
+    "lint:tokens": "node scripts/lint-tokens.mjs"
+  },
+  "devDependencies": {
+    "@pluto/tsconfig": "workspace:*",
+    "rimraf": "^5.0.5",
+    "style-dictionary": "^4.1.4",
+    "typescript": "^5.4.5",
+    "nodemon": "^3.1.0"
+  }
+}

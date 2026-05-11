@@ -1,0 +1,70 @@
+{
+  "$schema": "https://design-tokens.github.io/community-group/format/",
+  "$metadata": {
+    "note": "Semantic spacing tokens map raw scale values to layout and component intents. Prevents ad-hoc spacing decisions."
+  },
+
+  "space": {
+    "$description": "Semantic spacing for component internals. References primitive spacing scale.",
+
+    "component": {
+      "$description": "Internal component padding and gaps.",
+      "padding-xs":   { "$value": "{spacing.1}",   "$type": "dimension", "$description": "Compact density" },
+      "padding-sm":   { "$value": "{spacing.2}",   "$type": "dimension", "$description": "Tight density" },
+      "padding-md":   { "$value": "{spacing.3}",   "$type": "dimension", "$description": "Default density" },
+      "padding-lg":   { "$value": "{spacing.4}",   "$type": "dimension", "$description": "Comfortable density" },
+      "padding-xl":   { "$value": "{spacing.6}",   "$type": "dimension", "$description": "Spacious density" },
+      "gap-xs":       { "$value": "{spacing.1}",   "$type": "dimension" },
+      "gap-sm":       { "$value": "{spacing.2}",   "$type": "dimension" },
+      "gap-md":       { "$value": "{spacing.3}",   "$type": "dimension" },
+      "gap-lg":       { "$value": "{spacing.4}",   "$type": "dimension" },
+      "gap-xl":       { "$value": "{spacing.6}",   "$type": "dimension" }
+    },
+
+    "layout": {
+      "$description": "Page-level and section spacing.",
+      "section-sm":   { "$value": "{spacing.12}",  "$type": "dimension", "$description": "Small section gap" },
+      "section-md":   { "$value": "{spacing.20}",  "$type": "dimension", "$description": "Standard section gap" },
+      "section-lg":   { "$value": "{spacing.32}",  "$type": "dimension", "$description": "Large section gap" },
+      "page-gutter":  { "$value": "{spacing.6}",   "$type": "dimension", "$description": "Mobile page gutter (24px)" },
+      "page-gutter-lg": { "$value": "{spacing.8}", "$type": "dimension", "$description": "Desktop page gutter (32px)" },
+      "container-padding": { "$value": "{spacing.6}", "$type": "dimension" }
+    },
+
+    "inset": {
+      "$description": "Padding presets for containers. Inset = equal padding on all 4 sides.",
+      "xs":    { "$value": "{spacing.2}",   "$type": "dimension" },
+      "sm":    { "$value": "{spacing.3}",   "$type": "dimension" },
+      "md":    { "$value": "{spacing.4}",   "$type": "dimension" },
+      "lg":    { "$value": "{spacing.6}",   "$type": "dimension" },
+      "xl":    { "$value": "{spacing.8}",   "$type": "dimension" },
+      "2xl":   { "$value": "{spacing.12}",  "$type": "dimension" }
+    },
+
+    "stack": {
+      "$description": "Vertical spacing between stacked elements.",
+      "xs":   { "$value": "{spacing.1}",  "$type": "dimension" },
+      "sm":   { "$value": "{spacing.2}",  "$type": "dimension" },
+      "md":   { "$value": "{spacing.4}",  "$type": "dimension" },
+      "lg":   { "$value": "{spacing.6}",  "$type": "dimension" },
+      "xl":   { "$value": "{spacing.8}",  "$type": "dimension" },
+      "2xl":  { "$value": "{spacing.12}", "$type": "dimension" },
+      "3xl":  { "$value": "{spacing.20}", "$type": "dimension" }
+    },
+
+    "inline": {
+      "$description": "Horizontal spacing between inline elements.",
+      "xs":   { "$value": "{spacing.1}",  "$type": "dimension" },
+      "sm":   { "$value": "{spacing.2}",  "$type": "dimension" },
+      "md":   { "$value": "{spacing.3}",  "$type": "dimension" },
+      "lg":   { "$value": "{spacing.4}",  "$type": "dimension" },
+      "xl":   { "$value": "{spacing.6}",  "$type": "dimension" }
+    },
+
+    "touch": {
+      "$description": "Touch target sizing — WCAG 2.5.5 requires 44x44px minimum.",
+      "min":     { "$value": "{spacing.11}", "$type": "dimension", "$description": "44px minimum touch target" },
+      "default": { "$value": "{spacing.12}", "$type": "dimension", "$description": "48px comfortable touch target" }
+    }
+  }
+}

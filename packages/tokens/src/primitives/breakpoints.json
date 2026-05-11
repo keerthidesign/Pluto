@@ -1,0 +1,25 @@
+{
+  "$schema": "https://design-tokens.github.io/community-group/format/",
+  "breakpoint": {
+    "$description": "Viewport breakpoints for responsive design. Mobile-first: apply base styles, then override at min-width breakpoints. Values represent the minimum viewport width at which a breakpoint applies.",
+
+    "xs":  { "$value": "320px",  "$type": "dimension", "$description": "Extra-small — legacy small phones" },
+    "sm":  { "$value": "480px",  "$type": "dimension", "$description": "Small — most phones landscape, small phones" },
+    "md":  { "$value": "768px",  "$type": "dimension", "$description": "Medium — tablets portrait, large phones landscape" },
+    "lg":  { "$value": "1024px", "$type": "dimension", "$description": "Large — tablets landscape, small desktops" },
+    "xl":  { "$value": "1280px", "$type": "dimension", "$description": "Extra-large — standard desktop" },
+    "2xl": { "$value": "1440px", "$type": "dimension", "$description": "Wide — wide desktop monitors" },
+    "3xl": { "$value": "1920px", "$type": "dimension", "$description": "Ultra-wide — large screens, TV" }
+  },
+
+  "container": {
+    "$description": "Maximum content width at each breakpoint. Paired with centering and horizontal padding.",
+    "xs":  { "$value": "320px",  "$type": "dimension" },
+    "sm":  { "$value": "480px",  "$type": "dimension" },
+    "md":  { "$value": "720px",  "$type": "dimension" },
+    "lg":  { "$value": "960px",  "$type": "dimension" },
+    "xl":  { "$value": "1200px", "$type": "dimension" },
+    "2xl": { "$value": "1360px", "$type": "dimension" },
+    "3xl": { "$value": "1600px", "$type": "dimension" }
+  }
+}

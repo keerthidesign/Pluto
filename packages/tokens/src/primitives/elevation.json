@@ -1,0 +1,78 @@
+{
+  "$schema": "https://design-tokens.github.io/community-group/format/",
+  "elevation": {
+    "$description": "Shadow scale for perceived depth and layering. Values use multiple shadow layers for natural-looking shadows. Opacity values are hardcoded (not referencing alpha tokens) because Style Dictionary cannot resolve RGBA values from composite references.",
+
+    "none": {
+      "$value": "none",
+      "$type": "shadow",
+      "$description": "Flat — inline elements, table rows"
+    },
+    "xs": {
+      "$value": {
+        "offsetX": "0",
+        "offsetY": "1px",
+        "blur": "2px",
+        "spread": "0",
+        "color": "rgba(0, 0, 0, 0.05)"
+      },
+      "$type": "shadow",
+      "$description": "Subtle lift — tooltips, hover cards"
+    },
+    "sm": {
+      "$value": [
+        { "offsetX": "0", "offsetY": "1px", "blur": "3px",  "spread": "0",   "color": "rgba(0, 0, 0, 0.10)" },
+        { "offsetX": "0", "offsetY": "1px", "blur": "2px",  "spread": "-1px","color": "rgba(0, 0, 0, 0.10)" }
+      ],
+      "$type": "shadow",
+      "$description": "Cards, inputs on focus"
+    },
+    "md": {
+      "$value": [
+        { "offsetX": "0", "offsetY": "4px",  "blur": "6px",  "spread": "-1px", "color": "rgba(0, 0, 0, 0.10)" },
+        { "offsetX": "0", "offsetY": "2px",  "blur": "4px",  "spread": "-2px", "color": "rgba(0, 0, 0, 0.10)" }
+      ],
+      "$type": "shadow",
+      "$description": "Dropdowns, popovers"
+    },
+    "lg": {
+      "$value": [
+        { "offsetX": "0", "offsetY": "10px", "blur": "15px", "spread": "-3px", "color": "rgba(0, 0, 0, 0.10)" },
+        { "offsetX": "0", "offsetY": "4px",  "blur": "6px",  "spread": "-4px", "color": "rgba(0, 0, 0, 0.10)" }
+      ],
+      "$type": "shadow",
+      "$description": "Dialogs, menus"
+    },
+    "xl": {
+      "$value": [
+        { "offsetX": "0", "offsetY": "20px", "blur": "25px", "spread": "-5px",  "color": "rgba(0, 0, 0, 0.10)" },
+        { "offsetX": "0", "offsetY": "8px",  "blur": "10px", "spread": "-6px",  "color": "rgba(0, 0, 0, 0.10)" }
+      ],
+      "$type": "shadow",
+      "$description": "Modals"
+    },
+    "2xl": {
+      "$value": {
+        "offsetX": "0",
+        "offsetY": "25px",
+        "blur": "50px",
+        "spread": "-12px",
+        "color": "rgba(0, 0, 0, 0.25)"
+      },
+      "$type": "shadow",
+      "$description": "Full-screen overlays, drawers"
+    },
+    "inner": {
+      "$value": {
+        "offsetX": "0",
+        "offsetY": "2px",
+        "blur": "4px",
+        "spread": "0",
+        "color": "rgba(0, 0, 0, 0.06)",
+        "inset": true
+      },
+      "$type": "shadow",
+      "$description": "Inset shadows — pressed states, inset inputs"
+    }
+  }
+}

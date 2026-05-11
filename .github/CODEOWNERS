@@ -1,0 +1,26 @@
+# Pluto Design System — CODEOWNERS
+#
+# These owners are automatically requested for review on PRs touching the listed paths.
+# Format: <pattern> <owner1> <owner2>
+
+# Global fallback — design system core team reviews everything
+*                               @pluto/ds-core
+
+# Token architecture — requires token governance team sign-off
+packages/tokens/                @pluto/token-governance @pluto/ds-core
+packages/tokens/src/primitives/ @pluto/token-governance @pluto/ds-core
+packages/tokens/src/semantic/   @pluto/token-governance @pluto/ds-core
+packages/tokens/src/themes/     @pluto/token-governance @pluto/ds-core
+
+# Foundations — CSS layer, reset, accessibility
+packages/foundations/           @pluto/ds-core @pluto/a11y-review
+
+# Storybook — documentation team reviews story changes
+apps/storybook/                 @pluto/documentation
+
+# GitHub Actions — DevOps review required
+.github/workflows/              @pluto/devops @pluto/ds-core
+
+# Governance and contribution docs
+docs/                           @pluto/ds-core @pluto/documentation
+CONTRIBUTING.md                 @pluto/ds-core

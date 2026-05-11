@@ -1,0 +1,151 @@
+/**
+ * Pluto Design System — Base Styles
+ *
+ * Applies design-system tokens as defaults on semantic HTML elements.
+ * Import AFTER reset.css and AFTER @pluto/tokens CSS.
+ *
+ * Import order in your app:
+ *   1. @pluto/tokens/css          → CSS custom properties
+ *   2. @pluto/foundations/reset   → normalize
+ *   3. @pluto/foundations/base    → this file
+ */
+
+/* ── Root / Color Scheme ──────────────────────────────────────────────────── */
+:root {
+  color-scheme: light dark;
+  font-family: var(--pluto-font-family-sans);
+  font-size: var(--pluto-font-size-md);
+  font-weight: var(--pluto-font-weight-regular);
+  line-height: var(--pluto-font-line-height-normal);
+  color: var(--pluto-color-text-default);
+  background-color: var(--pluto-color-background-default);
+}
+
+/* ── Typography ───────────────────────────────────────────────────────────── */
+h1 {
+  font-size: var(--pluto-text-heading-h1);
+  font-weight: var(--pluto-type-style-heading-weight);
+  line-height: var(--pluto-type-style-heading-line-height);
+  letter-spacing: var(--pluto-type-style-heading-tracking);
+}
+
+h2 {
+  font-size: var(--pluto-text-heading-h2);
+  font-weight: var(--pluto-type-style-heading-weight);
+  line-height: var(--pluto-type-style-heading-line-height);
+  letter-spacing: var(--pluto-type-style-heading-tracking);
+}
+
+h3 {
+  font-size: var(--pluto-text-heading-h3);
+  font-weight: var(--pluto-type-style-subheading-weight);
+  line-height: var(--pluto-type-style-heading-line-height);
+}
+
+h4 {
+  font-size: var(--pluto-text-heading-h4);
+  font-weight: var(--pluto-type-style-subheading-weight);
+  line-height: var(--pluto-type-style-label-line-height);
+}
+
+h5 {
+  font-size: var(--pluto-text-heading-h5);
+  font-weight: var(--pluto-type-style-subheading-weight);
+  line-height: var(--pluto-type-style-label-line-height);
+}
+
+h6 {
+  font-size: var(--pluto-text-heading-h6);
+  font-weight: var(--pluto-type-style-label-weight);
+  line-height: var(--pluto-type-style-label-line-height);
+}
+
+p {
+  line-height: var(--pluto-type-style-body-line-height);
+  margin-bottom: var(--pluto-space-stack-md);
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
+
+a {
+  color: var(--pluto-color-text-link);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  transition: var(--pluto-motion-transition-colors);
+}
+
+a:hover {
+  color: var(--pluto-color-text-link-hover);
+}
+
+a:focus-visible {
+  outline: 2px solid var(--pluto-color-border-focus);
+  outline-offset: 2px;
+  border-radius: var(--pluto-radius-xs);
+}
+
+/* ── Code ─────────────────────────────────────────────────────────────────── */
+code,
+kbd,
+samp {
+  font-family: var(--pluto-font-family-mono);
+  font-size: 0.9em;
+  background-color: var(--pluto-color-surface-sunken);
+  border: 1px solid var(--pluto-color-border-default);
+  border-radius: var(--pluto-radius-xs);
+  padding: 0.1em 0.3em;
+}
+
+pre {
+  font-family: var(--pluto-font-family-mono);
+  background-color: var(--pluto-color-surface-sunken);
+  border: 1px solid var(--pluto-color-border-default);
+  border-radius: var(--pluto-radius-md);
+  padding: var(--pluto-space-inset-md);
+  overflow-x: auto;
+}
+
+pre code {
+  background: none;
+  border: none;
+  padding: 0;
+  font-size: inherit;
+}
+
+/* ── Focus ring ───────────────────────────────────────────────────────────── */
+:focus-visible {
+  outline: 2px solid var(--pluto-color-border-focus);
+  outline-offset: 2px;
+}
+
+/* ── Selection ────────────────────────────────────────────────────────────── */
+::selection {
+  background-color: var(--pluto-color-primary-200);
+  color: var(--pluto-color-primary-900);
+}
+
+/* ── Horizontal rule ──────────────────────────────────────────────────────── */
+hr {
+  border: 0;
+  border-top: 1px solid var(--pluto-color-border-subtle);
+  margin-block: var(--pluto-space-stack-lg);
+}
+
+/* ── Lists ────────────────────────────────────────────────────────────────── */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* ── Tables ───────────────────────────────────────────────────────────────── */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th {
+  font-weight: var(--pluto-font-weight-semibold);
+  text-align: left;
+}

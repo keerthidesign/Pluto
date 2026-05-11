@@ -1,0 +1,45 @@
+{
+  "$schema": "https://design-tokens.github.io/community-group/format/",
+  "$metadata": {
+    "tokenSetOrder": ["primitives/spacing"]
+  },
+  "spacing": {
+    "$description": "4px base-unit spacing scale. All values are multiples of 4px for pixel-perfect alignment. Never use values outside this scale — derive new ones from semantic tokens.",
+
+    "0":    { "$value": "0px",   "$type": "dimension" },
+    "0.5":  { "$value": "2px",   "$type": "dimension", "$description": "Hair-thin spacing, icon nudges" },
+    "1":    { "$value": "4px",   "$type": "dimension", "$description": "Micro spacing, icon gaps" },
+    "1.5":  { "$value": "6px",   "$type": "dimension" },
+    "2":    { "$value": "8px",   "$type": "dimension", "$description": "Tight component internals" },
+    "2.5":  { "$value": "10px",  "$type": "dimension" },
+    "3":    { "$value": "12px",  "$type": "dimension", "$description": "Small padding, compact UIs" },
+    "3.5":  { "$value": "14px",  "$type": "dimension" },
+    "4":    { "$value": "16px",  "$type": "dimension", "$description": "Base spacing unit — default padding" },
+    "5":    { "$value": "20px",  "$type": "dimension" },
+    "6":    { "$value": "24px",  "$type": "dimension", "$description": "Section padding" },
+    "7":    { "$value": "28px",  "$type": "dimension" },
+    "8":    { "$value": "32px",  "$type": "dimension", "$description": "Large component padding" },
+    "9":    { "$value": "36px",  "$type": "dimension" },
+    "10":   { "$value": "40px",  "$type": "dimension" },
+    "11":   { "$value": "44px",  "$type": "dimension", "$description": "Touch target minimum (WCAG 2.5.5)" },
+    "12":   { "$value": "48px",  "$type": "dimension" },
+    "14":   { "$value": "56px",  "$type": "dimension" },
+    "16":   { "$value": "64px",  "$type": "dimension" },
+    "18":   { "$value": "72px",  "$type": "dimension" },
+    "20":   { "$value": "80px",  "$type": "dimension" },
+    "24":   { "$value": "96px",  "$type": "dimension" },
+    "28":   { "$value": "112px", "$type": "dimension" },
+    "32":   { "$value": "128px", "$type": "dimension" },
+    "36":   { "$value": "144px", "$type": "dimension" },
+    "40":   { "$value": "160px", "$type": "dimension" },
+    "44":   { "$value": "176px", "$type": "dimension" },
+    "48":   { "$value": "192px", "$type": "dimension" },
+    "52":   { "$value": "208px", "$type": "dimension" },
+    "56":   { "$value": "224px", "$type": "dimension" },
+    "60":   { "$value": "240px", "$type": "dimension" },
+    "64":   { "$value": "256px", "$type": "dimension" },
+    "72":   { "$value": "288px", "$type": "dimension" },
+    "80":   { "$value": "320px", "$type": "dimension" },
+    "96":   { "$value": "384px", "$type": "dimension" }
+  }
+}

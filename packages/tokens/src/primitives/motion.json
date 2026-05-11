@@ -1,0 +1,79 @@
+{
+  "$schema": "https://design-tokens.github.io/community-group/format/",
+  "motion": {
+    "$description": "Animation timing tokens. Respects prefers-reduced-motion — semantic tokens apply duration:0 overrides in the reduced-motion theme.",
+
+    "duration": {
+      "$description": "Time values for transitions. Shorter for micro-interactions, longer for page transitions.",
+      "instant":  { "$value": "0ms",   "$type": "duration", "$description": "No animation — immediate state change" },
+      "fast":     { "$value": "100ms", "$type": "duration", "$description": "Micro: hover, focus ring, tooltip appear" },
+      "normal":   { "$value": "200ms", "$type": "duration", "$description": "Default: button, input, toggle" },
+      "slow":     { "$value": "300ms", "$type": "duration", "$description": "Popover, dropdown, drawer open" },
+      "slower":   { "$value": "400ms", "$type": "duration", "$description": "Modal entrance, page section reveal" },
+      "slowest":  { "$value": "700ms", "$type": "duration", "$description": "Skeleton loading, complex transitions" }
+    },
+
+    "easing": {
+      "$description": "Cubic bezier easing curves. Named semantically by feel, not math.",
+      "linear": {
+        "$value": [0, 0, 1, 1],
+        "$type": "cubicBezier",
+        "$description": "No easing — progress bars, opacity fades"
+      },
+      "ease-in": {
+        "$value": [0.4, 0, 1, 1],
+        "$type": "cubicBezier",
+        "$description": "Accelerates — elements leaving the screen"
+      },
+      "ease-out": {
+        "$value": [0, 0, 0.2, 1],
+        "$type": "cubicBezier",
+        "$description": "Decelerates — elements entering the screen (most common)"
+      },
+      "ease-in-out": {
+        "$value": [0.4, 0, 0.2, 1],
+        "$type": "cubicBezier",
+        "$description": "Material standard — elements moving within the screen"
+      },
+      "spring": {
+        "$value": [0.175, 0.885, 0.32, 1.275],
+        "$type": "cubicBezier",
+        "$description": "Slight overshoot — playful, approachable feel"
+      },
+      "bounce": {
+        "$value": [0.34, 1.56, 0.64, 1],
+        "$type": "cubicBezier",
+        "$description": "Strong overshoot — use sparingly for delight moments"
+      }
+    },
+
+    "transition": {
+      "$description": "Preset shorthand transitions for common patterns.",
+      "default": {
+        "$value": "all 200ms cubic-bezier(0, 0, 0.2, 1)",
+        "$type": "string",
+        "$description": "Standard element state change"
+      },
+      "colors": {
+        "$value": "color 200ms cubic-bezier(0, 0, 0.2, 1), background-color 200ms cubic-bezier(0, 0, 0.2, 1), border-color 200ms cubic-bezier(0, 0, 0.2, 1)",
+        "$type": "string",
+        "$description": "Color-only transitions — avoids layout thrash"
+      },
+      "transform": {
+        "$value": "transform 200ms cubic-bezier(0, 0, 0.2, 1)",
+        "$type": "string",
+        "$description": "GPU-accelerated movement"
+      },
+      "opacity": {
+        "$value": "opacity 200ms cubic-bezier(0, 0, 0.2, 1)",
+        "$type": "string",
+        "$description": "Fade in/out"
+      },
+      "shadow": {
+        "$value": "box-shadow 200ms cubic-bezier(0, 0, 0.2, 1)",
+        "$type": "string",
+        "$description": "Elevation changes on hover/focus"
+      }
+    }
+  }
+}

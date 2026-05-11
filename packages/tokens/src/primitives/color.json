@@ -1,0 +1,142 @@
+{
+  "$schema": "https://design-tokens.github.io/community-group/format/",
+  "$metadata": {
+    "tokenSetOrder": ["primitives/color"]
+  },
+  "color": {
+    "$description": "Primitive color palette — raw values only. Do not use directly in components. Reference via semantic tokens.",
+
+    "neutral": {
+      "$description": "Cool gray scale for surfaces, text, and borders.",
+      "0":   { "$value": "#FFFFFF", "$type": "color", "$description": "Pure white" },
+      "50":  { "$value": "#F8F9FA", "$type": "color", "$description": "Near-white, page background" },
+      "100": { "$value": "#F1F3F5", "$type": "color", "$description": "Subtle background" },
+      "200": { "$value": "#E9ECEF", "$type": "color", "$description": "UI dividers and borders" },
+      "300": { "$value": "#DEE2E6", "$type": "color", "$description": "Input borders" },
+      "400": { "$value": "#CED4DA", "$type": "color", "$description": "Disabled borders" },
+      "500": { "$value": "#ADB5BD", "$type": "color", "$description": "Placeholder text" },
+      "600": { "$value": "#868E96", "$type": "color", "$description": "Secondary text" },
+      "700": { "$value": "#495057", "$type": "color", "$description": "Body text" },
+      "800": { "$value": "#343A40", "$type": "color", "$description": "Strong text" },
+      "900": { "$value": "#212529", "$type": "color", "$description": "Heading text" },
+      "950": { "$value": "#0D0F12", "$type": "color", "$description": "Near-black" },
+      "1000": { "$value": "#000000", "$type": "color", "$description": "Pure black" }
+    },
+
+    "primary": {
+      "$description": "Pluto brand violet — primary actions, focus states, and brand identity.",
+      "50":  { "$value": "#F3F0FF", "$type": "color", "$description": "Lightest violet tint" },
+      "100": { "$value": "#E5DBFF", "$type": "color", "$description": "Hover backgrounds" },
+      "200": { "$value": "#D0BFFF", "$type": "color", "$description": "Active backgrounds" },
+      "300": { "$value": "#B197FC", "$type": "color", "$description": "Subtle accents" },
+      "400": { "$value": "#9775FA", "$type": "color", "$description": "Light interactive" },
+      "500": { "$value": "#845EF7", "$type": "color", "$description": "Brand mid-tone" },
+      "600": { "$value": "#7950F2", "$type": "color", "$description": "Primary brand — 4.5:1 on white" },
+      "700": { "$value": "#7048E8", "$type": "color", "$description": "Pressed state" },
+      "800": { "$value": "#6741D9", "$type": "color", "$description": "Strong interactive" },
+      "900": { "$value": "#5F3DC4", "$type": "color", "$description": "Dark brand" },
+      "950": { "$value": "#3B217A", "$type": "color", "$description": "Deepest brand" }
+    },
+
+    "secondary": {
+      "$description": "Cyan / teal — secondary brand accent and data visualization.",
+      "50":  { "$value": "#E3FAFC", "$type": "color" },
+      "100": { "$value": "#C5F6FA", "$type": "color" },
+      "200": { "$value": "#99E9F2", "$type": "color" },
+      "300": { "$value": "#66D9E8", "$type": "color" },
+      "400": { "$value": "#3BC9DB", "$type": "color" },
+      "500": { "$value": "#22B8CF", "$type": "color" },
+      "600": { "$value": "#15AABF", "$type": "color" },
+      "700": { "$value": "#1098AD", "$type": "color" },
+      "800": { "$value": "#0C8599", "$type": "color" },
+      "900": { "$value": "#0B7285", "$type": "color" },
+      "950": { "$value": "#054B56", "$type": "color" }
+    },
+
+    "success": {
+      "$description": "Emerald green — confirmations, success states, positive trends.",
+      "50":  { "$value": "#EBFBEE", "$type": "color" },
+      "100": { "$value": "#D3F9D8", "$type": "color" },
+      "200": { "$value": "#B2F2BB", "$type": "color" },
+      "300": { "$value": "#8CE99A", "$type": "color" },
+      "400": { "$value": "#69DB7C", "$type": "color" },
+      "500": { "$value": "#51CF66", "$type": "color" },
+      "600": { "$value": "#40C057", "$type": "color" },
+      "700": { "$value": "#37B24D", "$type": "color" },
+      "800": { "$value": "#2F9E44", "$type": "color" },
+      "900": { "$value": "#2B8A3E", "$type": "color" },
+      "950": { "$value": "#1A5C29", "$type": "color" }
+    },
+
+    "warning": {
+      "$description": "Amber — warnings, caution states, in-progress indicators.",
+      "50":  { "$value": "#FFF9DB", "$type": "color" },
+      "100": { "$value": "#FFF3BF", "$type": "color" },
+      "200": { "$value": "#FFEC99", "$type": "color" },
+      "300": { "$value": "#FFE066", "$type": "color" },
+      "400": { "$value": "#FFD43B", "$type": "color" },
+      "500": { "$value": "#FCC419", "$type": "color" },
+      "600": { "$value": "#FAB005", "$type": "color" },
+      "700": { "$value": "#F59F00", "$type": "color" },
+      "800": { "$value": "#F08C00", "$type": "color" },
+      "900": { "$value": "#E67700", "$type": "color" },
+      "950": { "$value": "#B35200", "$type": "color" }
+    },
+
+    "danger": {
+      "$description": "Rose red — errors, destructive actions, critical alerts.",
+      "50":  { "$value": "#FFF5F5", "$type": "color" },
+      "100": { "$value": "#FFE3E3", "$type": "color" },
+      "200": { "$value": "#FFC9C9", "$type": "color" },
+      "300": { "$value": "#FFA8A8", "$type": "color" },
+      "400": { "$value": "#FF8787", "$type": "color" },
+      "500": { "$value": "#FF6B6B", "$type": "color" },
+      "600": { "$value": "#FA5252", "$type": "color" },
+      "700": { "$value": "#F03E3E", "$type": "color" },
+      "800": { "$value": "#E03131", "$type": "color" },
+      "900": { "$value": "#C92A2A", "$type": "color" },
+      "950": { "$value": "#862020", "$type": "color" }
+    },
+
+    "info": {
+      "$description": "Sky blue — informational states, links, tooltips.",
+      "50":  { "$value": "#E7F5FF", "$type": "color" },
+      "100": { "$value": "#D0EBFF", "$type": "color" },
+      "200": { "$value": "#A5D8FF", "$type": "color" },
+      "300": { "$value": "#74C0FC", "$type": "color" },
+      "400": { "$value": "#4DABF7", "$type": "color" },
+      "500": { "$value": "#339AF0", "$type": "color" },
+      "600": { "$value": "#228BE6", "$type": "color" },
+      "700": { "$value": "#1C7ED6", "$type": "color" },
+      "800": { "$value": "#1971C2", "$type": "color" },
+      "900": { "$value": "#1864AB", "$type": "color" },
+      "950": { "$value": "#0E4180", "$type": "color" }
+    },
+
+    "alpha": {
+      "$description": "Transparent overlays using black and white alpha channels. Use for scrim, overlay, and shadow tokens.",
+      "black": {
+        "4":   { "$value": "rgba(0, 0, 0, 0.04)", "$type": "color" },
+        "8":   { "$value": "rgba(0, 0, 0, 0.08)", "$type": "color" },
+        "12":  { "$value": "rgba(0, 0, 0, 0.12)", "$type": "color" },
+        "16":  { "$value": "rgba(0, 0, 0, 0.16)", "$type": "color" },
+        "24":  { "$value": "rgba(0, 0, 0, 0.24)", "$type": "color" },
+        "32":  { "$value": "rgba(0, 0, 0, 0.32)", "$type": "color" },
+        "48":  { "$value": "rgba(0, 0, 0, 0.48)", "$type": "color" },
+        "64":  { "$value": "rgba(0, 0, 0, 0.64)", "$type": "color" },
+        "80":  { "$value": "rgba(0, 0, 0, 0.80)", "$type": "color" }
+      },
+      "white": {
+        "4":   { "$value": "rgba(255, 255, 255, 0.04)", "$type": "color" },
+        "8":   { "$value": "rgba(255, 255, 255, 0.08)", "$type": "color" },
+        "12":  { "$value": "rgba(255, 255, 255, 0.12)", "$type": "color" },
+        "16":  { "$value": "rgba(255, 255, 255, 0.16)", "$type": "color" },
+        "24":  { "$value": "rgba(255, 255, 255, 0.24)", "$type": "color" },
+        "32":  { "$value": "rgba(255, 255, 255, 0.32)", "$type": "color" },
+        "48":  { "$value": "rgba(255, 255, 255, 0.48)", "$type": "color" },
+        "64":  { "$value": "rgba(255, 255, 255, 0.64)", "$type": "color" },
+        "80":  { "$value": "rgba(255, 255, 255, 0.80)", "$type": "color" }
+      }
+    }
+  }
+}

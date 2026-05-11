@@ -1,0 +1,76 @@
+{
+  "$schema": "https://design-tokens.github.io/community-group/format/",
+  "$metadata": {
+    "note": "Semantic typography tokens define roles, not raw values. Heading scales, body sizes, and UI text all reference primitive font tokens."
+  },
+
+  "text": {
+    "$description": "Semantic text style tokens. These define typographic roles consumed by components.",
+
+    "display": {
+      "$description": "Hero and marketing text. Paired with font.family.display.",
+      "2xl": { "$value": "{font.size.7xl}", "$type": "dimension" },
+      "xl":  { "$value": "{font.size.6xl}", "$type": "dimension" },
+      "lg":  { "$value": "{font.size.5xl}", "$type": "dimension" },
+      "md":  { "$value": "{font.size.4xl}", "$type": "dimension" },
+      "sm":  { "$value": "{font.size.3xl}", "$type": "dimension" }
+    },
+
+    "heading": {
+      "$description": "Page and section headings. Maps to h1–h6 hierarchy.",
+      "h1": { "$value": "{font.size.4xl}", "$type": "dimension" },
+      "h2": { "$value": "{font.size.3xl}", "$type": "dimension" },
+      "h3": { "$value": "{font.size.2xl}", "$type": "dimension" },
+      "h4": { "$value": "{font.size.xl}",  "$type": "dimension" },
+      "h5": { "$value": "{font.size.lg}",  "$type": "dimension" },
+      "h6": { "$value": "{font.size.md}",  "$type": "dimension" }
+    },
+
+    "body": {
+      "$description": "Body and reading text.",
+      "lg":   { "$value": "{font.size.lg}", "$type": "dimension" },
+      "md":   { "$value": "{font.size.md}", "$type": "dimension" },
+      "sm":   { "$value": "{font.size.sm}", "$type": "dimension" }
+    },
+
+    "label": {
+      "$description": "UI labels, form labels, menu items.",
+      "lg":  { "$value": "{font.size.md}", "$type": "dimension" },
+      "md":  { "$value": "{font.size.sm}", "$type": "dimension" },
+      "sm":  { "$value": "{font.size.xs}", "$type": "dimension" }
+    },
+
+    "caption": {
+      "$description": "Supportive text, metadata, timestamps.",
+      "md": { "$value": "{font.size.xs}",  "$type": "dimension" },
+      "sm": { "$value": "{font.size.2xs}", "$type": "dimension" }
+    },
+
+    "code": {
+      "$description": "Inline and block code.",
+      "lg": { "$value": "{font.size.md}", "$type": "dimension" },
+      "md": { "$value": "{font.size.sm}", "$type": "dimension" },
+      "sm": { "$value": "{font.size.xs}", "$type": "dimension" }
+    }
+  },
+
+  "typeStyle": {
+    "$description": "Composite type style tokens — weight and line-height pairings for each text role.",
+
+    "heading-weight":       { "$value": "{font.weight.bold}",     "$type": "fontWeight" },
+    "subheading-weight":    { "$value": "{font.weight.semibold}", "$type": "fontWeight" },
+    "body-weight":          { "$value": "{font.weight.regular}",  "$type": "fontWeight" },
+    "label-weight":         { "$value": "{font.weight.medium}",   "$type": "fontWeight" },
+    "caption-weight":       { "$value": "{font.weight.regular}",  "$type": "fontWeight" },
+
+    "heading-line-height":  { "$value": "{font.lineHeight.tight}",  "$type": "number" },
+    "body-line-height":     { "$value": "{font.lineHeight.normal}", "$type": "number" },
+    "label-line-height":    { "$value": "{font.lineHeight.snug}",   "$type": "number" },
+    "caption-line-height":  { "$value": "{font.lineHeight.normal}", "$type": "number" },
+
+    "heading-tracking":     { "$value": "{font.letterSpacing.tight}",  "$type": "dimension" },
+    "display-tracking":     { "$value": "{font.letterSpacing.tighter}", "$type": "dimension" },
+    "body-tracking":        { "$value": "{font.letterSpacing.normal}",  "$type": "dimension" },
+    "label-tracking":       { "$value": "{font.letterSpacing.wide}",    "$type": "dimension" }
+  }
+}

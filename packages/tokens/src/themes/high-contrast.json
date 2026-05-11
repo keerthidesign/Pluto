@@ -1,0 +1,30 @@
+{
+  "$schema": "https://design-tokens.github.io/community-group/format/",
+  "$metadata": {
+    "theme": "high-contrast",
+    "description": "High-contrast theme — targets WCAG AAA (7:1 contrast ratio). Activated via prefers-contrast: more or data-theme='high-contrast'. Never use alpha/translucent colors.",
+    "a11y-standard": "WCAG 2.1 AAA, EN 301 549"
+  },
+
+  "theme": {
+    "color": {
+      "background": {
+        "default":   { "$value": "{color.neutral.1000}", "$type": "color" },
+        "subtle":    { "$value": "{color.neutral.1000}", "$type": "color" },
+        "muted":     { "$value": "{color.neutral.950}",  "$type": "color" }
+      },
+      "text": {
+        "default":     { "$value": "{color.neutral.0}",   "$type": "color", "$description": "21:1 on black" },
+        "secondary":   { "$value": "{color.neutral.100}", "$type": "color" },
+        "tertiary":    { "$value": "{color.neutral.200}", "$type": "color" },
+        "disabled":    { "$value": "{color.neutral.500}", "$type": "color" },
+        "link":        { "$value": "{color.primary.200}", "$type": "color" }
+      },
+      "border": {
+        "default":     { "$value": "{color.neutral.0}",   "$type": "color" },
+        "focus":       { "$value": "#FFFF00",             "$type": "color", "$description": "Yellow focus ring — WCAG 2.4.11 requirement for HC mode" },
+        "interactive": { "$value": "{color.neutral.0}",   "$type": "color" }
+      }
+    }
+  }
+}

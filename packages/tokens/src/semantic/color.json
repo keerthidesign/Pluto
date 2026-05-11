@@ -1,0 +1,117 @@
+{
+  "$schema": "https://design-tokens.github.io/community-group/format/",
+  "$metadata": {
+    "tokenSetOrder": ["semantic/color"],
+    "note": "Semantic tokens carry INTENT, not values. They reference primitive tokens and are overridden per theme. Components must ONLY consume semantic tokens — never primitives."
+  },
+
+  "color": {
+
+    "background": {
+      "$description": "Surface and background colors. Layer them to create visual depth.",
+      "default":      { "$value": "{color.neutral.0}",   "$type": "color", "$description": "Page canvas" },
+      "subtle":       { "$value": "{color.neutral.50}",  "$type": "color", "$description": "Secondary surfaces" },
+      "muted":        { "$value": "{color.neutral.100}", "$type": "color", "$description": "Tertiary, sidebar, panel" },
+      "emphasis":     { "$value": "{color.neutral.900}", "$type": "color", "$description": "Inverted surfaces (dark nav, toast)" },
+      "overlay":      { "$value": "{color.alpha.black.48}", "$type": "color", "$description": "Modal scrim" },
+      "disabled":     { "$value": "{color.neutral.100}", "$type": "color", "$description": "Disabled surface" }
+    },
+
+    "surface": {
+      "$description": "Card and interactive surface variants.",
+      "default":      { "$value": "{color.neutral.0}",   "$type": "color" },
+      "raised":       { "$value": "{color.neutral.0}",   "$type": "color", "$description": "Cards — paired with elevation.sm" },
+      "overlay":      { "$value": "{color.neutral.0}",   "$type": "color", "$description": "Modals, dialogs, drawers" },
+      "sunken":       { "$value": "{color.neutral.100}", "$type": "color", "$description": "Code blocks, inset sections" },
+      "interactive":  { "$value": "{color.neutral.50}",  "$type": "color", "$description": "Hover state for interactive surfaces" }
+    },
+
+    "text": {
+      "$description": "Text colors ordered by hierarchy. AA/AAA WCAG contrast documented.",
+      "default":      { "$value": "{color.neutral.900}", "$type": "color", "$description": "Primary text — 16:1 on white" },
+      "secondary":    { "$value": "{color.neutral.700}", "$type": "color", "$description": "Supporting text — 7:1 on white" },
+      "tertiary":     { "$value": "{color.neutral.600}", "$type": "color", "$description": "Captions, hints — 4.5:1 on white (AA)" },
+      "disabled":     { "$value": "{color.neutral.400}", "$type": "color", "$description": "Non-interactive text" },
+      "inverse":      { "$value": "{color.neutral.0}",   "$type": "color", "$description": "Text on dark surfaces" },
+      "link":         { "$value": "{color.primary.700}", "$type": "color", "$description": "Hyperlinks — 4.5:1 on white (AA)" },
+      "link-hover":   { "$value": "{color.primary.900}", "$type": "color" },
+      "on-emphasis":  { "$value": "{color.neutral.0}",   "$type": "color", "$description": "Text on branded/filled backgrounds" }
+    },
+
+    "border": {
+      "$description": "Border colors for containers, inputs, and dividers.",
+      "default":      { "$value": "{color.neutral.200}", "$type": "color", "$description": "Default container borders" },
+      "subtle":       { "$value": "{color.neutral.100}", "$type": "color", "$description": "Hairline dividers" },
+      "strong":       { "$value": "{color.neutral.400}", "$type": "color", "$description": "Visible interactive borders" },
+      "emphasis":     { "$value": "{color.neutral.700}", "$type": "color", "$description": "High-contrast borders" },
+      "focus":        { "$value": "{color.primary.600}", "$type": "color", "$description": "Focus ring — must be 3:1 contrast (WCAG 2.4.11)" },
+      "disabled":     { "$value": "{color.neutral.200}", "$type": "color" },
+      "interactive":  { "$value": "{color.neutral.300}", "$type": "color", "$description": "Input border default" },
+      "interactive-hover": { "$value": "{color.neutral.500}", "$type": "color" }
+    },
+
+    "action": {
+      "primary": {
+        "$description": "Primary CTA — buttons, links, key interactive elements.",
+        "default":     { "$value": "{color.primary.600}", "$type": "color" },
+        "hover":       { "$value": "{color.primary.700}", "$type": "color" },
+        "active":      { "$value": "{color.primary.800}", "$type": "color" },
+        "disabled":    { "$value": "{color.neutral.300}", "$type": "color" },
+        "foreground":  { "$value": "{color.neutral.0}",   "$type": "color", "$description": "Text/icon on primary bg" },
+        "subtle":      { "$value": "{color.primary.50}",  "$type": "color", "$description": "Ghost/subtle variant background" },
+        "subtle-hover":{ "$value": "{color.primary.100}", "$type": "color" }
+      },
+      "secondary": {
+        "default":     { "$value": "{color.secondary.600}", "$type": "color" },
+        "hover":       { "$value": "{color.secondary.700}", "$type": "color" },
+        "active":      { "$value": "{color.secondary.800}", "$type": "color" },
+        "foreground":  { "$value": "{color.neutral.0}",     "$type": "color" }
+      }
+    },
+
+    "status": {
+      "$description": "Semantic feedback colors. Each status has bg/text/border/icon variants for badge, alert, and inline feedback patterns.",
+
+      "success": {
+        "bg":          { "$value": "{color.success.50}",  "$type": "color" },
+        "bg-strong":   { "$value": "{color.success.600}", "$type": "color" },
+        "text":        { "$value": "{color.success.800}", "$type": "color" },
+        "text-strong": { "$value": "{color.neutral.0}",   "$type": "color" },
+        "border":      { "$value": "{color.success.300}", "$type": "color" },
+        "icon":        { "$value": "{color.success.600}", "$type": "color" }
+      },
+      "warning": {
+        "bg":          { "$value": "{color.warning.50}",  "$type": "color" },
+        "bg-strong":   { "$value": "{color.warning.500}", "$type": "color" },
+        "text":        { "$value": "{color.warning.900}", "$type": "color" },
+        "text-strong": { "$value": "{color.neutral.0}",   "$type": "color" },
+        "border":      { "$value": "{color.warning.300}", "$type": "color" },
+        "icon":        { "$value": "{color.warning.700}", "$type": "color" }
+      },
+      "danger": {
+        "bg":          { "$value": "{color.danger.50}",  "$type": "color" },
+        "bg-strong":   { "$value": "{color.danger.600}", "$type": "color" },
+        "text":        { "$value": "{color.danger.800}", "$type": "color" },
+        "text-strong": { "$value": "{color.neutral.0}",  "$type": "color" },
+        "border":      { "$value": "{color.danger.300}", "$type": "color" },
+        "icon":        { "$value": "{color.danger.600}", "$type": "color" }
+      },
+      "info": {
+        "bg":          { "$value": "{color.info.50}",  "$type": "color" },
+        "bg-strong":   { "$value": "{color.info.600}", "$type": "color" },
+        "text":        { "$value": "{color.info.800}", "$type": "color" },
+        "text-strong": { "$value": "{color.neutral.0}", "$type": "color" },
+        "border":      { "$value": "{color.info.300}", "$type": "color" },
+        "icon":        { "$value": "{color.info.600}", "$type": "color" }
+      },
+      "neutral": {
+        "bg":          { "$value": "{color.neutral.100}", "$type": "color" },
+        "bg-strong":   { "$value": "{color.neutral.700}", "$type": "color" },
+        "text":        { "$value": "{color.neutral.800}", "$type": "color" },
+        "text-strong": { "$value": "{color.neutral.0}",   "$type": "color" },
+        "border":      { "$value": "{color.neutral.300}", "$type": "color" },
+        "icon":        { "$value": "{color.neutral.600}", "$type": "color" }
+      }
+    }
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "name": "pluto-design-system",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Pluto Design System — Enterprise-grade, multi-brand design system built on DTCG token standards",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/keerthi/pluto-design-system"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">=20.0.0",
+    "pnpm": ">=9.0.0"
+  },
+  "packageManager": "pnpm@9.0.0",
+  "scripts": {
+    "build": "turbo run build",
+    "build:tokens": "turbo run build --filter=@pluto/tokens",
+    "dev": "turbo run dev --parallel",
+    "lint": "turbo run lint",
+    "lint:fix": "turbo run lint:fix",
+    "typecheck": "turbo run typecheck",
+    "test": "turbo run test",
+    "clean": "turbo run clean && rimraf node_modules",
+    "storybook": "turbo run storybook",
+    "changeset": "changeset",
+    "version-packages": "changeset version",
+    "release": "turbo run build --filter=!apps/* && changeset publish",
+    "format": "prettier --write \"**/*.{ts,tsx,js,json,md,css}\" --ignore-path .gitignore",
+    "format:check": "prettier --check \"**/*.{ts,tsx,js,json,md,css}\" --ignore-path .gitignore",
+    "tokens:validate": "node scripts/validate-tokens.mjs",
+    "tokens:diff": "node scripts/diff-tokens.mjs"
+  },
+  "devDependencies": {
+    "@changesets/cli": "^2.27.1",
+    "rimraf": "^5.0.5",
+    "turbo": "^2.0.6",
+    "prettier": "^3.2.5"
+  }
+}

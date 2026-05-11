@@ -1,0 +1,36 @@
+{
+  "name": "@pluto/storybook",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Storybook documentation app for Pluto Design System",
+  "scripts": {
+    "storybook": "storybook dev -p 6006",
+    "build": "storybook build -o storybook-static",
+    "clean": "rimraf storybook-static"
+  },
+  "dependencies": {
+    "@pluto/foundations": "workspace:*",
+    "@pluto/tokens": "workspace:*",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@pluto/eslint-config": "workspace:*",
+    "@pluto/tsconfig": "workspace:*",
+    "@storybook/addon-a11y": "^8.1.5",
+    "@storybook/addon-docs": "^8.1.5",
+    "@storybook/addon-essentials": "^8.1.5",
+    "@storybook/addon-interactions": "^8.1.5",
+    "@storybook/addon-themes": "^8.1.5",
+    "@storybook/blocks": "^8.1.5",
+    "@storybook/react": "^8.1.5",
+    "@storybook/react-vite": "^8.1.5",
+    "@storybook/testing-library": "^0.2.2",
+    "@types/react": "^18.3.1",
+    "@types/react-dom": "^18.3.0",
+    "rimraf": "^5.0.5",
+    "storybook": "^8.1.5",
+    "typescript": "^5.4.5",
+    "vite": "^5.2.11"
+  }
+}

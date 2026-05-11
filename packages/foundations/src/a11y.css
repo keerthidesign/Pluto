@@ -1,0 +1,120 @@
+/**
+ * Pluto Design System — Accessibility Utilities
+ *
+ * Standalone accessibility CSS that can be imported independently.
+ * These utilities implement WCAG 2.1 / 2.2 patterns.
+ */
+
+/* ── Screen Reader Only ───────────────────────────────────────────────────── */
+.pluto-sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.pluto-sr-only-focusable:focus,
+.pluto-sr-only-focusable:active {
+  position: static;
+  width: auto;
+  height: auto;
+  padding: 0;
+  margin: 0;
+  overflow: visible;
+  clip: auto;
+  white-space: normal;
+}
+
+/* ── Focus Management ─────────────────────────────────────────────────────── */
+
+/* Remove default focus style for mouse users, keep for keyboard */
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
+:focus-visible {
+  outline: 2px solid var(--pluto-color-border-focus, #7950f2);
+  outline-offset: 2px;
+}
+
+/* ── Motion / Animation Overrides ────────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* ── High Contrast Mode ───────────────────────────────────────────────────── */
+@media (forced-colors: active) {
+  /* Ensure interactive elements remain visible in Windows HC mode */
+  button,
+  [role="button"] {
+    forced-color-adjust: none;
+    border: 1px solid ButtonText;
+  }
+
+  a {
+    forced-color-adjust: none;
+    color: LinkText;
+  }
+
+  input,
+  select,
+  textarea {
+    forced-color-adjust: none;
+    border: 1px solid ButtonText;
+  }
+}
+
+/* ── Color Scheme ─────────────────────────────────────────────────────────── */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme]) {
+    color-scheme: dark;
+  }
+}
+
+/* ── ARIA States ──────────────────────────────────────────────────────────── */
+[aria-disabled="true"],
+[disabled] {
+  cursor: not-allowed;
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+[aria-busy="true"] {
+  cursor: progress;
+}
+
+[aria-invalid="true"] {
+  border-color: var(--pluto-color-status-danger-border) !important;
+}
+
+/* ── Live Regions ─────────────────────────────────────────────────────────── */
+[aria-live] {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+[aria-live]:not(:empty) {
+  clip: auto;
+  clip-path: none;
+  height: auto;
+  overflow: visible;
+  position: static;
+  white-space: normal;
+  width: auto;
+}
