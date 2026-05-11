@@ -2,9 +2,9 @@
   "$schema": "https://design-tokens.github.io/community-group/format/",
   "$metadata": {
     "theme": "dark",
-    "description": "Dark theme — inverts surfaces, adjusts text contrast, maintains 4.5:1 WCAG AA on all interactive text. Applied via data-theme='dark' on root.",
-    "figma-variable-collection": "Theme/Dark",
-    "a11y-notes": "All text/background pairs verified at 4.5:1 minimum. Danger/warning colors adjusted for dark background contrast."
+    "description": "Dark theme — warm charcoal surfaces, golden primary pops with vibrancy. Applied via data-theme='dark' on root.",
+    "figma-variable-collection": "Semantic / Color",
+    "a11y-notes": "All text/background pairs verified at 4.5:1 minimum. Golden primary uses dark text (#120E0A) for contrast compliance."
   },
 
   "theme": {
@@ -12,41 +12,42 @@
 
     "color": {
       "background": {
-        "default":   { "$value": "{color.neutral.950}",  "$type": "color", "$description": "Dark canvas — slightly off-black reduces eye strain" },
+        "default":   { "$value": "{color.neutral.950}",  "$type": "color", "$description": "Warm near-black canvas — #120E0A" },
         "subtle":    { "$value": "{color.neutral.900}",  "$type": "color" },
         "muted":     { "$value": "{color.neutral.800}",  "$type": "color" },
-        "emphasis":  { "$value": "{color.neutral.50}",   "$type": "color", "$description": "Inverted — near-white on dark" },
+        "emphasis":  { "$value": "{color.neutral.50}",   "$type": "color", "$description": "Inverted — warm white on dark" },
         "overlay":   { "$value": "{color.alpha.black.64}", "$type": "color", "$description": "Deeper scrim on dark" }
       },
       "surface": {
         "default":     { "$value": "{color.neutral.900}",  "$type": "color" },
-        "raised":      { "$value": "{color.neutral.800}",  "$type": "color", "$description": "Cards float above dark canvas" },
+        "raised":      { "$value": "{color.neutral.800}",  "$type": "color", "$description": "Warm charcoal cards — #302820" },
         "overlay":     { "$value": "{color.neutral.800}",  "$type": "color" },
         "sunken":      { "$value": "{color.neutral.950}",  "$type": "color" },
         "interactive": { "$value": "{color.neutral.800}",  "$type": "color" }
       },
       "text": {
-        "default":     { "$value": "{color.neutral.50}",   "$type": "color", "$description": "Near-white — reduces stark contrast vs pure white" },
+        "default":     { "$value": "{color.neutral.50}",   "$type": "color", "$description": "Warm white — #FDFCF8" },
         "secondary":   { "$value": "{color.neutral.300}",  "$type": "color" },
         "tertiary":    { "$value": "{color.neutral.500}",  "$type": "color", "$description": "4.5:1 on dark.background.default" },
         "disabled":    { "$value": "{color.neutral.700}",  "$type": "color" },
         "inverse":     { "$value": "{color.neutral.900}",  "$type": "color" },
-        "link":        { "$value": "{color.primary.300}",  "$type": "color", "$description": "Lighter violet for dark background readability" },
-        "on-emphasis": { "$value": "{color.neutral.900}",  "$type": "color" }
+        "link":        { "$value": "{color.primary.300}",  "$type": "color", "$description": "Bright golden-yellow for dark bg readability" },
+        "on-emphasis": { "$value": "{color.neutral.950}",  "$type": "color", "$description": "Dark text on golden backgrounds" }
       },
       "border": {
         "default":     { "$value": "{color.neutral.700}",  "$type": "color" },
         "subtle":      { "$value": "{color.neutral.800}",  "$type": "color" },
         "strong":      { "$value": "{color.neutral.500}",  "$type": "color" },
-        "focus":       { "$value": "{color.primary.400}",  "$type": "color", "$description": "Lighter focus ring on dark" },
+        "focus":       { "$value": "{color.primary.400}",  "$type": "color", "$description": "Golden focus ring on dark — #FACC15" },
         "interactive": { "$value": "{color.neutral.600}",  "$type": "color" }
       },
 
       "action": {
         "primary": {
-          "default":    { "$value": "{color.primary.500}", "$type": "color", "$description": "Lighter shade — 4.5:1 on dark.surface" },
-          "hover":      { "$value": "{color.primary.400}", "$type": "color" },
-          "active":     { "$value": "{color.primary.300}", "$type": "color" },
+          "default":    { "$value": "{color.primary.400}", "$type": "color", "$description": "Golden #FACC15 — vibrant on dark surfaces" },
+          "hover":      { "$value": "{color.primary.300}", "$type": "color" },
+          "active":     { "$value": "{color.primary.200}", "$type": "color" },
+          "foreground": { "$value": "{color.neutral.950}", "$type": "color", "$description": "Dark text on golden button — always needed regardless of theme" },
           "subtle":     { "$value": "{color.alpha.white.8}", "$type": "color" },
           "subtle-hover": { "$value": "{color.alpha.white.12}", "$type": "color" }
         }
@@ -54,28 +55,28 @@
 
       "status": {
         "success": {
-          "bg":     { "$value": "rgba(27, 92, 41, 0.3)",  "$type": "color" },
-          "text":   { "$value": "{color.success.300}",    "$type": "color" },
-          "border": { "$value": "{color.success.700}",    "$type": "color" },
-          "icon":   { "$value": "{color.success.400}",    "$type": "color" }
+          "bg":     { "$value": "rgba(21, 128, 61, 0.25)",  "$type": "color", "$description": "success/700 at 25% on dark" },
+          "text":   { "$value": "{color.success.300}",      "$type": "color" },
+          "border": { "$value": "{color.success.700}",      "$type": "color" },
+          "icon":   { "$value": "{color.success.400}",      "$type": "color" }
         },
         "warning": {
-          "bg":     { "$value": "rgba(179, 82, 0, 0.25)", "$type": "color" },
-          "text":   { "$value": "{color.warning.300}",    "$type": "color" },
-          "border": { "$value": "{color.warning.700}",    "$type": "color" },
-          "icon":   { "$value": "{color.warning.400}",    "$type": "color" }
+          "bg":     { "$value": "rgba(194, 65, 12, 0.25)",  "$type": "color", "$description": "warning/700 at 25% on dark" },
+          "text":   { "$value": "{color.warning.300}",      "$type": "color" },
+          "border": { "$value": "{color.warning.700}",      "$type": "color" },
+          "icon":   { "$value": "{color.warning.400}",      "$type": "color" }
         },
         "danger": {
-          "bg":     { "$value": "rgba(134, 32, 32, 0.3)", "$type": "color" },
-          "text":   { "$value": "{color.danger.300}",     "$type": "color" },
-          "border": { "$value": "{color.danger.700}",     "$type": "color" },
-          "icon":   { "$value": "{color.danger.400}",     "$type": "color" }
+          "bg":     { "$value": "rgba(190, 18, 60, 0.25)",  "$type": "color", "$description": "danger/700 (coral rose) at 25% on dark" },
+          "text":   { "$value": "{color.danger.300}",       "$type": "color" },
+          "border": { "$value": "{color.danger.700}",       "$type": "color" },
+          "icon":   { "$value": "{color.danger.400}",       "$type": "color" }
         },
         "info": {
-          "bg":     { "$value": "rgba(14, 65, 128, 0.3)", "$type": "color" },
-          "text":   { "$value": "{color.info.300}",       "$type": "color" },
-          "border": { "$value": "{color.info.700}",       "$type": "color" },
-          "icon":   { "$value": "{color.info.400}",       "$type": "color" }
+          "bg":     { "$value": "rgba(3, 105, 161, 0.25)",  "$type": "color", "$description": "info/700 at 25% on dark" },
+          "text":   { "$value": "{color.info.300}",         "$type": "color" },
+          "border": { "$value": "{color.info.700}",         "$type": "color" },
+          "icon":   { "$value": "{color.info.400}",         "$type": "color" }
         }
       }
     },

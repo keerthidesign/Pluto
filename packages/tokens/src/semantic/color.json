@@ -33,9 +33,9 @@
       "tertiary":     { "$value": "{color.neutral.600}", "$type": "color", "$description": "Captions, hints — 4.5:1 on white (AA)" },
       "disabled":     { "$value": "{color.neutral.400}", "$type": "color", "$description": "Non-interactive text" },
       "inverse":      { "$value": "{color.neutral.0}",   "$type": "color", "$description": "Text on dark surfaces" },
-      "link":         { "$value": "{color.primary.700}", "$type": "color", "$description": "Hyperlinks — 4.5:1 on white (AA)" },
-      "link-hover":   { "$value": "{color.primary.900}", "$type": "color" },
-      "on-emphasis":  { "$value": "{color.neutral.0}",   "$type": "color", "$description": "Text on branded/filled backgrounds" }
+      "link":         { "$value": "{color.primary.700}", "$type": "color", "$description": "Amber-brown links — 5:1 on cream white (WCAG AA)" },
+      "link-hover":   { "$value": "{color.primary.800}", "$type": "color" },
+      "on-emphasis":  { "$value": "{color.neutral.950}", "$type": "color", "$description": "Dark text on golden/branded backgrounds — 6:1 contrast" }
     },
 
     "border": {
@@ -57,7 +57,7 @@
         "hover":       { "$value": "{color.primary.700}", "$type": "color" },
         "active":      { "$value": "{color.primary.800}", "$type": "color" },
         "disabled":    { "$value": "{color.neutral.300}", "$type": "color" },
-        "foreground":  { "$value": "{color.neutral.0}",   "$type": "color", "$description": "Text/icon on primary bg" },
+        "foreground":  { "$value": "{color.neutral.950}", "$type": "color", "$description": "Dark text on golden button — 6:1 contrast (WCAG AA)" },
         "subtle":      { "$value": "{color.primary.50}",  "$type": "color", "$description": "Ghost/subtle variant background" },
         "subtle-hover":{ "$value": "{color.primary.100}", "$type": "color" }
       },
