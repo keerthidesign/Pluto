@@ -12,8 +12,8 @@ export const focusRingWithinStyles = {
   boxShadow: '0 0 0 2px var(--pluto-color-border-focus)',
 } as const;
 
-/** React inline style for focus ring on custom interactive elements. */
-export function getFocusRingStyle(inset = false): React.CSSProperties {
+/** Inline style object for focus ring on custom interactive elements. Compatible with React.CSSProperties. */
+export function getFocusRingStyle(inset = false): typeof focusRingWithinStyles | typeof focusRingStyles {
   if (inset) return focusRingWithinStyles;
   return focusRingStyles;
 }

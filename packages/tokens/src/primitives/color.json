@@ -116,6 +116,7 @@
     "alpha": {
       "$description": "Transparent overlays using black and white alpha channels. Use for scrim, overlay, and shadow tokens.",
       "black": {
+        "0":   { "$value": "rgba(0, 0, 0, 0)",    "$type": "color", "$description": "Fully transparent — used for ghost button default state" },
         "4":   { "$value": "rgba(0, 0, 0, 0.04)", "$type": "color" },
         "8":   { "$value": "rgba(0, 0, 0, 0.08)", "$type": "color" },
         "12":  { "$value": "rgba(0, 0, 0, 0.12)", "$type": "color" },

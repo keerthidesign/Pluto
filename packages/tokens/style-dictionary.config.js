@@ -286,9 +286,15 @@ const configs = [
   },
 
   // ── 3. Dark theme override CSS ──
+  //
+  // Architecture: `include` = primitives + semantic (available for refs, NOT output)
+  //               `source`  = only dark.json overrides (these ARE output)
+  // Result: [data-theme="dark"] { --pluto-color-background-default: ... }
+  // This correctly overrides the same --pluto-color-* variables from tokens.css.
   {
     log: { warnings: 'warn' },
-    source: [...semanticSources, 'src/themes/dark.json'],
+    include: semanticSources,
+    source: ['src/themes/dark.json'],
     preprocessors: ['tokens-studio'],
     platforms: {
       css: {
@@ -299,12 +305,12 @@ const configs = [
           {
             destination: 'dark.css',
             format: 'css/variables',
+            filter: (token) => token.isSource,
             options: {
-              outputReferences: true,
+              outputReferences: false,
               selector: '[data-theme="dark"]',
               fileHeader: () => ['Pluto Design System — Dark Theme'],
             },
-            filter: (token) => token.path[0] === 'theme',
           },
         ],
       },
@@ -312,9 +318,16 @@ const configs = [
   },
 
   // ── 4. High-contrast theme override CSS ──
+  //
+  // Same include/source pattern as dark. Outputs --pluto-color-* overrides.
+  // Always uses outputReferences: false — HC must emit resolved hex values
+  // (no var() refs) because the browser @media selector stacks on top of
+  // whatever theme is active, and CSS custom properties can't be resolved
+  // conditionally inside @media queries in all browsers.
   {
     log: { warnings: 'warn' },
-    source: [...semanticSources, 'src/themes/high-contrast.json'],
+    include: semanticSources,
+    source: ['src/themes/high-contrast.json'],
     preprocessors: ['tokens-studio'],
     platforms: {
       css: {
@@ -325,12 +338,22 @@ const configs = [
           {
             destination: 'high-contrast.css',
             format: 'css/variables',
+            filter: (token) => token.isSource,
             options: {
               outputReferences: false,
-              selector: '[data-theme="high-contrast"], @media (prefers-contrast: more)',
+              selector: '[data-theme="high-contrast"]',
               fileHeader: () => ['Pluto Design System — High Contrast Theme (WCAG AAA)'],
             },
-            filter: (token) => token.path[0] === 'theme',
+          },
+          {
+            destination: 'high-contrast-media.css',
+            format: 'css/variables',
+            filter: (token) => token.isSource,
+            options: {
+              outputReferences: false,
+              selector: '@media (prefers-contrast: more)',
+              fileHeader: () => ['Pluto Design System — High Contrast Theme via prefers-contrast media query'],
+            },
           },
         ],
       },

@@ -2,29 +2,172 @@
   "$schema": "https://design-tokens.github.io/community-group/format/",
   "$metadata": {
     "theme": "high-contrast",
-    "description": "High-contrast theme — targets WCAG AAA (7:1 contrast ratio). Activated via prefers-contrast: more or data-theme='high-contrast'. Never use alpha/translucent colors.",
-    "a11y-standard": "WCAG 2.1 AAA, EN 301 549"
+    "description": "High-contrast theme — WCAG AAA (7:1 contrast ratio). Activated via prefers-contrast: more or data-theme='high-contrast'. Dark surface by default — never use alpha/translucent colors.",
+    "a11y-standard": "WCAG 2.1 AAA, EN 301 549",
+    "contrast-floor": "7:1 for all text/bg pairs"
   },
 
-  "theme": {
-    "color": {
-      "background": {
-        "default":   { "$value": "{color.neutral.1000}", "$type": "color" },
-        "subtle":    { "$value": "{color.neutral.1000}", "$type": "color" },
-        "muted":     { "$value": "{color.neutral.950}",  "$type": "color" }
+  "color": {
+
+    "background": {
+      "default":    { "$value": "{color.neutral.1000}",      "$type": "color", "$description": "Pure black canvas" },
+      "subtle":     { "$value": "{color.neutral.1000}",      "$type": "color" },
+      "muted":      { "$value": "{color.neutral.950}",       "$type": "color" },
+      "emphasis":   { "$value": "{color.neutral.0}",         "$type": "color", "$description": "Pure white — maximum contrast inversion" },
+      "disabled":   { "$value": "{color.neutral.950}",       "$type": "color" },
+      "inverse":    { "$value": "{color.neutral.0}",         "$type": "color" },
+      "on-primary": { "$value": "{color.neutral.1000}",      "$type": "color" },
+      "on-success": { "$value": "{color.neutral.1000}",      "$type": "color" },
+      "on-warning": { "$value": "{color.neutral.1000}",      "$type": "color" },
+      "on-danger":  { "$value": "{color.neutral.1000}",      "$type": "color" },
+      "on-info":    { "$value": "{color.neutral.1000}",      "$type": "color" }
+    },
+
+    "surface": {
+      "default":     { "$value": "{color.neutral.1000}",     "$type": "color" },
+      "raised":      { "$value": "{color.neutral.950}",      "$type": "color" },
+      "overlay":     { "$value": "{color.neutral.950}",      "$type": "color" },
+      "sunken":      { "$value": "{color.neutral.1000}",     "$type": "color" },
+      "interactive": { "$value": "{color.neutral.950}",      "$type": "color" },
+      "disabled":    { "$value": "{color.neutral.950}",      "$type": "color" },
+      "primary":     { "$value": "{color.neutral.1000}",     "$type": "color" },
+      "secondary":   { "$value": "{color.neutral.1000}",     "$type": "color" },
+      "inverse":     { "$value": "{color.neutral.0}",        "$type": "color" }
+    },
+
+    "text": {
+      "default":     { "$value": "{color.neutral.0}",        "$type": "color", "$description": "Pure white on black — 21:1 (AAA)" },
+      "secondary":   { "$value": "{color.neutral.100}",      "$type": "color", "$description": "Near-white — >15:1" },
+      "tertiary":    { "$value": "{color.neutral.200}",      "$type": "color", "$description": ">10:1 — AAA" },
+      "disabled":    { "$value": "{color.neutral.500}",      "$type": "color", "$description": "Disabled — intentionally below threshold" },
+      "inverse":     { "$value": "{color.neutral.1000}",     "$type": "color", "$description": "Black text on white surfaces" },
+      "link":        { "$value": "{color.primary.200}",      "$type": "color", "$description": "Bright golden for HC dark bg — high contrast" },
+      "link-hover":  { "$value": "{color.primary.100}",      "$type": "color" },
+      "on-emphasis": { "$value": "{color.neutral.1000}",     "$type": "color", "$description": "Black text on white emphasis" },
+      "on-primary":  { "$value": "{color.neutral.1000}",     "$type": "color", "$description": "Black on bright golden — maximum contrast" },
+      "placeholder": { "$value": "{color.neutral.400}",      "$type": "color" },
+      "heading":     { "$value": "{color.neutral.0}",        "$type": "color" },
+      "caption":     { "$value": "{color.neutral.200}",      "$type": "color" },
+      "code":        { "$value": "{color.primary.200}",      "$type": "color" },
+      "error":       { "$value": "{color.danger.200}",       "$type": "color", "$description": "Bright on black for HC" },
+      "success":     { "$value": "{color.success.200}",      "$type": "color" },
+      "warning":     { "$value": "{color.warning.200}",      "$type": "color" },
+      "info":        { "$value": "{color.info.200}",         "$type": "color" }
+    },
+
+    "icon": {
+      "default":     { "$value": "{color.neutral.0}",        "$type": "color" },
+      "secondary":   { "$value": "{color.neutral.100}",      "$type": "color" },
+      "tertiary":    { "$value": "{color.neutral.200}",      "$type": "color" },
+      "disabled":    { "$value": "{color.neutral.500}",      "$type": "color" },
+      "inverse":     { "$value": "{color.neutral.1000}",     "$type": "color" },
+      "primary":     { "$value": "{color.primary.200}",      "$type": "color" },
+      "on-emphasis": { "$value": "{color.neutral.1000}",     "$type": "color" },
+      "danger":      { "$value": "{color.danger.200}",       "$type": "color" },
+      "success":     { "$value": "{color.success.200}",      "$type": "color" },
+      "warning":     { "$value": "{color.warning.200}",      "$type": "color" }
+    },
+
+    "border": {
+      "default":           { "$value": "{color.neutral.0}",   "$type": "color", "$description": "White borders on black — maximum visibility" },
+      "subtle":            { "$value": "{color.neutral.200}",  "$type": "color" },
+      "strong":            { "$value": "{color.neutral.0}",    "$type": "color" },
+      "emphasis":          { "$value": "{color.neutral.0}",    "$type": "color" },
+      "focus":             { "$value": "#FFFF00",              "$type": "color", "$description": "Yellow focus ring — WCAG 2.4.11 requirement for HC mode, universal visibility" },
+      "disabled":          { "$value": "{color.neutral.500}",  "$type": "color" },
+      "interactive":       { "$value": "{color.neutral.0}",    "$type": "color" },
+      "interactive-hover": { "$value": "#FFFF00",              "$type": "color", "$description": "Yellow on hover matches focus intent" },
+      "primary":           { "$value": "{color.primary.200}",  "$type": "color" },
+      "success":           { "$value": "{color.success.200}",  "$type": "color" },
+      "warning":           { "$value": "{color.warning.200}",  "$type": "color" },
+      "danger":            { "$value": "{color.danger.200}",   "$type": "color" },
+      "info":              { "$value": "{color.info.200}",     "$type": "color" },
+      "on-emphasis":       { "$value": "{color.neutral.1000}", "$type": "color" },
+      "neutral":           { "$value": "{color.neutral.0}",    "$type": "color" }
+    },
+
+    "overlay": {
+      "scrim":  { "$value": "rgba(0, 0, 0, 0.85)",   "$type": "color", "$description": "Heavy scrim for HC mode — no alpha primitives" },
+      "ghost":  { "$value": "rgba(255, 255, 255, 0.1)", "$type": "color" }
+    },
+
+    "action": {
+
+      "primary": {
+        "default":      { "$value": "{color.primary.300}",    "$type": "color", "$description": "Bright golden — high contrast on black bg" },
+        "hover":        { "$value": "{color.primary.200}",    "$type": "color" },
+        "active":       { "$value": "{color.primary.100}",    "$type": "color" },
+        "disabled":     { "$value": "{color.neutral.600}",    "$type": "color" },
+        "text":         { "$value": "{color.neutral.1000}",   "$type": "color", "$description": "Black on bright golden — maximum contrast" },
+        "subtle":       { "$value": "{color.neutral.950}",    "$type": "color" },
+        "subtle-hover": { "$value": "{color.neutral.900}",    "$type": "color" }
       },
-      "text": {
-        "default":     { "$value": "{color.neutral.0}",   "$type": "color", "$description": "21:1 on black" },
-        "secondary":   { "$value": "{color.neutral.100}", "$type": "color" },
-        "tertiary":    { "$value": "{color.neutral.200}", "$type": "color" },
-        "disabled":    { "$value": "{color.neutral.500}", "$type": "color" },
-        "link":        { "$value": "{color.primary.200}", "$type": "color", "$description": "Bright golden for HC dark bg" }
+
+      "secondary": {
+        "default":      { "$value": "{color.neutral.0}",      "$type": "color" },
+        "hover":        { "$value": "{color.neutral.100}",    "$type": "color" },
+        "active":       { "$value": "{color.neutral.200}",    "$type": "color" },
+        "disabled":     { "$value": "{color.neutral.600}",    "$type": "color" },
+        "text":         { "$value": "{color.neutral.1000}",   "$type": "color" },
+        "subtle":       { "$value": "{color.neutral.950}",    "$type": "color" },
+        "subtle-hover": { "$value": "{color.neutral.900}",    "$type": "color" }
       },
-      "border": {
-        "default":     { "$value": "{color.neutral.0}",   "$type": "color" },
-        "focus":       { "$value": "#FFFF00",             "$type": "color", "$description": "Yellow focus ring — WCAG 2.4.11 requirement for HC mode" },
-        "interactive": { "$value": "{color.neutral.0}",   "$type": "color" }
+
+      "ghost": {
+        "default":      { "$value": "rgba(0,0,0,0)",          "$type": "color" },
+        "hover":        { "$value": "{color.neutral.900}",    "$type": "color" },
+        "active":       { "$value": "{color.neutral.800}",    "$type": "color" },
+        "disabled":     { "$value": "rgba(0,0,0,0)",          "$type": "color" },
+        "text":         { "$value": "{color.neutral.0}",      "$type": "color" },
+        "subtle":       { "$value": "rgba(0,0,0,0)",          "$type": "color" },
+        "subtle-hover": { "$value": "{color.neutral.900}",    "$type": "color" }
+      },
+
+      "destructive": {
+        "default":      { "$value": "{color.danger.300}",     "$type": "color" },
+        "hover":        { "$value": "{color.danger.200}",     "$type": "color" },
+        "active":       { "$value": "{color.danger.100}",     "$type": "color" },
+        "disabled":     { "$value": "{color.neutral.600}",    "$type": "color" },
+        "text":         { "$value": "{color.neutral.1000}",   "$type": "color" },
+        "subtle":       { "$value": "{color.neutral.950}",    "$type": "color" },
+        "subtle-hover": { "$value": "{color.neutral.900}",    "$type": "color" }
+      }
+    },
+
+    "status": {
+      "success": {
+        "bg":          { "$value": "{color.neutral.1000}",    "$type": "color" },
+        "bg-strong":   { "$value": "{color.success.300}",     "$type": "color" },
+        "text":        { "$value": "{color.success.200}",     "$type": "color", "$description": "AAA on black bg" },
+        "text-strong": { "$value": "{color.neutral.1000}",    "$type": "color" },
+        "border":      { "$value": "{color.success.200}",     "$type": "color" },
+        "icon":        { "$value": "{color.success.200}",     "$type": "color" }
+      },
+      "warning": {
+        "bg":          { "$value": "{color.neutral.1000}",    "$type": "color" },
+        "bg-strong":   { "$value": "{color.warning.300}",     "$type": "color" },
+        "text":        { "$value": "{color.warning.200}",     "$type": "color" },
+        "text-strong": { "$value": "{color.neutral.1000}",    "$type": "color" },
+        "border":      { "$value": "{color.warning.200}",     "$type": "color" },
+        "icon":        { "$value": "{color.warning.200}",     "$type": "color" }
+      },
+      "danger": {
+        "bg":          { "$value": "{color.neutral.1000}",    "$type": "color" },
+        "bg-strong":   { "$value": "{color.danger.300}",      "$type": "color" },
+        "text":        { "$value": "{color.danger.200}",      "$type": "color" },
+        "text-strong": { "$value": "{color.neutral.1000}",    "$type": "color" },
+        "border":      { "$value": "{color.danger.200}",      "$type": "color" },
+        "icon":        { "$value": "{color.danger.200}",      "$type": "color" }
+      },
+      "info": {
+        "bg":          { "$value": "{color.neutral.1000}",    "$type": "color" },
+        "bg-strong":   { "$value": "{color.info.300}",        "$type": "color" },
+        "text":        { "$value": "{color.info.200}",        "$type": "color" },
+        "text-strong": { "$value": "{color.neutral.1000}",    "$type": "color" },
+        "border":      { "$value": "{color.info.200}",        "$type": "color" },
+        "icon":        { "$value": "{color.info.200}",        "$type": "color" }
       }
     }
+
   }
 }
