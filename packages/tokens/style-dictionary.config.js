@@ -43,9 +43,7 @@ StyleDictionary.registerTransform({
   type: 'name',
   transform: (token) => {
     return token.path
-      .map((part, i) =>
-        i === 0 ? part : part.charAt(0).toUpperCase() + part.slice(1)
-      )
+      .map((part, i) => (i === 0 ? part : part.charAt(0).toUpperCase() + part.slice(1)))
       .join('')
       .replace(/-([a-z])/g, (_, c) => c.toUpperCase());
   },
@@ -100,9 +98,8 @@ StyleDictionary.registerFormat({
 
     dictionary.allTokens.forEach((token) => {
       const key = token.name;
-      const val = typeof token.value === 'string'
-        ? `'${token.value}'`
-        : JSON.stringify(token.value);
+      const val =
+        typeof token.value === 'string' ? `'${token.value}'` : JSON.stringify(token.value);
       const desc = token.$description || token.description || '';
       if (desc) lines.push(`  /** ${desc} */`);
       lines.push(`  '${key}': ${val},`);
@@ -352,7 +349,9 @@ const configs = [
             options: {
               outputReferences: false,
               selector: '@media (prefers-contrast: more)',
-              fileHeader: () => ['Pluto Design System — High Contrast Theme via prefers-contrast media query'],
+              fileHeader: () => [
+                'Pluto Design System — High Contrast Theme via prefers-contrast media query',
+              ],
             },
           },
         ],

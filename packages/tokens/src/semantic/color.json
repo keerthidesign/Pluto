@@ -8,93 +8,344 @@
   },
 
   "color": {
-
     "background": {
       "$description": "Surface and background colors. Layer them to create visual depth. 11 tokens.",
-      "default":      { "$value": "{color.neutral.0}",       "$type": "color", "$description": "Page canvas — white" },
-      "subtle":       { "$value": "{color.neutral.50}",      "$type": "color", "$description": "Secondary surfaces, sidebars" },
-      "muted":        { "$value": "{color.neutral.100}",     "$type": "color", "$description": "Tertiary surfaces, panels" },
-      "emphasis":     { "$value": "{color.neutral.900}",     "$type": "color", "$description": "Inverted surfaces — dark nav, toast" },
-      "disabled":     { "$value": "{color.neutral.100}",     "$type": "color", "$description": "Disabled surface" },
-      "inverse":      { "$value": "{color.neutral.900}",     "$type": "color", "$description": "Inverse theme bg — dark in light mode, light in dark mode" },
-      "on-primary":   { "$value": "{color.primary.50}",      "$type": "color", "$description": "Very light golden tint for primary-contextual areas" },
-      "on-success":   { "$value": "{color.success.50}",      "$type": "color", "$description": "Light tint for success feedback backgrounds" },
-      "on-warning":   { "$value": "{color.warning.50}",      "$type": "color", "$description": "Light tint for warning feedback backgrounds" },
-      "on-danger":    { "$value": "{color.danger.50}",       "$type": "color", "$description": "Light tint for danger feedback backgrounds" },
-      "on-info":      { "$value": "{color.info.50}",         "$type": "color", "$description": "Light tint for info feedback backgrounds" }
+      "default": {
+        "$value": "{color.neutral.0}",
+        "$type": "color",
+        "$description": "Page canvas — white"
+      },
+      "subtle": {
+        "$value": "{color.neutral.50}",
+        "$type": "color",
+        "$description": "Secondary surfaces, sidebars"
+      },
+      "muted": {
+        "$value": "{color.neutral.100}",
+        "$type": "color",
+        "$description": "Tertiary surfaces, panels"
+      },
+      "emphasis": {
+        "$value": "{color.neutral.900}",
+        "$type": "color",
+        "$description": "Inverted surfaces — dark nav, toast"
+      },
+      "disabled": {
+        "$value": "{color.neutral.100}",
+        "$type": "color",
+        "$description": "Disabled surface"
+      },
+      "inverse": {
+        "$value": "{color.neutral.900}",
+        "$type": "color",
+        "$description": "Inverse theme bg — dark in light mode, light in dark mode"
+      },
+      "on-primary": {
+        "$value": "{color.primary.50}",
+        "$type": "color",
+        "$description": "Very light golden tint for primary-contextual areas"
+      },
+      "on-success": {
+        "$value": "{color.success.50}",
+        "$type": "color",
+        "$description": "Light tint for success feedback backgrounds"
+      },
+      "on-warning": {
+        "$value": "{color.warning.50}",
+        "$type": "color",
+        "$description": "Light tint for warning feedback backgrounds"
+      },
+      "on-danger": {
+        "$value": "{color.danger.50}",
+        "$type": "color",
+        "$description": "Light tint for danger feedback backgrounds"
+      },
+      "on-info": {
+        "$value": "{color.info.50}",
+        "$type": "color",
+        "$description": "Light tint for info feedback backgrounds"
+      }
     },
 
     "surface": {
       "$description": "Card and interactive surface variants. 9 tokens.",
-      "default":      { "$value": "{color.neutral.0}",       "$type": "color", "$description": "Base surface — same as background" },
-      "raised":       { "$value": "{color.neutral.0}",       "$type": "color", "$description": "Cards — pair with elevation.sm shadow" },
-      "overlay":      { "$value": "{color.neutral.0}",       "$type": "color", "$description": "Modals, dialogs, drawers" },
-      "sunken":       { "$value": "{color.neutral.100}",     "$type": "color", "$description": "Code blocks, inset sections" },
-      "interactive":  { "$value": "{color.neutral.50}",      "$type": "color", "$description": "Hover state for interactive rows/surfaces" },
-      "disabled":     { "$value": "{color.neutral.100}",     "$type": "color", "$description": "Disabled surface" },
-      "primary":      { "$value": "{color.primary.50}",      "$type": "color", "$description": "Primary-tinted surface (e.g. selected state)" },
-      "secondary":    { "$value": "{color.secondary.50}",    "$type": "color", "$description": "Secondary-tinted surface" },
-      "inverse":      { "$value": "{color.neutral.900}",     "$type": "color", "$description": "Dark surface in light mode (e.g. dark card inlay)" }
+      "default": {
+        "$value": "{color.neutral.0}",
+        "$type": "color",
+        "$description": "Base surface — same as background"
+      },
+      "raised": {
+        "$value": "{color.neutral.0}",
+        "$type": "color",
+        "$description": "Cards — pair with elevation.sm shadow"
+      },
+      "overlay": {
+        "$value": "{color.neutral.0}",
+        "$type": "color",
+        "$description": "Modals, dialogs, drawers"
+      },
+      "sunken": {
+        "$value": "{color.neutral.100}",
+        "$type": "color",
+        "$description": "Code blocks, inset sections"
+      },
+      "interactive": {
+        "$value": "{color.neutral.50}",
+        "$type": "color",
+        "$description": "Hover state for interactive rows/surfaces"
+      },
+      "disabled": {
+        "$value": "{color.neutral.100}",
+        "$type": "color",
+        "$description": "Disabled surface"
+      },
+      "primary": {
+        "$value": "{color.primary.50}",
+        "$type": "color",
+        "$description": "Primary-tinted surface (e.g. selected state)"
+      },
+      "secondary": {
+        "$value": "{color.secondary.50}",
+        "$type": "color",
+        "$description": "Secondary-tinted surface"
+      },
+      "inverse": {
+        "$value": "{color.neutral.900}",
+        "$type": "color",
+        "$description": "Dark surface in light mode (e.g. dark card inlay)"
+      }
     },
 
     "text": {
       "$description": "Text colors ordered by hierarchy. WCAG contrast ratios documented against background/default. 17 tokens.",
-      "default":      { "$value": "{color.neutral.900}",     "$type": "color", "$description": "Primary text — ~16:1 on white (AAA)" },
-      "secondary":    { "$value": "{color.neutral.700}",     "$type": "color", "$description": "Supporting text — 7:1 on white (AAA)" },
-      "tertiary":     { "$value": "{color.neutral.600}",     "$type": "color", "$description": "Captions, hints — 4.5:1 on white (AA)" },
-      "disabled":     { "$value": "{color.neutral.400}",     "$type": "color", "$description": "Non-interactive text — below 3:1, intentional" },
-      "inverse":      { "$value": "{color.neutral.0}",       "$type": "color", "$description": "Text on dark/emphasis surfaces" },
-      "link":         { "$value": "{color.primary.700}",     "$type": "color", "$description": "Amber-brown links — 5:1 on cream white (AA)" },
-      "link-hover":   { "$value": "{color.primary.800}",     "$type": "color", "$description": "Deepened link on hover" },
-      "on-emphasis":  { "$value": "{color.neutral.0}",       "$type": "color", "$description": "White text on dark emphasis backgrounds — 21:1" },
-      "on-primary":   { "$value": "{color.neutral.950}",     "$type": "color", "$description": "WCAG A11Y OVERRIDE: Dark text on golden (#EAB308) — 6:1 (white fails at 1.4:1)" },
-      "placeholder":  { "$value": "{color.neutral.500}",     "$type": "color", "$description": "Input placeholder text — 4.5:1 on white (AA)" },
-      "heading":      { "$value": "{color.neutral.950}",     "$type": "color", "$description": "Page/section headings — deepest warm brown-black" },
-      "caption":      { "$value": "{color.neutral.500}",     "$type": "color", "$description": "Small captions, metadata text" },
-      "code":         { "$value": "{color.primary.700}",     "$type": "color", "$description": "Inline code text — golden-toned" },
-      "error":        { "$value": "{color.danger.700}",      "$type": "color", "$description": "Error state text" },
-      "success":      { "$value": "{color.success.700}",     "$type": "color", "$description": "Success state text" },
-      "warning":      { "$value": "{color.warning.700}",     "$type": "color", "$description": "Warning state text" },
-      "info":         { "$value": "{color.info.700}",        "$type": "color", "$description": "Info state text" }
+      "default": {
+        "$value": "{color.neutral.900}",
+        "$type": "color",
+        "$description": "Primary text — ~16:1 on white (AAA)"
+      },
+      "secondary": {
+        "$value": "{color.neutral.700}",
+        "$type": "color",
+        "$description": "Supporting text — 7:1 on white (AAA)"
+      },
+      "tertiary": {
+        "$value": "{color.neutral.600}",
+        "$type": "color",
+        "$description": "Captions, hints — 4.5:1 on white (AA)"
+      },
+      "disabled": {
+        "$value": "{color.neutral.400}",
+        "$type": "color",
+        "$description": "Non-interactive text — below 3:1, intentional"
+      },
+      "inverse": {
+        "$value": "{color.neutral.0}",
+        "$type": "color",
+        "$description": "Text on dark/emphasis surfaces"
+      },
+      "link": {
+        "$value": "{color.primary.700}",
+        "$type": "color",
+        "$description": "Amber-brown links — 5:1 on cream white (AA)"
+      },
+      "link-hover": {
+        "$value": "{color.primary.800}",
+        "$type": "color",
+        "$description": "Deepened link on hover"
+      },
+      "on-emphasis": {
+        "$value": "{color.neutral.0}",
+        "$type": "color",
+        "$description": "White text on dark emphasis backgrounds — 21:1"
+      },
+      "on-primary": {
+        "$value": "{color.neutral.950}",
+        "$type": "color",
+        "$description": "WCAG A11Y OVERRIDE: Dark text on golden (#EAB308) — 6:1 (white fails at 1.4:1)"
+      },
+      "placeholder": {
+        "$value": "{color.neutral.500}",
+        "$type": "color",
+        "$description": "Input placeholder text — 4.5:1 on white (AA)"
+      },
+      "heading": {
+        "$value": "{color.neutral.950}",
+        "$type": "color",
+        "$description": "Page/section headings — deepest warm brown-black"
+      },
+      "caption": {
+        "$value": "{color.neutral.500}",
+        "$type": "color",
+        "$description": "Small captions, metadata text"
+      },
+      "code": {
+        "$value": "{color.primary.700}",
+        "$type": "color",
+        "$description": "Inline code text — golden-toned"
+      },
+      "error": {
+        "$value": "{color.danger.700}",
+        "$type": "color",
+        "$description": "Error state text"
+      },
+      "success": {
+        "$value": "{color.success.700}",
+        "$type": "color",
+        "$description": "Success state text"
+      },
+      "warning": {
+        "$value": "{color.warning.700}",
+        "$type": "color",
+        "$description": "Warning state text"
+      },
+      "info": { "$value": "{color.info.700}", "$type": "color", "$description": "Info state text" }
     },
 
     "icon": {
       "$description": "Icon fill colors. Match text hierarchy for visual consistency. 10 tokens.",
-      "default":      { "$value": "{color.neutral.700}",     "$type": "color", "$description": "Default icons — matches text/secondary" },
-      "secondary":    { "$value": "{color.neutral.500}",     "$type": "color", "$description": "Secondary/decorative icons" },
-      "tertiary":     { "$value": "{color.neutral.400}",     "$type": "color", "$description": "Tertiary / low-emphasis icons" },
-      "disabled":     { "$value": "{color.neutral.300}",     "$type": "color", "$description": "Disabled icon state" },
-      "inverse":      { "$value": "{color.neutral.0}",       "$type": "color", "$description": "Icons on dark surfaces" },
-      "primary":      { "$value": "{color.primary.600}",     "$type": "color", "$description": "Primary accent icon" },
-      "on-emphasis":  { "$value": "{color.neutral.0}",       "$type": "color", "$description": "Icons on emphasis/dark backgrounds" },
-      "danger":       { "$value": "{color.danger.600}",      "$type": "color", "$description": "Danger/error icon" },
-      "success":      { "$value": "{color.success.600}",     "$type": "color", "$description": "Success icon" },
-      "warning":      { "$value": "{color.warning.600}",     "$type": "color", "$description": "Warning icon" }
+      "default": {
+        "$value": "{color.neutral.700}",
+        "$type": "color",
+        "$description": "Default icons — matches text/secondary"
+      },
+      "secondary": {
+        "$value": "{color.neutral.500}",
+        "$type": "color",
+        "$description": "Secondary/decorative icons"
+      },
+      "tertiary": {
+        "$value": "{color.neutral.400}",
+        "$type": "color",
+        "$description": "Tertiary / low-emphasis icons"
+      },
+      "disabled": {
+        "$value": "{color.neutral.300}",
+        "$type": "color",
+        "$description": "Disabled icon state"
+      },
+      "inverse": {
+        "$value": "{color.neutral.0}",
+        "$type": "color",
+        "$description": "Icons on dark surfaces"
+      },
+      "primary": {
+        "$value": "{color.primary.600}",
+        "$type": "color",
+        "$description": "Primary accent icon"
+      },
+      "on-emphasis": {
+        "$value": "{color.neutral.0}",
+        "$type": "color",
+        "$description": "Icons on emphasis/dark backgrounds"
+      },
+      "danger": {
+        "$value": "{color.danger.600}",
+        "$type": "color",
+        "$description": "Danger/error icon"
+      },
+      "success": {
+        "$value": "{color.success.600}",
+        "$type": "color",
+        "$description": "Success icon"
+      },
+      "warning": {
+        "$value": "{color.warning.600}",
+        "$type": "color",
+        "$description": "Warning icon"
+      }
     },
 
     "border": {
       "$description": "Border colors for containers, inputs, and dividers. 15 tokens.",
-      "default":         { "$value": "{color.neutral.200}",  "$type": "color", "$description": "Default container borders" },
-      "subtle":          { "$value": "{color.neutral.100}",  "$type": "color", "$description": "Hairline dividers" },
-      "strong":          { "$value": "{color.neutral.400}",  "$type": "color", "$description": "Prominent interactive borders" },
-      "emphasis":        { "$value": "{color.neutral.700}",  "$type": "color", "$description": "High-contrast borders" },
-      "focus":           { "$value": "{color.primary.600}",  "$type": "color", "$description": "Focus ring — 3:1 contrast min (WCAG 2.4.7 + 2.4.11)" },
-      "disabled":        { "$value": "{color.neutral.200}",  "$type": "color", "$description": "Disabled element border" },
-      "interactive":     { "$value": "{color.neutral.300}",  "$type": "color", "$description": "Input border default state" },
-      "interactive-hover": { "$value": "{color.neutral.500}", "$type": "color", "$description": "Input border on hover" },
-      "primary":         { "$value": "{color.primary.300}",  "$type": "color", "$description": "Primary accent border" },
-      "success":         { "$value": "{color.success.300}",  "$type": "color", "$description": "Success state border" },
-      "warning":         { "$value": "{color.warning.300}",  "$type": "color", "$description": "Warning state border" },
-      "danger":          { "$value": "{color.danger.300}",   "$type": "color", "$description": "Danger/error state border" },
-      "info":            { "$value": "{color.info.300}",     "$type": "color", "$description": "Info state border" },
-      "on-emphasis":     { "$value": "{color.neutral.600}",  "$type": "color", "$description": "Border on dark/emphasis surfaces" },
-      "neutral":         { "$value": "{color.neutral.200}",  "$type": "color", "$description": "Neutral badge/chip border" }
+      "default": {
+        "$value": "{color.neutral.200}",
+        "$type": "color",
+        "$description": "Default container borders"
+      },
+      "subtle": {
+        "$value": "{color.neutral.100}",
+        "$type": "color",
+        "$description": "Hairline dividers"
+      },
+      "strong": {
+        "$value": "{color.neutral.400}",
+        "$type": "color",
+        "$description": "Prominent interactive borders"
+      },
+      "emphasis": {
+        "$value": "{color.neutral.700}",
+        "$type": "color",
+        "$description": "High-contrast borders"
+      },
+      "focus": {
+        "$value": "{color.primary.600}",
+        "$type": "color",
+        "$description": "Focus ring — 3:1 contrast min (WCAG 2.4.7 + 2.4.11)"
+      },
+      "disabled": {
+        "$value": "{color.neutral.200}",
+        "$type": "color",
+        "$description": "Disabled element border"
+      },
+      "interactive": {
+        "$value": "{color.neutral.300}",
+        "$type": "color",
+        "$description": "Input border default state"
+      },
+      "interactive-hover": {
+        "$value": "{color.neutral.500}",
+        "$type": "color",
+        "$description": "Input border on hover"
+      },
+      "primary": {
+        "$value": "{color.primary.300}",
+        "$type": "color",
+        "$description": "Primary accent border"
+      },
+      "success": {
+        "$value": "{color.success.300}",
+        "$type": "color",
+        "$description": "Success state border"
+      },
+      "warning": {
+        "$value": "{color.warning.300}",
+        "$type": "color",
+        "$description": "Warning state border"
+      },
+      "danger": {
+        "$value": "{color.danger.300}",
+        "$type": "color",
+        "$description": "Danger/error state border"
+      },
+      "info": {
+        "$value": "{color.info.300}",
+        "$type": "color",
+        "$description": "Info state border"
+      },
+      "on-emphasis": {
+        "$value": "{color.neutral.600}",
+        "$type": "color",
+        "$description": "Border on dark/emphasis surfaces"
+      },
+      "neutral": {
+        "$value": "{color.neutral.200}",
+        "$type": "color",
+        "$description": "Neutral badge/chip border"
+      }
     },
 
     "overlay": {
       "$description": "Overlay layers for dialogs, tooltips, and ghost patterns. 2 tokens.",
-      "scrim":   { "$value": "{color.alpha.black.48}", "$type": "color", "$description": "Modal backdrop scrim — 48% black" },
-      "ghost":   { "$value": "{color.alpha.black.8}",  "$type": "color", "$description": "Ghost overlay — subtle 8% black tint" }
+      "scrim": {
+        "$value": "{color.alpha.black.48}",
+        "$type": "color",
+        "$description": "Modal backdrop scrim — 48% black"
+      },
+      "ghost": {
+        "$value": "{color.alpha.black.8}",
+        "$type": "color",
+        "$description": "Ghost overlay — subtle 8% black tint"
+      }
     },
 
     "action": {
@@ -102,46 +353,94 @@
 
       "primary": {
         "$description": "Primary CTA — golden yellow brand color.",
-        "default":      { "$value": "{color.primary.600}",    "$type": "color", "$description": "Golden button fill — #CA8A04" },
-        "hover":        { "$value": "{color.primary.700}",    "$type": "color", "$description": "Deepened on hover" },
-        "active":       { "$value": "{color.primary.800}",    "$type": "color", "$description": "Pressed state" },
-        "disabled":     { "$value": "{color.neutral.300}",    "$type": "color", "$description": "Disabled fill" },
-        "text":         { "$value": "{color.neutral.950}",    "$type": "color", "$description": "WCAG A11Y OVERRIDE: Dark text on golden — 6:1 (white #FFF on #CA8A04 = 1.4:1, fails AA)" },
-        "subtle":       { "$value": "{color.primary.50}",     "$type": "color", "$description": "Ghost/subtle variant background" },
-        "subtle-hover": { "$value": "{color.primary.100}",    "$type": "color", "$description": "Ghost hover fill" }
+        "default": {
+          "$value": "{color.primary.600}",
+          "$type": "color",
+          "$description": "Golden button fill — #CA8A04"
+        },
+        "hover": {
+          "$value": "{color.primary.700}",
+          "$type": "color",
+          "$description": "Deepened on hover"
+        },
+        "active": {
+          "$value": "{color.primary.800}",
+          "$type": "color",
+          "$description": "Pressed state"
+        },
+        "disabled": {
+          "$value": "{color.neutral.300}",
+          "$type": "color",
+          "$description": "Disabled fill"
+        },
+        "text": {
+          "$value": "{color.neutral.950}",
+          "$type": "color",
+          "$description": "WCAG A11Y OVERRIDE: Dark text on golden — 6:1 (white #FFF on #CA8A04 = 1.4:1, fails AA)"
+        },
+        "subtle": {
+          "$value": "{color.primary.50}",
+          "$type": "color",
+          "$description": "Ghost/subtle variant background"
+        },
+        "subtle-hover": {
+          "$value": "{color.primary.100}",
+          "$type": "color",
+          "$description": "Ghost hover fill"
+        }
       },
 
       "secondary": {
         "$description": "Secondary action — warm slate.",
-        "default":      { "$value": "{color.secondary.600}",  "$type": "color" },
-        "hover":        { "$value": "{color.secondary.700}",  "$type": "color" },
-        "active":       { "$value": "{color.secondary.800}",  "$type": "color" },
-        "disabled":     { "$value": "{color.neutral.300}",    "$type": "color" },
-        "text":         { "$value": "{color.neutral.0}",      "$type": "color", "$description": "White text on warm slate — passes AA" },
-        "subtle":       { "$value": "{color.secondary.50}",   "$type": "color" },
-        "subtle-hover": { "$value": "{color.secondary.100}",  "$type": "color" }
+        "default": { "$value": "{color.secondary.600}", "$type": "color" },
+        "hover": { "$value": "{color.secondary.700}", "$type": "color" },
+        "active": { "$value": "{color.secondary.800}", "$type": "color" },
+        "disabled": { "$value": "{color.neutral.300}", "$type": "color" },
+        "text": {
+          "$value": "{color.neutral.0}",
+          "$type": "color",
+          "$description": "White text on warm slate — passes AA"
+        },
+        "subtle": { "$value": "{color.secondary.50}", "$type": "color" },
+        "subtle-hover": { "$value": "{color.secondary.100}", "$type": "color" }
       },
 
       "ghost": {
         "$description": "Ghost / outline action — transparent fill, visible border.",
-        "default":      { "$value": "{color.alpha.black.0}",  "$type": "color", "$description": "Fully transparent fill" },
-        "hover":        { "$value": "{color.neutral.50}",     "$type": "color", "$description": "Subtle fill on hover" },
-        "active":       { "$value": "{color.neutral.100}",    "$type": "color" },
-        "disabled":     { "$value": "{color.neutral.50}",     "$type": "color" },
-        "text":         { "$value": "{color.neutral.900}",    "$type": "color", "$description": "Text color for ghost buttons" },
-        "subtle":       { "$value": "{color.alpha.black.0}",  "$type": "color" },
-        "subtle-hover": { "$value": "{color.neutral.50}",     "$type": "color" }
+        "default": {
+          "$value": "{color.alpha.black.0}",
+          "$type": "color",
+          "$description": "Fully transparent fill"
+        },
+        "hover": {
+          "$value": "{color.neutral.50}",
+          "$type": "color",
+          "$description": "Subtle fill on hover"
+        },
+        "active": { "$value": "{color.neutral.100}", "$type": "color" },
+        "disabled": { "$value": "{color.neutral.50}", "$type": "color" },
+        "text": {
+          "$value": "{color.neutral.900}",
+          "$type": "color",
+          "$description": "Text color for ghost buttons"
+        },
+        "subtle": { "$value": "{color.alpha.black.0}", "$type": "color" },
+        "subtle-hover": { "$value": "{color.neutral.50}", "$type": "color" }
       },
 
       "destructive": {
         "$description": "Destructive / danger action — coral rose.",
-        "default":      { "$value": "{color.danger.600}",     "$type": "color" },
-        "hover":        { "$value": "{color.danger.700}",     "$type": "color" },
-        "active":       { "$value": "{color.danger.800}",     "$type": "color" },
-        "disabled":     { "$value": "{color.neutral.300}",    "$type": "color" },
-        "text":         { "$value": "{color.neutral.0}",      "$type": "color", "$description": "White text on coral rose — passes AA" },
-        "subtle":       { "$value": "{color.danger.50}",      "$type": "color" },
-        "subtle-hover": { "$value": "{color.danger.100}",     "$type": "color" }
+        "default": { "$value": "{color.danger.600}", "$type": "color" },
+        "hover": { "$value": "{color.danger.700}", "$type": "color" },
+        "active": { "$value": "{color.danger.800}", "$type": "color" },
+        "disabled": { "$value": "{color.neutral.300}", "$type": "color" },
+        "text": {
+          "$value": "{color.neutral.0}",
+          "$type": "color",
+          "$description": "White text on coral rose — passes AA"
+        },
+        "subtle": { "$value": "{color.danger.50}", "$type": "color" },
+        "subtle-hover": { "$value": "{color.danger.100}", "$type": "color" }
       }
     },
 
@@ -149,38 +448,61 @@
       "$description": "Semantic feedback colors — badge, alert, and inline feedback patterns. 24 tokens (4 statuses × 6 variants).",
 
       "success": {
-        "bg":           { "$value": "{color.success.50}",     "$type": "color", "$description": "Light emerald tint background" },
-        "bg-strong":    { "$value": "{color.success.600}",    "$type": "color", "$description": "Bold emerald fill" },
-        "text":         { "$value": "{color.success.800}",    "$type": "color", "$description": "Success text on light bg — 4.5:1" },
-        "text-strong":  { "$value": "{color.neutral.0}",      "$type": "color", "$description": "White on success/600 — passes AA" },
-        "border":       { "$value": "{color.success.300}",    "$type": "color" },
-        "icon":         { "$value": "{color.success.600}",    "$type": "color" }
+        "bg": {
+          "$value": "{color.success.50}",
+          "$type": "color",
+          "$description": "Light emerald tint background"
+        },
+        "bg-strong": {
+          "$value": "{color.success.600}",
+          "$type": "color",
+          "$description": "Bold emerald fill"
+        },
+        "text": {
+          "$value": "{color.success.800}",
+          "$type": "color",
+          "$description": "Success text on light bg — 4.5:1"
+        },
+        "text-strong": {
+          "$value": "{color.neutral.0}",
+          "$type": "color",
+          "$description": "White on success/600 — passes AA"
+        },
+        "border": { "$value": "{color.success.300}", "$type": "color" },
+        "icon": { "$value": "{color.success.600}", "$type": "color" }
       },
       "warning": {
-        "bg":           { "$value": "{color.warning.50}",     "$type": "color" },
-        "bg-strong":    { "$value": "{color.warning.500}",    "$type": "color" },
-        "text":         { "$value": "{color.warning.900}",    "$type": "color", "$description": "Deep orange-brown on light bg" },
-        "text-strong":  { "$value": "{color.neutral.0}",      "$type": "color", "$description": "White on warning/500" },
-        "border":       { "$value": "{color.warning.300}",    "$type": "color" },
-        "icon":         { "$value": "{color.warning.700}",    "$type": "color" }
+        "bg": { "$value": "{color.warning.50}", "$type": "color" },
+        "bg-strong": { "$value": "{color.warning.500}", "$type": "color" },
+        "text": {
+          "$value": "{color.warning.900}",
+          "$type": "color",
+          "$description": "Deep orange-brown on light bg"
+        },
+        "text-strong": {
+          "$value": "{color.neutral.0}",
+          "$type": "color",
+          "$description": "White on warning/500"
+        },
+        "border": { "$value": "{color.warning.300}", "$type": "color" },
+        "icon": { "$value": "{color.warning.700}", "$type": "color" }
       },
       "danger": {
-        "bg":           { "$value": "{color.danger.50}",      "$type": "color" },
-        "bg-strong":    { "$value": "{color.danger.600}",     "$type": "color" },
-        "text":         { "$value": "{color.danger.800}",     "$type": "color" },
-        "text-strong":  { "$value": "{color.neutral.0}",      "$type": "color" },
-        "border":       { "$value": "{color.danger.300}",     "$type": "color" },
-        "icon":         { "$value": "{color.danger.600}",     "$type": "color" }
+        "bg": { "$value": "{color.danger.50}", "$type": "color" },
+        "bg-strong": { "$value": "{color.danger.600}", "$type": "color" },
+        "text": { "$value": "{color.danger.800}", "$type": "color" },
+        "text-strong": { "$value": "{color.neutral.0}", "$type": "color" },
+        "border": { "$value": "{color.danger.300}", "$type": "color" },
+        "icon": { "$value": "{color.danger.600}", "$type": "color" }
       },
       "info": {
-        "bg":           { "$value": "{color.info.50}",        "$type": "color" },
-        "bg-strong":    { "$value": "{color.info.600}",       "$type": "color" },
-        "text":         { "$value": "{color.info.800}",       "$type": "color" },
-        "text-strong":  { "$value": "{color.neutral.0}",      "$type": "color" },
-        "border":       { "$value": "{color.info.300}",       "$type": "color" },
-        "icon":         { "$value": "{color.info.600}",       "$type": "color" }
+        "bg": { "$value": "{color.info.50}", "$type": "color" },
+        "bg-strong": { "$value": "{color.info.600}", "$type": "color" },
+        "text": { "$value": "{color.info.800}", "$type": "color" },
+        "text-strong": { "$value": "{color.neutral.0}", "$type": "color" },
+        "border": { "$value": "{color.info.300}", "$type": "color" },
+        "icon": { "$value": "{color.info.600}", "$type": "color" }
       }
     }
-
   }
 }

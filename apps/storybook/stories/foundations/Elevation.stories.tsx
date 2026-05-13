@@ -16,9 +16,15 @@ function ElevationScale() {
   return (
     <div style={{ padding: '24px', fontFamily: 'var(--pluto-font-family-sans)' }}>
       <h1 style={{ fontSize: '24px', fontWeight: 700, marginBottom: '8px' }}>Elevation</h1>
-      <p style={{ fontSize: '14px', color: 'var(--pluto-color-text-secondary)', marginBottom: '40px' }}>
-        Shadow scale creates perceived depth and layering hierarchy. Multi-layer shadows produce more
-        natural-looking results than single shadows.
+      <p
+        style={{
+          fontSize: '14px',
+          color: 'var(--pluto-color-text-secondary)',
+          marginBottom: '40px',
+        }}
+      >
+        Shadow scale creates perceived depth and layering hierarchy. Multi-layer shadows produce
+        more natural-looking results than single shadows.
       </p>
 
       <div

@@ -15,7 +15,10 @@
     "./base.css": "./src/base.css",
     "./a11y.css": "./src/a11y.css"
   },
-  "files": ["dist", "src/*.css"],
+  "files": [
+    "dist",
+    "src/*.css"
+  ],
   "scripts": {
     "build": "tsup src/index.ts --format esm,cjs --dts",
     "typecheck": "tsc --noEmit",

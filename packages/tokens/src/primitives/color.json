@@ -8,135 +8,191 @@
 
     "neutral": {
       "$description": "Warm cream scale — light surfaces carry a subtle warmth; dark surfaces use rich warm charcoal. Use for backgrounds, text, and borders.",
-      "0":    { "$value": "#FFFFFF",  "$type": "color", "$description": "Pure white" },
-      "50":   { "$value": "#FDFCF8",  "$type": "color", "$description": "Warm white — page background light mode" },
-      "100":  { "$value": "#FAF8F0",  "$type": "color", "$description": "Cream — card backgrounds" },
-      "200":  { "$value": "#F3EFE4",  "$type": "color", "$description": "Light warm beige — subtle backgrounds" },
-      "300":  { "$value": "#E8E0CF",  "$type": "color", "$description": "Warm beige — borders light" },
-      "400":  { "$value": "#CEC4B4",  "$type": "color", "$description": "Sand — strong borders" },
-      "500":  { "$value": "#A89C8C",  "$type": "color", "$description": "Warm gray — placeholder text" },
-      "600":  { "$value": "#7C7068",  "$type": "color", "$description": "Warm taupe — tertiary text" },
-      "700":  { "$value": "#504840",  "$type": "color", "$description": "Dark warm — secondary text" },
-      "800":  { "$value": "#302820",  "$type": "color", "$description": "Warm charcoal — dark card surfaces (attendance card vibe)" },
-      "900":  { "$value": "#1E1810",  "$type": "color", "$description": "Dark warm — primary text, dark page bg" },
-      "950":  { "$value": "#120E0A",  "$type": "color", "$description": "Near-black warm" },
-      "1000": { "$value": "#060403",  "$type": "color", "$description": "Richest dark" }
+      "0": { "$value": "#FFFFFF", "$type": "color", "$description": "Pure white" },
+      "50": {
+        "$value": "#FDFCF8",
+        "$type": "color",
+        "$description": "Warm white — page background light mode"
+      },
+      "100": { "$value": "#FAF8F0", "$type": "color", "$description": "Cream — card backgrounds" },
+      "200": {
+        "$value": "#F3EFE4",
+        "$type": "color",
+        "$description": "Light warm beige — subtle backgrounds"
+      },
+      "300": {
+        "$value": "#E8E0CF",
+        "$type": "color",
+        "$description": "Warm beige — borders light"
+      },
+      "400": { "$value": "#CEC4B4", "$type": "color", "$description": "Sand — strong borders" },
+      "500": {
+        "$value": "#A89C8C",
+        "$type": "color",
+        "$description": "Warm gray — placeholder text"
+      },
+      "600": {
+        "$value": "#7C7068",
+        "$type": "color",
+        "$description": "Warm taupe — tertiary text"
+      },
+      "700": {
+        "$value": "#504840",
+        "$type": "color",
+        "$description": "Dark warm — secondary text"
+      },
+      "800": {
+        "$value": "#302820",
+        "$type": "color",
+        "$description": "Warm charcoal — dark card surfaces (attendance card vibe)"
+      },
+      "900": {
+        "$value": "#1E1810",
+        "$type": "color",
+        "$description": "Dark warm — primary text, dark page bg"
+      },
+      "950": { "$value": "#120E0A", "$type": "color", "$description": "Near-black warm" },
+      "1000": { "$value": "#060403", "$type": "color", "$description": "Richest dark" }
     },
 
     "primary": {
       "$description": "Golden Yellow — primary actions, focus states, and brand identity. 400 (#FACC15) is the hero tone. Dark text required on 50–600.",
-      "50":  { "$value": "#FEFCE8",  "$type": "color", "$description": "Pastel yellow — selected/active backgrounds" },
-      "100": { "$value": "#FEF9C3",  "$type": "color", "$description": "Pale lemon" },
-      "200": { "$value": "#FEF08A",  "$type": "color", "$description": "Light yellow" },
-      "300": { "$value": "#FDE047",  "$type": "color", "$description": "Medium yellow" },
-      "400": { "$value": "#FACC15",  "$type": "color", "$description": "Golden hero — badges, active dots, highlights" },
-      "500": { "$value": "#EAB308",  "$type": "color", "$description": "Rich gold — primary action default" },
-      "600": { "$value": "#CA8A04",  "$type": "color", "$description": "Dark gold — hover states" },
-      "700": { "$value": "#A16207",  "$type": "color", "$description": "Amber-brown — links 5:1 on white (WCAG AA)" },
-      "800": { "$value": "#854D0E",  "$type": "color", "$description": "Deep amber — pressed states" },
-      "900": { "$value": "#713F12",  "$type": "color", "$description": "Dark amber" },
-      "950": { "$value": "#422006",  "$type": "color", "$description": "Richest amber" }
+      "50": {
+        "$value": "#FEFCE8",
+        "$type": "color",
+        "$description": "Pastel yellow — selected/active backgrounds"
+      },
+      "100": { "$value": "#FEF9C3", "$type": "color", "$description": "Pale lemon" },
+      "200": { "$value": "#FEF08A", "$type": "color", "$description": "Light yellow" },
+      "300": { "$value": "#FDE047", "$type": "color", "$description": "Medium yellow" },
+      "400": {
+        "$value": "#FACC15",
+        "$type": "color",
+        "$description": "Golden hero — badges, active dots, highlights"
+      },
+      "500": {
+        "$value": "#EAB308",
+        "$type": "color",
+        "$description": "Rich gold — primary action default"
+      },
+      "600": { "$value": "#CA8A04", "$type": "color", "$description": "Dark gold — hover states" },
+      "700": {
+        "$value": "#A16207",
+        "$type": "color",
+        "$description": "Amber-brown — links 5:1 on white (WCAG AA)"
+      },
+      "800": {
+        "$value": "#854D0E",
+        "$type": "color",
+        "$description": "Deep amber — pressed states"
+      },
+      "900": { "$value": "#713F12", "$type": "color", "$description": "Dark amber" },
+      "950": { "$value": "#422006", "$type": "color", "$description": "Richest amber" }
     },
 
     "secondary": {
       "$description": "Warm Slate — muted neutral companion. Secondary actions, helper text, visited links.",
-      "50":  { "$value": "#F9F8F6",  "$type": "color" },
-      "100": { "$value": "#F1EFEB",  "$type": "color" },
-      "200": { "$value": "#E3E0D8",  "$type": "color" },
-      "300": { "$value": "#C9C4BC",  "$type": "color" },
-      "400": { "$value": "#A8A298",  "$type": "color" },
-      "500": { "$value": "#857E74",  "$type": "color" },
-      "600": { "$value": "#665E55",  "$type": "color" },
-      "700": { "$value": "#4E4840",  "$type": "color" },
-      "800": { "$value": "#36302A",  "$type": "color" },
-      "900": { "$value": "#221E18",  "$type": "color" },
-      "950": { "$value": "#14110E",  "$type": "color" }
+      "50": { "$value": "#F9F8F6", "$type": "color" },
+      "100": { "$value": "#F1EFEB", "$type": "color" },
+      "200": { "$value": "#E3E0D8", "$type": "color" },
+      "300": { "$value": "#C9C4BC", "$type": "color" },
+      "400": { "$value": "#A8A298", "$type": "color" },
+      "500": { "$value": "#857E74", "$type": "color" },
+      "600": { "$value": "#665E55", "$type": "color" },
+      "700": { "$value": "#4E4840", "$type": "color" },
+      "800": { "$value": "#36302A", "$type": "color" },
+      "900": { "$value": "#221E18", "$type": "color" },
+      "950": { "$value": "#14110E", "$type": "color" }
     },
 
     "success": {
       "$description": "Emerald green — confirmations, positive states, completed actions.",
-      "50":  { "$value": "#F0FDF4",  "$type": "color" },
-      "100": { "$value": "#DCFCE7",  "$type": "color" },
-      "200": { "$value": "#BBF7D0",  "$type": "color" },
-      "300": { "$value": "#86EFAC",  "$type": "color" },
-      "400": { "$value": "#4ADE80",  "$type": "color" },
-      "500": { "$value": "#22C55E",  "$type": "color" },
-      "600": { "$value": "#16A34A",  "$type": "color" },
-      "700": { "$value": "#15803D",  "$type": "color" },
-      "800": { "$value": "#166534",  "$type": "color" },
-      "900": { "$value": "#14532D",  "$type": "color" },
-      "950": { "$value": "#052E16",  "$type": "color" }
+      "50": { "$value": "#F0FDF4", "$type": "color" },
+      "100": { "$value": "#DCFCE7", "$type": "color" },
+      "200": { "$value": "#BBF7D0", "$type": "color" },
+      "300": { "$value": "#86EFAC", "$type": "color" },
+      "400": { "$value": "#4ADE80", "$type": "color" },
+      "500": { "$value": "#22C55E", "$type": "color" },
+      "600": { "$value": "#16A34A", "$type": "color" },
+      "700": { "$value": "#15803D", "$type": "color" },
+      "800": { "$value": "#166534", "$type": "color" },
+      "900": { "$value": "#14532D", "$type": "color" },
+      "950": { "$value": "#052E16", "$type": "color" }
     },
 
     "warning": {
       "$description": "Orange — warnings, caution states. Distinct from golden yellow primary to avoid ambiguity.",
-      "50":  { "$value": "#FFF7ED",  "$type": "color" },
-      "100": { "$value": "#FFEDD5",  "$type": "color" },
-      "200": { "$value": "#FED7AA",  "$type": "color" },
-      "300": { "$value": "#FDBA74",  "$type": "color" },
-      "400": { "$value": "#FB923C",  "$type": "color" },
-      "500": { "$value": "#F97316",  "$type": "color" },
-      "600": { "$value": "#EA580C",  "$type": "color" },
-      "700": { "$value": "#C2410C",  "$type": "color" },
-      "800": { "$value": "#9A3412",  "$type": "color" },
-      "900": { "$value": "#7C2D12",  "$type": "color" },
-      "950": { "$value": "#431407",  "$type": "color" }
+      "50": { "$value": "#FFF7ED", "$type": "color" },
+      "100": { "$value": "#FFEDD5", "$type": "color" },
+      "200": { "$value": "#FED7AA", "$type": "color" },
+      "300": { "$value": "#FDBA74", "$type": "color" },
+      "400": { "$value": "#FB923C", "$type": "color" },
+      "500": { "$value": "#F97316", "$type": "color" },
+      "600": { "$value": "#EA580C", "$type": "color" },
+      "700": { "$value": "#C2410C", "$type": "color" },
+      "800": { "$value": "#9A3412", "$type": "color" },
+      "900": { "$value": "#7C2D12", "$type": "color" },
+      "950": { "$value": "#431407", "$type": "color" }
     },
 
     "danger": {
       "$description": "Coral Rose — errors, destructive actions. Warm and clear without harsh red.",
-      "50":  { "$value": "#FFF1F2",  "$type": "color" },
-      "100": { "$value": "#FFE4E6",  "$type": "color" },
-      "200": { "$value": "#FECDD3",  "$type": "color" },
-      "300": { "$value": "#FDA4AF",  "$type": "color" },
-      "400": { "$value": "#FB7185",  "$type": "color" },
-      "500": { "$value": "#F43F5E",  "$type": "color" },
-      "600": { "$value": "#E11D48",  "$type": "color" },
-      "700": { "$value": "#BE123C",  "$type": "color" },
-      "800": { "$value": "#9F1239",  "$type": "color" },
-      "900": { "$value": "#881337",  "$type": "color" },
-      "950": { "$value": "#4C0519",  "$type": "color" }
+      "50": { "$value": "#FFF1F2", "$type": "color" },
+      "100": { "$value": "#FFE4E6", "$type": "color" },
+      "200": { "$value": "#FECDD3", "$type": "color" },
+      "300": { "$value": "#FDA4AF", "$type": "color" },
+      "400": { "$value": "#FB7185", "$type": "color" },
+      "500": { "$value": "#F43F5E", "$type": "color" },
+      "600": { "$value": "#E11D48", "$type": "color" },
+      "700": { "$value": "#BE123C", "$type": "color" },
+      "800": { "$value": "#9F1239", "$type": "color" },
+      "900": { "$value": "#881337", "$type": "color" },
+      "950": { "$value": "#4C0519", "$type": "color" }
     },
 
     "info": {
       "$description": "Sky Blue — informational states, tooltips, data visualization. Zero purple.",
-      "50":  { "$value": "#F0F9FF",  "$type": "color" },
-      "100": { "$value": "#E0F2FE",  "$type": "color" },
-      "200": { "$value": "#BAE6FD",  "$type": "color" },
-      "300": { "$value": "#7DD3FC",  "$type": "color" },
-      "400": { "$value": "#38BDF8",  "$type": "color" },
-      "500": { "$value": "#0EA5E9",  "$type": "color" },
-      "600": { "$value": "#0284C7",  "$type": "color" },
-      "700": { "$value": "#0369A1",  "$type": "color" },
-      "800": { "$value": "#075985",  "$type": "color" },
-      "900": { "$value": "#0C4A6E",  "$type": "color" },
-      "950": { "$value": "#082F49",  "$type": "color" }
+      "50": { "$value": "#F0F9FF", "$type": "color" },
+      "100": { "$value": "#E0F2FE", "$type": "color" },
+      "200": { "$value": "#BAE6FD", "$type": "color" },
+      "300": { "$value": "#7DD3FC", "$type": "color" },
+      "400": { "$value": "#38BDF8", "$type": "color" },
+      "500": { "$value": "#0EA5E9", "$type": "color" },
+      "600": { "$value": "#0284C7", "$type": "color" },
+      "700": { "$value": "#0369A1", "$type": "color" },
+      "800": { "$value": "#075985", "$type": "color" },
+      "900": { "$value": "#0C4A6E", "$type": "color" },
+      "950": { "$value": "#082F49", "$type": "color" }
     },
 
     "alpha": {
       "$description": "Transparent overlays using black and white alpha channels. Use for scrim, overlay, and shadow tokens.",
       "black": {
-        "0":   { "$value": "rgba(0, 0, 0, 0)",    "$type": "color", "$description": "Fully transparent — used for ghost button default state" },
-        "4":   { "$value": "rgba(0, 0, 0, 0.04)", "$type": "color" },
-        "8":   { "$value": "rgba(0, 0, 0, 0.08)", "$type": "color" },
-        "12":  { "$value": "rgba(0, 0, 0, 0.12)", "$type": "color" },
-        "16":  { "$value": "rgba(0, 0, 0, 0.16)", "$type": "color" },
-        "24":  { "$value": "rgba(0, 0, 0, 0.24)", "$type": "color" },
-        "32":  { "$value": "rgba(0, 0, 0, 0.32)", "$type": "color" },
-        "48":  { "$value": "rgba(0, 0, 0, 0.48)", "$type": "color" },
-        "64":  { "$value": "rgba(0, 0, 0, 0.64)", "$type": "color" },
-        "80":  { "$value": "rgba(0, 0, 0, 0.80)", "$type": "color" }
+        "0": {
+          "$value": "rgba(0, 0, 0, 0)",
+          "$type": "color",
+          "$description": "Fully transparent — used for ghost button default state"
+        },
+        "4": { "$value": "rgba(0, 0, 0, 0.04)", "$type": "color" },
+        "8": { "$value": "rgba(0, 0, 0, 0.08)", "$type": "color" },
+        "12": { "$value": "rgba(0, 0, 0, 0.12)", "$type": "color" },
+        "16": { "$value": "rgba(0, 0, 0, 0.16)", "$type": "color" },
+        "24": { "$value": "rgba(0, 0, 0, 0.24)", "$type": "color" },
+        "32": { "$value": "rgba(0, 0, 0, 0.32)", "$type": "color" },
+        "48": { "$value": "rgba(0, 0, 0, 0.48)", "$type": "color" },
+        "64": { "$value": "rgba(0, 0, 0, 0.64)", "$type": "color" },
+        "80": { "$value": "rgba(0, 0, 0, 0.80)", "$type": "color" }
       },
       "white": {
-        "4":   { "$value": "rgba(255, 255, 255, 0.04)", "$type": "color" },
-        "8":   { "$value": "rgba(255, 255, 255, 0.08)", "$type": "color" },
-        "12":  { "$value": "rgba(255, 255, 255, 0.12)", "$type": "color" },
-        "16":  { "$value": "rgba(255, 255, 255, 0.16)", "$type": "color" },
-        "24":  { "$value": "rgba(255, 255, 255, 0.24)", "$type": "color" },
-        "32":  { "$value": "rgba(255, 255, 255, 0.32)", "$type": "color" },
-        "48":  { "$value": "rgba(255, 255, 255, 0.48)", "$type": "color" },
-        "64":  { "$value": "rgba(255, 255, 255, 0.64)", "$type": "color" },
-        "80":  { "$value": "rgba(255, 255, 255, 0.80)", "$type": "color" }
+        "4": { "$value": "rgba(255, 255, 255, 0.04)", "$type": "color" },
+        "8": { "$value": "rgba(255, 255, 255, 0.08)", "$type": "color" },
+        "12": { "$value": "rgba(255, 255, 255, 0.12)", "$type": "color" },
+        "16": { "$value": "rgba(255, 255, 255, 0.16)", "$type": "color" },
+        "24": { "$value": "rgba(255, 255, 255, 0.24)", "$type": "color" },
+        "32": { "$value": "rgba(255, 255, 255, 0.32)", "$type": "color" },
+        "48": { "$value": "rgba(255, 255, 255, 0.48)", "$type": "color" },
+        "64": { "$value": "rgba(255, 255, 255, 0.64)", "$type": "color" },
+        "80": { "$value": "rgba(255, 255, 255, 0.80)", "$type": "color" }
       }
     }
   }

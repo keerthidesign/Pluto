@@ -16,11 +16,23 @@ function DurationDemo() {
   return (
     <div style={{ padding: '24px', fontFamily: 'var(--pluto-font-family-sans)' }}>
       <h1 style={{ fontSize: '24px', fontWeight: 700, marginBottom: '8px' }}>Duration</h1>
-      <p style={{ fontSize: '14px', color: 'var(--pluto-color-text-secondary)', marginBottom: '8px' }}>
+      <p
+        style={{
+          fontSize: '14px',
+          color: 'var(--pluto-color-text-secondary)',
+          marginBottom: '8px',
+        }}
+      >
         Click each row to preview the transition duration. Shorter durations for micro-interactions,
         longer for content entering/leaving the screen.
       </p>
-      <p style={{ fontSize: '13px', color: 'var(--pluto-color-text-tertiary)', marginBottom: '32px' }}>
+      <p
+        style={{
+          fontSize: '13px',
+          color: 'var(--pluto-color-text-tertiary)',
+          marginBottom: '32px',
+        }}
+      >
         Note: All animations are disabled when <code>prefers-reduced-motion: reduce</code> is set.
       </p>
 
@@ -68,16 +80,34 @@ function EasingDemo() {
   const easings: { name: string; value: string; usage: string }[] = [
     { name: 'linear', value: 'linear', usage: 'Progress bars, opacity' },
     { name: 'ease-in', value: 'cubic-bezier(0.4, 0, 1, 1)', usage: 'Elements leaving screen' },
-    { name: 'ease-out', value: 'cubic-bezier(0, 0, 0.2, 1)', usage: 'Elements entering screen (most common)' },
-    { name: 'ease-in-out', value: 'cubic-bezier(0.4, 0, 0.2, 1)', usage: 'Elements moving within screen' },
-    { name: 'spring', value: 'cubic-bezier(0.175, 0.885, 0.32, 1.275)', usage: 'Playful, approachable' },
+    {
+      name: 'ease-out',
+      value: 'cubic-bezier(0, 0, 0.2, 1)',
+      usage: 'Elements entering screen (most common)',
+    },
+    {
+      name: 'ease-in-out',
+      value: 'cubic-bezier(0.4, 0, 0.2, 1)',
+      usage: 'Elements moving within screen',
+    },
+    {
+      name: 'spring',
+      value: 'cubic-bezier(0.175, 0.885, 0.32, 1.275)',
+      usage: 'Playful, approachable',
+    },
     { name: 'bounce', value: 'cubic-bezier(0.34, 1.56, 0.64, 1)', usage: 'Delight moments only' },
   ];
 
   return (
     <div style={{ padding: '24px', fontFamily: 'var(--pluto-font-family-sans)' }}>
       <h1 style={{ fontSize: '24px', fontWeight: 700, marginBottom: '8px' }}>Easing Curves</h1>
-      <p style={{ fontSize: '14px', color: 'var(--pluto-color-text-secondary)', marginBottom: '32px' }}>
+      <p
+        style={{
+          fontSize: '14px',
+          color: 'var(--pluto-color-text-secondary)',
+          marginBottom: '32px',
+        }}
+      >
         Click to animate. Ease-out is the default for most UI — elements decelerate as they enter,
         giving a physical, grounded feel.
       </p>
@@ -85,7 +115,13 @@ function EasingDemo() {
       {easings.map((e) => (
         <div
           key={e.name}
-          style={{ display: 'flex', alignItems: 'center', gap: '24px', marginBottom: '16px', cursor: 'pointer' }}
+          style={{
+            display: 'flex',
+            alignItems: 'center',
+            gap: '24px',
+            marginBottom: '16px',
+            cursor: 'pointer',
+          }}
           onClick={() => setActive(active === e.name ? null : e.name)}
         >
           <div
@@ -101,8 +137,12 @@ function EasingDemo() {
           />
           <div>
             <div style={{ fontSize: '14px', fontWeight: 500 }}>motion.easing.{e.name}</div>
-            <code style={{ fontSize: '11px', color: 'var(--pluto-color-text-tertiary)' }}>{e.value}</code>
-            <div style={{ fontSize: '12px', color: 'var(--pluto-color-text-tertiary)' }}>{e.usage}</div>
+            <code style={{ fontSize: '11px', color: 'var(--pluto-color-text-tertiary)' }}>
+              {e.value}
+            </code>
+            <div style={{ fontSize: '12px', color: 'var(--pluto-color-text-tertiary)' }}>
+              {e.usage}
+            </div>
           </div>
         </div>
       ))}

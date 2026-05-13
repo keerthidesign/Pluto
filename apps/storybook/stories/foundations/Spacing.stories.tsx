@@ -30,18 +30,38 @@ function SpacingScale() {
   return (
     <div style={{ padding: '24px', fontFamily: 'var(--pluto-font-family-sans)' }}>
       <h1 style={{ fontSize: '24px', fontWeight: 700, marginBottom: '8px' }}>Spacing Scale</h1>
-      <p style={{ fontSize: '14px', color: 'var(--pluto-color-text-secondary)', marginBottom: '8px' }}>
-        4px base unit. Every value is a multiple of 4px, ensuring pixel-perfect alignment across
-        all screen densities.
+      <p
+        style={{
+          fontSize: '14px',
+          color: 'var(--pluto-color-text-secondary)',
+          marginBottom: '8px',
+        }}
+      >
+        4px base unit. Every value is a multiple of 4px, ensuring pixel-perfect alignment across all
+        screen densities.
       </p>
-      <p style={{ fontSize: '13px', color: 'var(--pluto-color-text-tertiary)', marginBottom: '40px' }}>
+      <p
+        style={{
+          fontSize: '13px',
+          color: 'var(--pluto-color-text-tertiary)',
+          marginBottom: '40px',
+        }}
+      >
         ⚠️ spacing.11 (44px) is the WCAG 2.5.5 minimum touch target size.
       </p>
 
       <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
         {steps.map(({ key, px }) => (
           <div key={key} style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>
-            <div style={{ width: '80px', fontSize: '13px', fontWeight: 500, textAlign: 'right', color: 'var(--pluto-color-text-secondary)' }}>
+            <div
+              style={{
+                width: '80px',
+                fontSize: '13px',
+                fontWeight: 500,
+                textAlign: 'right',
+                color: 'var(--pluto-color-text-secondary)',
+              }}
+            >
               spacing.{key}
             </div>
             <div
@@ -68,26 +88,61 @@ function SemanticSpacing() {
     {
       label: 'Inset (Padding)',
       tokens: ['xs (8px)', 'sm (12px)', 'md (16px)', 'lg (24px)', 'xl (32px)', '2xl (48px)'],
-      cssVars: ['--pluto-space-inset-xs', '--pluto-space-inset-sm', '--pluto-space-inset-md', '--pluto-space-inset-lg', '--pluto-space-inset-xl', '--pluto-space-inset-2xl'],
+      cssVars: [
+        '--pluto-space-inset-xs',
+        '--pluto-space-inset-sm',
+        '--pluto-space-inset-md',
+        '--pluto-space-inset-lg',
+        '--pluto-space-inset-xl',
+        '--pluto-space-inset-2xl',
+      ],
     },
     {
       label: 'Stack (Vertical Gap)',
-      tokens: ['xs (4px)', 'sm (8px)', 'md (16px)', 'lg (24px)', 'xl (32px)', '2xl (48px)', '3xl (80px)'],
-      cssVars: ['--pluto-space-stack-xs', '--pluto-space-stack-sm', '--pluto-space-stack-md', '--pluto-space-stack-lg', '--pluto-space-stack-xl', '--pluto-space-stack-2xl', '--pluto-space-stack-3xl'],
+      tokens: [
+        'xs (4px)',
+        'sm (8px)',
+        'md (16px)',
+        'lg (24px)',
+        'xl (32px)',
+        '2xl (48px)',
+        '3xl (80px)',
+      ],
+      cssVars: [
+        '--pluto-space-stack-xs',
+        '--pluto-space-stack-sm',
+        '--pluto-space-stack-md',
+        '--pluto-space-stack-lg',
+        '--pluto-space-stack-xl',
+        '--pluto-space-stack-2xl',
+        '--pluto-space-stack-3xl',
+      ],
     },
     {
       label: 'Inline (Horizontal Gap)',
       tokens: ['xs (4px)', 'sm (8px)', 'md (12px)', 'lg (16px)', 'xl (24px)'],
-      cssVars: ['--pluto-space-inline-xs', '--pluto-space-inline-sm', '--pluto-space-inline-md', '--pluto-space-inline-lg', '--pluto-space-inline-xl'],
+      cssVars: [
+        '--pluto-space-inline-xs',
+        '--pluto-space-inline-sm',
+        '--pluto-space-inline-md',
+        '--pluto-space-inline-lg',
+        '--pluto-space-inline-xl',
+      ],
     },
   ];
 
   return (
     <div style={{ padding: '24px', fontFamily: 'var(--pluto-font-family-sans)' }}>
       <h1 style={{ fontSize: '24px', fontWeight: 700, marginBottom: '8px' }}>Semantic Spacing</h1>
-      <p style={{ fontSize: '14px', color: 'var(--pluto-color-text-secondary)', marginBottom: '40px' }}>
-        Named spacing roles replace ad-hoc numeric values. Inset = padding (all sides), Stack = vertical
-        gaps, Inline = horizontal gaps.
+      <p
+        style={{
+          fontSize: '14px',
+          color: 'var(--pluto-color-text-secondary)',
+          marginBottom: '40px',
+        }}
+      >
+        Named spacing roles replace ad-hoc numeric values. Inset = padding (all sides), Stack =
+        vertical gaps, Inline = horizontal gaps.
       </p>
       {groups.map((g) => (
         <div key={g.label} style={{ marginBottom: '32px' }}>

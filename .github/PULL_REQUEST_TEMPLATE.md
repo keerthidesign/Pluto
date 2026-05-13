@@ -17,10 +17,11 @@
 > Complete this section if any token values were added, modified, or removed.
 
 | Token | Before | After | Reason |
-|-------|--------|-------|--------|
+| ----- | ------ | ----- | ------ |
 |       |        |       |        |
 
 **Breaking change?**
+
 - [ ] No — existing consumers are unaffected
 - [ ] Yes — describe migration path below
 

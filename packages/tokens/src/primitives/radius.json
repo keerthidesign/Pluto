@@ -2,14 +2,26 @@
   "$schema": "https://design-tokens.github.io/community-group/format/",
   "radius": {
     "$description": "Border radius scale. Consistent rounding creates visual hierarchy and brand feel.",
-    "none": { "$value": "0px",    "$type": "dimension", "$description": "No rounding — sharp corners" },
-    "xs":   { "$value": "2px",    "$type": "dimension", "$description": "Subtle rounding — tags, chips" },
-    "sm":   { "$value": "4px",    "$type": "dimension", "$description": "Inputs, small cards" },
-    "md":   { "$value": "6px",    "$type": "dimension", "$description": "Buttons (default)" },
-    "lg":   { "$value": "8px",    "$type": "dimension", "$description": "Cards, panels" },
-    "xl":   { "$value": "12px",   "$type": "dimension", "$description": "Modals, drawers" },
-    "2xl":  { "$value": "16px",   "$type": "dimension", "$description": "Large surfaces" },
-    "3xl":  { "$value": "24px",   "$type": "dimension", "$description": "Extra-large containers" },
-    "full": { "$value": "9999px", "$type": "dimension", "$description": "Pill shape — badges, toggles" }
+    "none": {
+      "$value": "0px",
+      "$type": "dimension",
+      "$description": "No rounding — sharp corners"
+    },
+    "xs": {
+      "$value": "2px",
+      "$type": "dimension",
+      "$description": "Subtle rounding — tags, chips"
+    },
+    "sm": { "$value": "4px", "$type": "dimension", "$description": "Inputs, small cards" },
+    "md": { "$value": "6px", "$type": "dimension", "$description": "Buttons (default)" },
+    "lg": { "$value": "8px", "$type": "dimension", "$description": "Cards, panels" },
+    "xl": { "$value": "12px", "$type": "dimension", "$description": "Modals, drawers" },
+    "2xl": { "$value": "16px", "$type": "dimension", "$description": "Large surfaces" },
+    "3xl": { "$value": "24px", "$type": "dimension", "$description": "Extra-large containers" },
+    "full": {
+      "$value": "9999px",
+      "$type": "dimension",
+      "$description": "Pill shape — badges, toggles"
+    }
   }
 }

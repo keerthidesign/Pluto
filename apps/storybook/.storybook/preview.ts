@@ -1,9 +1,9 @@
 import type { Preview } from '@storybook/react';
 import { withThemeByDataAttribute } from '@storybook/addon-themes';
 
-import '@pluto/tokens/css';                            // :root — light mode default
-import '@pluto/tokens/css/themes/dark';                // [data-theme="dark"] overrides
-import '@pluto/tokens/css/themes/high-contrast';       // [data-theme="high-contrast"] overrides
+import '@pluto/tokens/css'; // :root — light mode default
+import '@pluto/tokens/css/themes/dark'; // [data-theme="dark"] overrides
+import '@pluto/tokens/css/themes/high-contrast'; // [data-theme="high-contrast"] overrides
 import '@pluto/tokens/css/themes/high-contrast-media'; // @media (prefers-contrast: more)
 import '@pluto/foundations/reset.css';
 import '@pluto/foundations/base.css';

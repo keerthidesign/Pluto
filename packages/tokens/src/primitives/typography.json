@@ -32,53 +32,65 @@
 
     "size": {
       "$description": "Type scale using a modular 1.25 (Major Third) ratio. Base is 16px.",
-      "2xs":  { "$value": "10px", "$type": "dimension", "$description": "Legal text, fine print" },
-      "xs":   { "$value": "12px", "$type": "dimension", "$description": "Captions, labels, badges" },
-      "sm":   { "$value": "14px", "$type": "dimension", "$description": "Secondary body text, helper text" },
-      "md":   { "$value": "16px", "$type": "dimension", "$description": "Base body text size" },
-      "lg":   { "$value": "18px", "$type": "dimension", "$description": "Large body, intro text" },
-      "xl":   { "$value": "20px", "$type": "dimension", "$description": "Sub-headings" },
-      "2xl":  { "$value": "24px", "$type": "dimension", "$description": "Section headings" },
-      "3xl":  { "$value": "30px", "$type": "dimension", "$description": "Page headings" },
-      "4xl":  { "$value": "36px", "$type": "dimension", "$description": "Title headings" },
-      "5xl":  { "$value": "48px", "$type": "dimension", "$description": "Display headings" },
-      "6xl":  { "$value": "60px", "$type": "dimension", "$description": "Hero headings" },
-      "7xl":  { "$value": "72px", "$type": "dimension", "$description": "Jumbo hero text" },
-      "8xl":  { "$value": "96px", "$type": "dimension", "$description": "Oversized display" },
-      "9xl":  { "$value": "128px", "$type": "dimension", "$description": "Maximum display" }
+      "2xs": { "$value": "10px", "$type": "dimension", "$description": "Legal text, fine print" },
+      "xs": { "$value": "12px", "$type": "dimension", "$description": "Captions, labels, badges" },
+      "sm": {
+        "$value": "14px",
+        "$type": "dimension",
+        "$description": "Secondary body text, helper text"
+      },
+      "md": { "$value": "16px", "$type": "dimension", "$description": "Base body text size" },
+      "lg": { "$value": "18px", "$type": "dimension", "$description": "Large body, intro text" },
+      "xl": { "$value": "20px", "$type": "dimension", "$description": "Sub-headings" },
+      "2xl": { "$value": "24px", "$type": "dimension", "$description": "Section headings" },
+      "3xl": { "$value": "30px", "$type": "dimension", "$description": "Page headings" },
+      "4xl": { "$value": "36px", "$type": "dimension", "$description": "Title headings" },
+      "5xl": { "$value": "48px", "$type": "dimension", "$description": "Display headings" },
+      "6xl": { "$value": "60px", "$type": "dimension", "$description": "Hero headings" },
+      "7xl": { "$value": "72px", "$type": "dimension", "$description": "Jumbo hero text" },
+      "8xl": { "$value": "96px", "$type": "dimension", "$description": "Oversized display" },
+      "9xl": { "$value": "128px", "$type": "dimension", "$description": "Maximum display" }
     },
 
     "weight": {
       "$description": "Numeric font weight values. Named weights ensure clarity over 'bold' shorthand.",
-      "thin":       { "$value": 100, "$type": "fontWeight" },
+      "thin": { "$value": 100, "$type": "fontWeight" },
       "extralight": { "$value": 200, "$type": "fontWeight" },
-      "light":      { "$value": 300, "$type": "fontWeight" },
-      "regular":    { "$value": 400, "$type": "fontWeight", "$description": "Default body weight" },
-      "medium":     { "$value": 500, "$type": "fontWeight", "$description": "Labels, captions" },
-      "semibold":   { "$value": 600, "$type": "fontWeight", "$description": "Subheadings, emphasis" },
-      "bold":       { "$value": 700, "$type": "fontWeight", "$description": "Headings, strong emphasis" },
-      "extrabold":  { "$value": 800, "$type": "fontWeight" },
-      "black":      { "$value": 900, "$type": "fontWeight", "$description": "Display-only, hero text" }
+      "light": { "$value": 300, "$type": "fontWeight" },
+      "regular": { "$value": 400, "$type": "fontWeight", "$description": "Default body weight" },
+      "medium": { "$value": 500, "$type": "fontWeight", "$description": "Labels, captions" },
+      "semibold": { "$value": 600, "$type": "fontWeight", "$description": "Subheadings, emphasis" },
+      "bold": { "$value": 700, "$type": "fontWeight", "$description": "Headings, strong emphasis" },
+      "extrabold": { "$value": 800, "$type": "fontWeight" },
+      "black": { "$value": 900, "$type": "fontWeight", "$description": "Display-only, hero text" }
     },
 
     "lineHeight": {
       "$description": "Unitless line heights for predictable vertical rhythm.",
-      "none":    { "$value": 1,    "$type": "number", "$description": "Single-line text, icons" },
-      "tight":   { "$value": 1.25, "$type": "number", "$description": "Headings" },
-      "snug":    { "$value": 1.375,"$type": "number", "$description": "Short paragraphs" },
-      "normal":  { "$value": 1.5,  "$type": "number", "$description": "Body text — WCAG recommended" },
-      "relaxed": { "$value": 1.625,"$type": "number", "$description": "Long-form reading" },
-      "loose":   { "$value": 2,    "$type": "number", "$description": "Maximum spacing, editorial" }
+      "none": { "$value": 1, "$type": "number", "$description": "Single-line text, icons" },
+      "tight": { "$value": 1.25, "$type": "number", "$description": "Headings" },
+      "snug": { "$value": 1.375, "$type": "number", "$description": "Short paragraphs" },
+      "normal": {
+        "$value": 1.5,
+        "$type": "number",
+        "$description": "Body text — WCAG recommended"
+      },
+      "relaxed": { "$value": 1.625, "$type": "number", "$description": "Long-form reading" },
+      "loose": { "$value": 2, "$type": "number", "$description": "Maximum spacing, editorial" }
     },
 
     "letterSpacing": {
       "$description": "Tracked in em units to scale with font size.",
-      "tighter": { "$value": "-0.05em", "$type": "dimension", "$description": "Display / large headings" },
-      "tight":   { "$value": "-0.025em","$type": "dimension", "$description": "Headings" },
-      "normal":  { "$value": "0em",     "$type": "dimension", "$description": "Body text" },
-      "wide":    { "$value": "0.025em", "$type": "dimension", "$description": "All-caps labels" },
-      "wider":   { "$value": "0.05em",  "$type": "dimension", "$description": "Small caps" },
-      "widest":  { "$value": "0.1em",   "$type": "dimension", "$description": "Spaced letter-marks" }
+      "tighter": {
+        "$value": "-0.05em",
+        "$type": "dimension",
+        "$description": "Display / large headings"
+      },
+      "tight": { "$value": "-0.025em", "$type": "dimension", "$description": "Headings" },
+      "normal": { "$value": "0em", "$type": "dimension", "$description": "Body text" },
+      "wide": { "$value": "0.025em", "$type": "dimension", "$description": "All-caps labels" },
+      "wider": { "$value": "0.05em", "$type": "dimension", "$description": "Small caps" },
+      "widest": { "$value": "0.1em", "$type": "dimension", "$description": "Spaced letter-marks" }
     }
   }
 }

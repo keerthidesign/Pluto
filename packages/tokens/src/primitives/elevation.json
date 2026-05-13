@@ -21,32 +21,80 @@
     },
     "sm": {
       "$value": [
-        { "offsetX": "0", "offsetY": "1px", "blur": "3px",  "spread": "0",   "color": "rgba(0, 0, 0, 0.10)" },
-        { "offsetX": "0", "offsetY": "1px", "blur": "2px",  "spread": "-1px","color": "rgba(0, 0, 0, 0.10)" }
+        {
+          "offsetX": "0",
+          "offsetY": "1px",
+          "blur": "3px",
+          "spread": "0",
+          "color": "rgba(0, 0, 0, 0.10)"
+        },
+        {
+          "offsetX": "0",
+          "offsetY": "1px",
+          "blur": "2px",
+          "spread": "-1px",
+          "color": "rgba(0, 0, 0, 0.10)"
+        }
       ],
       "$type": "shadow",
       "$description": "Cards, inputs on focus"
     },
     "md": {
       "$value": [
-        { "offsetX": "0", "offsetY": "4px",  "blur": "6px",  "spread": "-1px", "color": "rgba(0, 0, 0, 0.10)" },
-        { "offsetX": "0", "offsetY": "2px",  "blur": "4px",  "spread": "-2px", "color": "rgba(0, 0, 0, 0.10)" }
+        {
+          "offsetX": "0",
+          "offsetY": "4px",
+          "blur": "6px",
+          "spread": "-1px",
+          "color": "rgba(0, 0, 0, 0.10)"
+        },
+        {
+          "offsetX": "0",
+          "offsetY": "2px",
+          "blur": "4px",
+          "spread": "-2px",
+          "color": "rgba(0, 0, 0, 0.10)"
+        }
       ],
       "$type": "shadow",
       "$description": "Dropdowns, popovers"
     },
     "lg": {
       "$value": [
-        { "offsetX": "0", "offsetY": "10px", "blur": "15px", "spread": "-3px", "color": "rgba(0, 0, 0, 0.10)" },
-        { "offsetX": "0", "offsetY": "4px",  "blur": "6px",  "spread": "-4px", "color": "rgba(0, 0, 0, 0.10)" }
+        {
+          "offsetX": "0",
+          "offsetY": "10px",
+          "blur": "15px",
+          "spread": "-3px",
+          "color": "rgba(0, 0, 0, 0.10)"
+        },
+        {
+          "offsetX": "0",
+          "offsetY": "4px",
+          "blur": "6px",
+          "spread": "-4px",
+          "color": "rgba(0, 0, 0, 0.10)"
+        }
       ],
       "$type": "shadow",
       "$description": "Dialogs, menus"
     },
     "xl": {
       "$value": [
-        { "offsetX": "0", "offsetY": "20px", "blur": "25px", "spread": "-5px",  "color": "rgba(0, 0, 0, 0.10)" },
-        { "offsetX": "0", "offsetY": "8px",  "blur": "10px", "spread": "-6px",  "color": "rgba(0, 0, 0, 0.10)" }
+        {
+          "offsetX": "0",
+          "offsetY": "20px",
+          "blur": "25px",
+          "spread": "-5px",
+          "color": "rgba(0, 0, 0, 0.10)"
+        },
+        {
+          "offsetX": "0",
+          "offsetY": "8px",
+          "blur": "10px",
+          "spread": "-6px",
+          "color": "rgba(0, 0, 0, 0.10)"
+        }
       ],
       "$type": "shadow",
       "$description": "Modals"

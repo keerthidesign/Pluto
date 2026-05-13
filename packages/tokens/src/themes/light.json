@@ -11,40 +11,44 @@
 
     "color": {
       "background": {
-        "default":   { "$value": "{color.neutral.0}",    "$type": "color" },
-        "subtle":    { "$value": "{color.neutral.50}",   "$type": "color" },
-        "muted":     { "$value": "{color.neutral.100}",  "$type": "color" },
-        "emphasis":  { "$value": "{color.neutral.900}",  "$type": "color" },
-        "overlay":   { "$value": "{color.alpha.black.48}", "$type": "color" }
+        "default": { "$value": "{color.neutral.0}", "$type": "color" },
+        "subtle": { "$value": "{color.neutral.50}", "$type": "color" },
+        "muted": { "$value": "{color.neutral.100}", "$type": "color" },
+        "emphasis": { "$value": "{color.neutral.900}", "$type": "color" },
+        "overlay": { "$value": "{color.alpha.black.48}", "$type": "color" }
       },
       "surface": {
-        "default":   { "$value": "{color.neutral.0}",    "$type": "color" },
-        "raised":    { "$value": "{color.neutral.0}",    "$type": "color" },
-        "overlay":   { "$value": "{color.neutral.0}",    "$type": "color" },
-        "sunken":    { "$value": "{color.neutral.100}",  "$type": "color" },
+        "default": { "$value": "{color.neutral.0}", "$type": "color" },
+        "raised": { "$value": "{color.neutral.0}", "$type": "color" },
+        "overlay": { "$value": "{color.neutral.0}", "$type": "color" },
+        "sunken": { "$value": "{color.neutral.100}", "$type": "color" },
         "interactive": { "$value": "{color.neutral.50}", "$type": "color" }
       },
       "text": {
-        "default":     { "$value": "{color.neutral.900}", "$type": "color" },
-        "secondary":   { "$value": "{color.neutral.700}", "$type": "color" },
-        "tertiary":    { "$value": "{color.neutral.600}", "$type": "color" },
-        "disabled":    { "$value": "{color.neutral.400}", "$type": "color" },
-        "inverse":     { "$value": "{color.neutral.0}",   "$type": "color" },
-        "link":        { "$value": "{color.primary.700}", "$type": "color" },
-        "on-emphasis": { "$value": "{color.neutral.0}",   "$type": "color" }
+        "default": { "$value": "{color.neutral.900}", "$type": "color" },
+        "secondary": { "$value": "{color.neutral.700}", "$type": "color" },
+        "tertiary": { "$value": "{color.neutral.600}", "$type": "color" },
+        "disabled": { "$value": "{color.neutral.400}", "$type": "color" },
+        "inverse": { "$value": "{color.neutral.0}", "$type": "color" },
+        "link": { "$value": "{color.primary.700}", "$type": "color" },
+        "on-emphasis": { "$value": "{color.neutral.0}", "$type": "color" }
       },
       "border": {
-        "default":     { "$value": "{color.neutral.200}", "$type": "color" },
-        "subtle":      { "$value": "{color.neutral.100}", "$type": "color" },
-        "strong":      { "$value": "{color.neutral.400}", "$type": "color" },
-        "focus":       { "$value": "{color.primary.600}", "$type": "color" },
+        "default": { "$value": "{color.neutral.200}", "$type": "color" },
+        "subtle": { "$value": "{color.neutral.100}", "$type": "color" },
+        "strong": { "$value": "{color.neutral.400}", "$type": "color" },
+        "focus": { "$value": "{color.primary.600}", "$type": "color" },
         "interactive": { "$value": "{color.neutral.300}", "$type": "color" }
       }
     },
 
     "motion": {
       "$description": "Light theme uses standard motion timings.",
-      "duration-modifier": { "$value": "1", "$type": "number", "$description": "Multiplier: 1 = full animation, 0 = no animation" }
+      "duration-modifier": {
+        "$value": "1",
+        "$type": "number",
+        "$description": "Multiplier: 1 = full animation, 0 = no animation"
+      }
     }
   }
 }

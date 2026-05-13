@@ -5,12 +5,36 @@
 
     "duration": {
       "$description": "Time values for transitions. Shorter for micro-interactions, longer for page transitions.",
-      "instant":  { "$value": "0ms",   "$type": "duration", "$description": "No animation — immediate state change" },
-      "fast":     { "$value": "100ms", "$type": "duration", "$description": "Micro: hover, focus ring, tooltip appear" },
-      "normal":   { "$value": "200ms", "$type": "duration", "$description": "Default: button, input, toggle" },
-      "slow":     { "$value": "300ms", "$type": "duration", "$description": "Popover, dropdown, drawer open" },
-      "slower":   { "$value": "400ms", "$type": "duration", "$description": "Modal entrance, page section reveal" },
-      "slowest":  { "$value": "700ms", "$type": "duration", "$description": "Skeleton loading, complex transitions" }
+      "instant": {
+        "$value": "0ms",
+        "$type": "duration",
+        "$description": "No animation — immediate state change"
+      },
+      "fast": {
+        "$value": "100ms",
+        "$type": "duration",
+        "$description": "Micro: hover, focus ring, tooltip appear"
+      },
+      "normal": {
+        "$value": "200ms",
+        "$type": "duration",
+        "$description": "Default: button, input, toggle"
+      },
+      "slow": {
+        "$value": "300ms",
+        "$type": "duration",
+        "$description": "Popover, dropdown, drawer open"
+      },
+      "slower": {
+        "$value": "400ms",
+        "$type": "duration",
+        "$description": "Modal entrance, page section reveal"
+      },
+      "slowest": {
+        "$value": "700ms",
+        "$type": "duration",
+        "$description": "Skeleton loading, complex transitions"
+      }
     },
 
     "easing": {

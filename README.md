@@ -1,17 +1,17 @@
 # Pluto Design System
 
-> Enterprise-grade, multi-brand design system built on DTCG token standards.
-> Phase 1: Foundations + Token Architecture.
+> Enterprise-grade, multi-brand design system built on DTCG token standards. Phase 1: Foundations +
+> Token Architecture.
 
 ---
 
 ## Packages
 
-| Package | Description |
-|---------|-------------|
-| [`@pluto/tokens`](packages/tokens) | DTCG design tokens — primitives, semantic, themes |
-| [`@pluto/foundations`](packages/foundations) | CSS reset, base styles, accessibility utilities |
-| [`@pluto/storybook`](apps/storybook) | Living documentation |
+| Package                                      | Description                                       |
+| -------------------------------------------- | ------------------------------------------------- |
+| [`@pluto/tokens`](packages/tokens)           | DTCG design tokens — primitives, semantic, themes |
+| [`@pluto/foundations`](packages/foundations) | CSS reset, base styles, accessibility utilities   |
+| [`@pluto/storybook`](apps/storybook)         | Living documentation                              |
 
 ## Quick Start
 
@@ -67,11 +67,11 @@ See [Token Architecture](docs/architecture/token-architecture.md) for full detai
 
 ## Theming
 
-| Theme | Selector |
-|-------|----------|
-| Light (default) | `:root` or `[data-theme="light"]` |
-| Dark | `[data-theme="dark"]` |
-| High Contrast (WCAG AAA) | `[data-theme="high-contrast"]` |
+| Theme                    | Selector                          |
+| ------------------------ | --------------------------------- |
+| Light (default)          | `:root` or `[data-theme="light"]` |
+| Dark                     | `[data-theme="dark"]`             |
+| High Contrast (WCAG AAA) | `[data-theme="high-contrast"]`    |
 
 ## Contributing
 

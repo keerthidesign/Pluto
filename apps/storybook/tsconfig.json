@@ -3,7 +3,8 @@
   "extends": "@pluto/tsconfig/react.json",
   "compilerOptions": {
     "rootDir": ".",
-    "noEmit": true
+    "noEmit": true,
+    "allowImportingTsExtensions": false
   },
   "include": [".storybook", "stories"],
   "exclude": ["node_modules", "storybook-static"]

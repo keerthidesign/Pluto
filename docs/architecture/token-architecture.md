@@ -2,8 +2,8 @@
 
 ## Overview
 
-Pluto uses a **three-tier token system** aligned with the W3C Design Token Community Group
-(DTCG) specification. Every design decision in the system flows through this hierarchy.
+Pluto uses a **three-tier token system** aligned with the W3C Design Token Community Group (DTCG)
+specification. Every design decision in the system flows through this hierarchy.
 
 ```
 Primitive Tokens
@@ -30,6 +30,7 @@ Raw values with no semantic meaning. These are the source of truth for all desig
 ```
 
 **Rules:**
+
 - Never used directly in components
 - Never referenced in application code
 - Change infrequently (palette additions/corrections only)
@@ -56,6 +57,7 @@ Intent-based aliases that reference primitive tokens. These are what components 
 ```
 
 **Rules:**
+
 - Always reference primitives, never hardcode values
 - Carry intent: `color.action.primary.default`, `color.text.secondary`
 - Overridden per theme (dark, high-contrast, brand)
@@ -67,8 +69,8 @@ Intent-based aliases that reference primitive tokens. These are what components 
 
 ## Tier 3 — Component Tokens (Phase 2)
 
-Component-scoped tokens that reference semantic tokens. Allows per-component overrides
-without touching the global semantic layer.
+Component-scoped tokens that reference semantic tokens. Allows per-component overrides without
+touching the global semantic layer.
 
 ```json
 {
@@ -91,12 +93,12 @@ without touching the global semantic layer.
 
 All tokens follow the W3C DTCG specification:
 
-| Field | Purpose |
-|-------|---------|
-| `$value` | The token's value (required) |
-| `$type` | The value type: `color`, `dimension`, `fontFamily`, `fontWeight`, `duration`, `cubicBezier`, `shadow`, `number`, `string` |
-| `$description` | Human-readable context (required on all semantic tokens) |
-| `$extensions` | Custom metadata: Figma variable IDs, WCAG contrast, usage hints |
+| Field          | Purpose                                                                                                                   |
+| -------------- | ------------------------------------------------------------------------------------------------------------------------- |
+| `$value`       | The token's value (required)                                                                                              |
+| `$type`        | The value type: `color`, `dimension`, `fontFamily`, `fontWeight`, `duration`, `cubicBezier`, `shadow`, `number`, `string` |
+| `$description` | Human-readable context (required on all semantic tokens)                                                                  |
+| `$extensions`  | Custom metadata: Figma variable IDs, WCAG contrast, usage hints                                                           |
 
 ---
 
@@ -119,12 +121,13 @@ DTCG JSON Sources
 ### CSS Output Example
 
 ```css
-:root, [data-theme="light"] {
+:root,
+[data-theme='light'] {
   --pluto-color-action-primary-default: var(--pluto-color-primary-600);
   --pluto-color-text-default: var(--pluto-color-neutral-900);
 }
 
-[data-theme="dark"] {
+[data-theme='dark'] {
   --pluto-color-action-primary-default: var(--pluto-color-primary-500);
   --pluto-color-text-default: var(--pluto-color-neutral-50);
 }
@@ -135,7 +138,7 @@ DTCG JSON Sources
 Themes are applied via `data-theme` attribute on the root element:
 
 ```html
-<html data-theme="dark">
+<html data-theme="dark"></html>
 ```
 
 ```ts
@@ -178,6 +181,7 @@ All production tokens carry `$extensions` for AI tooling and governance:
 ```
 
 This enables:
+
 - AI-assisted component generation with correct tokens
 - Automated WCAG contrast auditing
 - Figma ↔ code synchronization

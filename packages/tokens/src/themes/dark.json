@@ -7,166 +7,247 @@
   },
 
   "color": {
-
     "background": {
-      "default":    { "$value": "{color.neutral.950}",       "$type": "color", "$description": "Warm near-black canvas — #120E0A" },
-      "subtle":     { "$value": "{color.neutral.900}",       "$type": "color" },
-      "muted":      { "$value": "{color.neutral.800}",       "$type": "color" },
-      "emphasis":   { "$value": "{color.neutral.50}",        "$type": "color", "$description": "Inverted — warm white on dark" },
-      "disabled":   { "$value": "{color.neutral.800}",       "$type": "color" },
-      "inverse":    { "$value": "{color.neutral.50}",        "$type": "color", "$description": "Inverse in dark mode = light surface" },
-      "on-primary": { "$value": "{color.primary.950}",       "$type": "color", "$description": "Deep golden tint on dark" },
-      "on-success": { "$value": "rgba(21, 128, 61, 0.15)",   "$type": "color" },
-      "on-warning": { "$value": "rgba(194, 65, 12, 0.15)",   "$type": "color" },
-      "on-danger":  { "$value": "rgba(190, 18, 60, 0.15)",   "$type": "color" },
-      "on-info":    { "$value": "rgba(3, 105, 161, 0.15)",   "$type": "color" }
+      "default": {
+        "$value": "{color.neutral.950}",
+        "$type": "color",
+        "$description": "Warm near-black canvas — #120E0A"
+      },
+      "subtle": { "$value": "{color.neutral.900}", "$type": "color" },
+      "muted": { "$value": "{color.neutral.800}", "$type": "color" },
+      "emphasis": {
+        "$value": "{color.neutral.50}",
+        "$type": "color",
+        "$description": "Inverted — warm white on dark"
+      },
+      "disabled": { "$value": "{color.neutral.800}", "$type": "color" },
+      "inverse": {
+        "$value": "{color.neutral.50}",
+        "$type": "color",
+        "$description": "Inverse in dark mode = light surface"
+      },
+      "on-primary": {
+        "$value": "{color.primary.950}",
+        "$type": "color",
+        "$description": "Deep golden tint on dark"
+      },
+      "on-success": { "$value": "rgba(21, 128, 61, 0.15)", "$type": "color" },
+      "on-warning": { "$value": "rgba(194, 65, 12, 0.15)", "$type": "color" },
+      "on-danger": { "$value": "rgba(190, 18, 60, 0.15)", "$type": "color" },
+      "on-info": { "$value": "rgba(3, 105, 161, 0.15)", "$type": "color" }
     },
 
     "surface": {
-      "default":     { "$value": "{color.neutral.900}",      "$type": "color" },
-      "raised":      { "$value": "{color.neutral.800}",      "$type": "color", "$description": "Warm charcoal cards — #302820" },
-      "overlay":     { "$value": "{color.neutral.800}",      "$type": "color" },
-      "sunken":      { "$value": "{color.neutral.950}",      "$type": "color" },
-      "interactive": { "$value": "{color.neutral.800}",      "$type": "color" },
-      "disabled":    { "$value": "{color.neutral.900}",      "$type": "color" },
-      "primary":     { "$value": "{color.primary.950}",      "$type": "color", "$description": "Deep golden-tinted surface" },
-      "secondary":   { "$value": "{color.secondary.950}",    "$type": "color" },
-      "inverse":     { "$value": "{color.neutral.50}",       "$type": "color", "$description": "Light surface in dark mode" }
+      "default": { "$value": "{color.neutral.900}", "$type": "color" },
+      "raised": {
+        "$value": "{color.neutral.800}",
+        "$type": "color",
+        "$description": "Warm charcoal cards — #302820"
+      },
+      "overlay": { "$value": "{color.neutral.800}", "$type": "color" },
+      "sunken": { "$value": "{color.neutral.950}", "$type": "color" },
+      "interactive": { "$value": "{color.neutral.800}", "$type": "color" },
+      "disabled": { "$value": "{color.neutral.900}", "$type": "color" },
+      "primary": {
+        "$value": "{color.primary.950}",
+        "$type": "color",
+        "$description": "Deep golden-tinted surface"
+      },
+      "secondary": { "$value": "{color.secondary.950}", "$type": "color" },
+      "inverse": {
+        "$value": "{color.neutral.50}",
+        "$type": "color",
+        "$description": "Light surface in dark mode"
+      }
     },
 
     "text": {
-      "default":     { "$value": "{color.neutral.50}",       "$type": "color", "$description": "Warm white — #FDFCF8" },
-      "secondary":   { "$value": "{color.neutral.300}",      "$type": "color" },
-      "tertiary":    { "$value": "{color.neutral.500}",      "$type": "color", "$description": "4.5:1 on dark.background.default" },
-      "disabled":    { "$value": "{color.neutral.700}",      "$type": "color" },
-      "inverse":     { "$value": "{color.neutral.900}",      "$type": "color" },
-      "link":        { "$value": "{color.primary.300}",      "$type": "color", "$description": "Bright golden-yellow for dark bg readability" },
-      "link-hover":  { "$value": "{color.primary.200}",      "$type": "color" },
-      "on-emphasis": { "$value": "{color.neutral.950}",      "$type": "color", "$description": "Dark text on light emphasis surfaces in dark mode" },
-      "on-primary":  { "$value": "{color.neutral.950}",      "$type": "color", "$description": "Dark text on golden — 6:1 (a11y override, same as light)" },
-      "heading":     { "$value": "{color.neutral.50}",       "$type": "color" },
-      "caption":     { "$value": "{color.neutral.500}",      "$type": "color" },
-      "placeholder": { "$value": "{color.neutral.600}",      "$type": "color" },
-      "code":        { "$value": "{color.primary.300}",      "$type": "color", "$description": "Golden code text on dark bg" },
-      "error":       { "$value": "{color.danger.400}",       "$type": "color" },
-      "success":     { "$value": "{color.success.400}",      "$type": "color" },
-      "warning":     { "$value": "{color.warning.400}",      "$type": "color" },
-      "info":        { "$value": "{color.info.400}",         "$type": "color" }
+      "default": {
+        "$value": "{color.neutral.50}",
+        "$type": "color",
+        "$description": "Warm white — #FDFCF8"
+      },
+      "secondary": { "$value": "{color.neutral.300}", "$type": "color" },
+      "tertiary": {
+        "$value": "{color.neutral.500}",
+        "$type": "color",
+        "$description": "4.5:1 on dark.background.default"
+      },
+      "disabled": { "$value": "{color.neutral.700}", "$type": "color" },
+      "inverse": { "$value": "{color.neutral.900}", "$type": "color" },
+      "link": {
+        "$value": "{color.primary.300}",
+        "$type": "color",
+        "$description": "Bright golden-yellow for dark bg readability"
+      },
+      "link-hover": { "$value": "{color.primary.200}", "$type": "color" },
+      "on-emphasis": {
+        "$value": "{color.neutral.950}",
+        "$type": "color",
+        "$description": "Dark text on light emphasis surfaces in dark mode"
+      },
+      "on-primary": {
+        "$value": "{color.neutral.950}",
+        "$type": "color",
+        "$description": "Dark text on golden — 6:1 (a11y override, same as light)"
+      },
+      "heading": { "$value": "{color.neutral.50}", "$type": "color" },
+      "caption": { "$value": "{color.neutral.500}", "$type": "color" },
+      "placeholder": { "$value": "{color.neutral.600}", "$type": "color" },
+      "code": {
+        "$value": "{color.primary.300}",
+        "$type": "color",
+        "$description": "Golden code text on dark bg"
+      },
+      "error": { "$value": "{color.danger.400}", "$type": "color" },
+      "success": { "$value": "{color.success.400}", "$type": "color" },
+      "warning": { "$value": "{color.warning.400}", "$type": "color" },
+      "info": { "$value": "{color.info.400}", "$type": "color" }
     },
 
     "icon": {
-      "default":     { "$value": "{color.neutral.300}",      "$type": "color" },
-      "secondary":   { "$value": "{color.neutral.500}",      "$type": "color" },
-      "tertiary":    { "$value": "{color.neutral.600}",      "$type": "color" },
-      "disabled":    { "$value": "{color.neutral.700}",      "$type": "color" },
-      "inverse":     { "$value": "{color.neutral.900}",      "$type": "color" },
-      "primary":     { "$value": "{color.primary.400}",      "$type": "color", "$description": "Bright golden in dark mode" },
-      "on-emphasis": { "$value": "{color.neutral.950}",      "$type": "color" },
-      "danger":      { "$value": "{color.danger.400}",       "$type": "color" },
-      "success":     { "$value": "{color.success.400}",      "$type": "color" },
-      "warning":     { "$value": "{color.warning.400}",      "$type": "color" }
+      "default": { "$value": "{color.neutral.300}", "$type": "color" },
+      "secondary": { "$value": "{color.neutral.500}", "$type": "color" },
+      "tertiary": { "$value": "{color.neutral.600}", "$type": "color" },
+      "disabled": { "$value": "{color.neutral.700}", "$type": "color" },
+      "inverse": { "$value": "{color.neutral.900}", "$type": "color" },
+      "primary": {
+        "$value": "{color.primary.400}",
+        "$type": "color",
+        "$description": "Bright golden in dark mode"
+      },
+      "on-emphasis": { "$value": "{color.neutral.950}", "$type": "color" },
+      "danger": { "$value": "{color.danger.400}", "$type": "color" },
+      "success": { "$value": "{color.success.400}", "$type": "color" },
+      "warning": { "$value": "{color.warning.400}", "$type": "color" }
     },
 
     "border": {
-      "default":           { "$value": "{color.neutral.700}",  "$type": "color" },
-      "subtle":            { "$value": "{color.neutral.800}",  "$type": "color" },
-      "strong":            { "$value": "{color.neutral.500}",  "$type": "color" },
-      "emphasis":          { "$value": "{color.neutral.300}",  "$type": "color" },
-      "focus":             { "$value": "{color.primary.400}",  "$type": "color", "$description": "Golden focus ring on dark — #FACC15" },
-      "disabled":          { "$value": "{color.neutral.800}",  "$type": "color" },
-      "interactive":       { "$value": "{color.neutral.600}",  "$type": "color" },
-      "interactive-hover": { "$value": "{color.neutral.400}",  "$type": "color" },
-      "primary":           { "$value": "{color.primary.700}",  "$type": "color" },
-      "success":           { "$value": "{color.success.700}",  "$type": "color" },
-      "warning":           { "$value": "{color.warning.700}",  "$type": "color" },
-      "danger":            { "$value": "{color.danger.700}",   "$type": "color" },
-      "info":              { "$value": "{color.info.700}",     "$type": "color" },
-      "on-emphasis":       { "$value": "{color.neutral.400}",  "$type": "color" },
-      "neutral":           { "$value": "{color.neutral.700}",  "$type": "color" }
+      "default": { "$value": "{color.neutral.700}", "$type": "color" },
+      "subtle": { "$value": "{color.neutral.800}", "$type": "color" },
+      "strong": { "$value": "{color.neutral.500}", "$type": "color" },
+      "emphasis": { "$value": "{color.neutral.300}", "$type": "color" },
+      "focus": {
+        "$value": "{color.primary.400}",
+        "$type": "color",
+        "$description": "Golden focus ring on dark — #FACC15"
+      },
+      "disabled": { "$value": "{color.neutral.800}", "$type": "color" },
+      "interactive": { "$value": "{color.neutral.600}", "$type": "color" },
+      "interactive-hover": { "$value": "{color.neutral.400}", "$type": "color" },
+      "primary": { "$value": "{color.primary.700}", "$type": "color" },
+      "success": { "$value": "{color.success.700}", "$type": "color" },
+      "warning": { "$value": "{color.warning.700}", "$type": "color" },
+      "danger": { "$value": "{color.danger.700}", "$type": "color" },
+      "info": { "$value": "{color.info.700}", "$type": "color" },
+      "on-emphasis": { "$value": "{color.neutral.400}", "$type": "color" },
+      "neutral": { "$value": "{color.neutral.700}", "$type": "color" }
     },
 
     "overlay": {
-      "scrim":  { "$value": "{color.alpha.black.64}", "$type": "color", "$description": "Deeper scrim on dark — 64% black" },
-      "ghost":  { "$value": "{color.alpha.white.8}",  "$type": "color", "$description": "White ghost overlay on dark" }
+      "scrim": {
+        "$value": "{color.alpha.black.64}",
+        "$type": "color",
+        "$description": "Deeper scrim on dark — 64% black"
+      },
+      "ghost": {
+        "$value": "{color.alpha.white.8}",
+        "$type": "color",
+        "$description": "White ghost overlay on dark"
+      }
     },
 
     "action": {
-
       "primary": {
-        "default":      { "$value": "{color.primary.400}",    "$type": "color", "$description": "Golden #FACC15 — vibrant on dark surfaces" },
-        "hover":        { "$value": "{color.primary.300}",    "$type": "color" },
-        "active":       { "$value": "{color.primary.200}",    "$type": "color" },
-        "disabled":     { "$value": "{color.neutral.700}",    "$type": "color" },
-        "text":         { "$value": "{color.neutral.950}",    "$type": "color", "$description": "Dark text on golden — 6:1 (a11y, unchanged across themes)" },
-        "subtle":       { "$value": "{color.alpha.white.8}",  "$type": "color" },
+        "default": {
+          "$value": "{color.primary.400}",
+          "$type": "color",
+          "$description": "Golden #FACC15 — vibrant on dark surfaces"
+        },
+        "hover": { "$value": "{color.primary.300}", "$type": "color" },
+        "active": { "$value": "{color.primary.200}", "$type": "color" },
+        "disabled": { "$value": "{color.neutral.700}", "$type": "color" },
+        "text": {
+          "$value": "{color.neutral.950}",
+          "$type": "color",
+          "$description": "Dark text on golden — 6:1 (a11y, unchanged across themes)"
+        },
+        "subtle": { "$value": "{color.alpha.white.8}", "$type": "color" },
         "subtle-hover": { "$value": "{color.alpha.white.12}", "$type": "color" }
       },
 
       "secondary": {
-        "default":      { "$value": "{color.secondary.400}",  "$type": "color" },
-        "hover":        { "$value": "{color.secondary.300}",  "$type": "color" },
-        "active":       { "$value": "{color.secondary.200}",  "$type": "color" },
-        "disabled":     { "$value": "{color.neutral.700}",    "$type": "color" },
-        "text":         { "$value": "{color.neutral.950}",    "$type": "color" },
-        "subtle":       { "$value": "{color.alpha.white.8}",  "$type": "color" },
+        "default": { "$value": "{color.secondary.400}", "$type": "color" },
+        "hover": { "$value": "{color.secondary.300}", "$type": "color" },
+        "active": { "$value": "{color.secondary.200}", "$type": "color" },
+        "disabled": { "$value": "{color.neutral.700}", "$type": "color" },
+        "text": { "$value": "{color.neutral.950}", "$type": "color" },
+        "subtle": { "$value": "{color.alpha.white.8}", "$type": "color" },
         "subtle-hover": { "$value": "{color.alpha.white.12}", "$type": "color" }
       },
 
       "ghost": {
-        "default":      { "$value": "{color.alpha.black.0}",  "$type": "color" },
-        "hover":        { "$value": "{color.alpha.white.8}",  "$type": "color" },
-        "active":       { "$value": "{color.alpha.white.12}", "$type": "color" },
-        "disabled":     { "$value": "{color.alpha.white.4}",  "$type": "color" },
-        "text":         { "$value": "{color.neutral.50}",     "$type": "color" },
-        "subtle":       { "$value": "{color.alpha.black.0}",  "$type": "color" },
-        "subtle-hover": { "$value": "{color.alpha.white.8}",  "$type": "color" }
+        "default": { "$value": "{color.alpha.black.0}", "$type": "color" },
+        "hover": { "$value": "{color.alpha.white.8}", "$type": "color" },
+        "active": { "$value": "{color.alpha.white.12}", "$type": "color" },
+        "disabled": { "$value": "{color.alpha.white.4}", "$type": "color" },
+        "text": { "$value": "{color.neutral.50}", "$type": "color" },
+        "subtle": { "$value": "{color.alpha.black.0}", "$type": "color" },
+        "subtle-hover": { "$value": "{color.alpha.white.8}", "$type": "color" }
       },
 
       "destructive": {
-        "default":      { "$value": "{color.danger.500}",     "$type": "color" },
-        "hover":        { "$value": "{color.danger.400}",     "$type": "color" },
-        "active":       { "$value": "{color.danger.300}",     "$type": "color" },
-        "disabled":     { "$value": "{color.neutral.700}",    "$type": "color" },
-        "text":         { "$value": "{color.neutral.0}",      "$type": "color" },
-        "subtle":       { "$value": "rgba(190, 18, 60, 0.15)", "$type": "color" },
+        "default": { "$value": "{color.danger.500}", "$type": "color" },
+        "hover": { "$value": "{color.danger.400}", "$type": "color" },
+        "active": { "$value": "{color.danger.300}", "$type": "color" },
+        "disabled": { "$value": "{color.neutral.700}", "$type": "color" },
+        "text": { "$value": "{color.neutral.0}", "$type": "color" },
+        "subtle": { "$value": "rgba(190, 18, 60, 0.15)", "$type": "color" },
         "subtle-hover": { "$value": "rgba(190, 18, 60, 0.25)", "$type": "color" }
       }
     },
 
     "status": {
       "success": {
-        "bg":          { "$value": "rgba(21, 128, 61, 0.20)",  "$type": "color", "$description": "Success tint on dark" },
-        "bg-strong":   { "$value": "{color.success.600}",      "$type": "color" },
-        "text":        { "$value": "{color.success.300}",      "$type": "color" },
-        "text-strong": { "$value": "{color.neutral.950}",      "$type": "color" },
-        "border":      { "$value": "{color.success.700}",      "$type": "color" },
-        "icon":        { "$value": "{color.success.400}",      "$type": "color" }
+        "bg": {
+          "$value": "rgba(21, 128, 61, 0.20)",
+          "$type": "color",
+          "$description": "Success tint on dark"
+        },
+        "bg-strong": { "$value": "{color.success.600}", "$type": "color" },
+        "text": { "$value": "{color.success.300}", "$type": "color" },
+        "text-strong": { "$value": "{color.neutral.950}", "$type": "color" },
+        "border": { "$value": "{color.success.700}", "$type": "color" },
+        "icon": { "$value": "{color.success.400}", "$type": "color" }
       },
       "warning": {
-        "bg":          { "$value": "rgba(194, 65, 12, 0.20)",  "$type": "color" },
-        "bg-strong":   { "$value": "{color.warning.500}",      "$type": "color" },
-        "text":        { "$value": "{color.warning.300}",      "$type": "color" },
-        "text-strong": { "$value": "{color.neutral.950}",      "$type": "color" },
-        "border":      { "$value": "{color.warning.700}",      "$type": "color" },
-        "icon":        { "$value": "{color.warning.400}",      "$type": "color" }
+        "bg": { "$value": "rgba(194, 65, 12, 0.20)", "$type": "color" },
+        "bg-strong": { "$value": "{color.warning.500}", "$type": "color" },
+        "text": { "$value": "{color.warning.300}", "$type": "color" },
+        "text-strong": { "$value": "{color.neutral.950}", "$type": "color" },
+        "border": { "$value": "{color.warning.700}", "$type": "color" },
+        "icon": { "$value": "{color.warning.400}", "$type": "color" }
       },
       "danger": {
-        "bg":          { "$value": "rgba(190, 18, 60, 0.20)",  "$type": "color", "$description": "Coral rose tint on dark" },
-        "bg-strong":   { "$value": "{color.danger.600}",       "$type": "color" },
-        "text":        { "$value": "{color.danger.300}",       "$type": "color" },
-        "text-strong": { "$value": "{color.neutral.950}",      "$type": "color" },
-        "border":      { "$value": "{color.danger.700}",       "$type": "color" },
-        "icon":        { "$value": "{color.danger.400}",       "$type": "color" }
+        "bg": {
+          "$value": "rgba(190, 18, 60, 0.20)",
+          "$type": "color",
+          "$description": "Coral rose tint on dark"
+        },
+        "bg-strong": { "$value": "{color.danger.600}", "$type": "color" },
+        "text": { "$value": "{color.danger.300}", "$type": "color" },
+        "text-strong": { "$value": "{color.neutral.950}", "$type": "color" },
+        "border": { "$value": "{color.danger.700}", "$type": "color" },
+        "icon": { "$value": "{color.danger.400}", "$type": "color" }
       },
       "info": {
-        "bg":          { "$value": "rgba(3, 105, 161, 0.20)",  "$type": "color" },
-        "bg-strong":   { "$value": "{color.info.600}",         "$type": "color" },
-        "text":        { "$value": "{color.info.300}",         "$type": "color" },
-        "text-strong": { "$value": "{color.neutral.950}",      "$type": "color" },
-        "border":      { "$value": "{color.info.700}",         "$type": "color" },
-        "icon":        { "$value": "{color.info.400}",         "$type": "color" }
+        "bg": { "$value": "rgba(3, 105, 161, 0.20)", "$type": "color" },
+        "bg-strong": { "$value": "{color.info.600}", "$type": "color" },
+        "text": { "$value": "{color.info.300}", "$type": "color" },
+        "text-strong": { "$value": "{color.neutral.950}", "$type": "color" },
+        "border": { "$value": "{color.info.700}", "$type": "color" },
+        "icon": { "$value": "{color.info.400}", "$type": "color" }
       }
     }
-
   }
 }
