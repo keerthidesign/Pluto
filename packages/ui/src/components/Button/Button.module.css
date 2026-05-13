@@ -1,11 +1,9 @@
 /* ── Button ─────────────────────────────────────────────────────────────────── */
 
 .btn {
-  /* Layout */
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 0;
   white-space: nowrap;
   text-decoration: none;
   border: 1px solid transparent;
@@ -65,57 +63,57 @@
 
 /* ── Variants ──────────────────────────────────────────────────────────────── */
 
-/* Primary */
+/* Primary — golden fill, dark text */
 .primary {
-  background-color: var(--pluto-color-action-primary-background);
+  background-color: var(--pluto-color-action-primary-default);
   color: var(--pluto-color-action-primary-text);
   border-color: transparent;
 }
 .primary:hover:not(:disabled) {
-  background-color: var(--pluto-color-action-primary-background-hover);
+  background-color: var(--pluto-color-action-primary-hover);
 }
 .primary:active:not(:disabled) {
-  background-color: var(--pluto-color-action-primary-background-pressed);
+  background-color: var(--pluto-color-action-primary-active);
 }
 
-/* Secondary */
+/* Secondary — outlined, warm slate */
 .secondary {
-  background-color: var(--pluto-color-action-secondary-background);
+  background-color: var(--pluto-color-action-secondary-default);
   color: var(--pluto-color-action-secondary-text);
-  border-color: var(--pluto-color-action-secondary-border);
+  border-color: var(--pluto-color-border-default);
 }
 .secondary:hover:not(:disabled) {
-  background-color: var(--pluto-color-action-secondary-background-hover);
-  border-color: var(--pluto-color-action-secondary-border-hover);
+  background-color: var(--pluto-color-action-secondary-hover);
+  border-color: var(--pluto-color-border-strong);
 }
 .secondary:active:not(:disabled) {
-  background-color: var(--pluto-color-action-secondary-background-pressed);
+  background-color: var(--pluto-color-action-secondary-active);
 }
 
-/* Ghost */
+/* Ghost — transparent, no border */
 .ghost {
-  background-color: var(--pluto-color-action-ghost-background);
+  background-color: var(--pluto-color-action-ghost-default);
   color: var(--pluto-color-action-ghost-text);
   border-color: transparent;
 }
 .ghost:hover:not(:disabled) {
-  background-color: var(--pluto-color-action-ghost-background-hover);
+  background-color: var(--pluto-color-action-ghost-hover);
 }
 .ghost:active:not(:disabled) {
-  background-color: var(--pluto-color-action-ghost-background-pressed);
+  background-color: var(--pluto-color-action-ghost-active);
 }
 
-/* Destructive */
+/* Destructive — coral rose fill */
 .destructive {
-  background-color: var(--pluto-color-action-destructive-background);
+  background-color: var(--pluto-color-action-destructive-default);
   color: var(--pluto-color-action-destructive-text);
-  border-color: var(--pluto-color-action-destructive-border);
+  border-color: transparent;
 }
 .destructive:hover:not(:disabled) {
-  background-color: var(--pluto-color-action-destructive-background-hover);
+  background-color: var(--pluto-color-action-destructive-hover);
 }
 .destructive:active:not(:disabled) {
-  background-color: var(--pluto-color-action-destructive-background-pressed);
+  background-color: var(--pluto-color-action-destructive-active);
 }
 
 /* ── States ────────────────────────────────────────────────────────────────── */
