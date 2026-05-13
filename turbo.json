@@ -4,7 +4,7 @@
   "tasks": {
     "build": {
       "dependsOn": ["^build"],
-      "outputs": ["dist/**", "build/**", "*.css", "*.js", "*.d.ts"]
+      "outputs": ["dist/**", "build/**", "storybook-static/**", "*.css", "*.js", "*.d.ts"]
     },
     "build:tokens": {
       "outputs": ["dist/**"]
