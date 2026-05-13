@@ -102,7 +102,7 @@ jobs:
           path: packages/tokens/dist/
 
       - name: Build Storybook
-        run: pnpm storybook build
+        run: pnpm storybook:build
 
       - name: Upload Storybook
         uses: actions/upload-artifact@v4

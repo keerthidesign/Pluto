@@ -23,6 +23,7 @@
     "test": "turbo run test",
     "clean": "turbo run clean && rimraf node_modules",
     "storybook": "turbo run storybook",
+    "storybook:build": "pnpm --filter @pluto/storybook build",
     "changeset": "changeset",
     "version-packages": "changeset version",
     "release": "turbo run build --filter=!apps/* && changeset publish",
