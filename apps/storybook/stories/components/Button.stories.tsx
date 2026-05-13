@@ -67,13 +67,18 @@ const ChevronDown = ({ size = 16 }: { size?: number }) => (
 
 type IconPosition = 'none' | 'left' | 'right';
 
+// Icon size per button size token
+const iconSizeMap: Record<string, number> = { sm: 12, md: 16, lg: 16 };
+
 /** Map an iconPosition value to the correct Button icon props */
 function resolveIconProps(
   position: IconPosition,
   variant: string,
+  size = 'md',
 ): { iconLeft?: React.ReactNode; iconRight?: React.ReactNode } {
-  const icon = variant === 'destructive' ? <TrashIcon /> : <PlusIcon />;
-  const iconR = <ArrowRight />;
+  const s = iconSizeMap[size] ?? 16;
+  const icon = variant === 'destructive' ? <TrashIcon size={s} /> : <PlusIcon size={s} />;
+  const iconR = <ArrowRight size={s} />;
 
   if (position === 'left')  return { iconLeft: icon };
   if (position === 'right') return { iconRight: iconR };
@@ -134,10 +139,11 @@ type Story = StoryObj<typeof Button & { iconPosition?: IconPosition }>;
 
 export const Playground: Story = {
   args: { children: 'Click me', iconPosition: 'left' } as Story['args'],
-  render: ({ iconPosition = 'none', variant = 'primary', ...rest }) => (
+  render: ({ iconPosition = 'none', variant = 'primary', size = 'md', ...rest }) => (
     <Button
       variant={variant}
-      {...resolveIconProps(iconPosition, variant)}
+      size={size}
+      {...resolveIconProps(iconPosition, variant, size)}
       {...rest}
     />
   ),
@@ -188,19 +194,19 @@ export const Sizes: Story = {
   render: () => (
     <div style={{ display: 'flex', flexDirection: 'column', gap: 24 }}>
       <Row label="sm — 32px">
-        <Button size="sm" variant="primary" iconLeft={<PlusIcon size={14} />}>Add item</Button>
+        <Button size="sm" variant="primary" iconLeft={<PlusIcon size={12} />}>Add item</Button>
         <Button size="sm" variant="primary">Label only</Button>
-        <Button size="sm" variant="primary" iconRight={<ArrowRight size={14} />}>Next</Button>
+        <Button size="sm" variant="primary" iconRight={<ArrowRight size={12} />}>Next</Button>
       </Row>
       <Row label="md — 40px (default)">
-        <Button size="md" variant="primary" iconLeft={<PlusIcon />}>Add item</Button>
+        <Button size="md" variant="primary" iconLeft={<PlusIcon size={16} />}>Add item</Button>
         <Button size="md" variant="primary">Label only</Button>
-        <Button size="md" variant="primary" iconRight={<ArrowRight />}>Next</Button>
+        <Button size="md" variant="primary" iconRight={<ArrowRight size={16} />}>Next</Button>
       </Row>
       <Row label="lg — 48px">
-        <Button size="lg" variant="primary" iconLeft={<PlusIcon size={20} />}>Add item</Button>
+        <Button size="lg" variant="primary" iconLeft={<PlusIcon size={16} />}>Add item</Button>
         <Button size="lg" variant="primary">Label only</Button>
-        <Button size="lg" variant="primary" iconRight={<ArrowRight size={20} />}>Next</Button>
+        <Button size="lg" variant="primary" iconRight={<ArrowRight size={16} />}>Next</Button>
       </Row>
     </div>
   ),
@@ -266,36 +272,36 @@ export const States: Story = {
 
 export const Primary: Story = {
   args: { variant: 'primary', children: 'Save changes', iconPosition: 'left' } as Story['args'],
-  render: ({ iconPosition = 'left', variant = 'primary', ...rest }) => (
-    <Button variant={variant} {...resolveIconProps(iconPosition, variant)} {...rest} />
+  render: ({ iconPosition = 'left', variant = 'primary', size = 'md', ...rest }) => (
+    <Button variant={variant} size={size} {...resolveIconProps(iconPosition, variant, size)} {...rest} />
   ),
 };
 
 export const Secondary: Story = {
   args: { variant: 'secondary', children: 'Cancel', iconPosition: 'right' } as Story['args'],
-  render: ({ iconPosition = 'right', variant = 'secondary', ...rest }) => (
-    <Button variant={variant} {...resolveIconProps(iconPosition, variant)} {...rest} />
+  render: ({ iconPosition = 'right', variant = 'secondary', size = 'md', ...rest }) => (
+    <Button variant={variant} size={size} {...resolveIconProps(iconPosition, variant, size)} {...rest} />
   ),
 };
 
 export const Ghost: Story = {
   args: { variant: 'ghost', children: 'Learn more', iconPosition: 'right' } as Story['args'],
-  render: ({ iconPosition = 'right', variant = 'ghost', ...rest }) => (
-    <Button variant={variant} {...resolveIconProps(iconPosition, variant)} {...rest} />
+  render: ({ iconPosition = 'right', variant = 'ghost', size = 'md', ...rest }) => (
+    <Button variant={variant} size={size} {...resolveIconProps(iconPosition, variant, size)} {...rest} />
   ),
 };
 
 export const Destructive: Story = {
   args: { variant: 'destructive', children: 'Delete record', iconPosition: 'left' } as Story['args'],
-  render: ({ iconPosition = 'left', variant = 'destructive', ...rest }) => (
-    <Button variant={variant} {...resolveIconProps(iconPosition, variant)} {...rest} />
+  render: ({ iconPosition = 'left', variant = 'destructive', size = 'md', ...rest }) => (
+    <Button variant={variant} size={size} {...resolveIconProps(iconPosition, variant, size)} {...rest} />
   ),
 };
 
 export const Loading: Story = {
   args: { variant: 'primary', children: 'Saving…', loading: true, iconPosition: 'none' } as Story['args'],
-  render: ({ iconPosition = 'none', variant = 'primary', ...rest }) => (
-    <Button variant={variant} {...resolveIconProps(iconPosition, variant)} {...rest} />
+  render: ({ iconPosition = 'none', variant = 'primary', size = 'md', ...rest }) => (
+    <Button variant={variant} size={size} {...resolveIconProps(iconPosition, variant, size)} {...rest} />
   ),
 };
 
