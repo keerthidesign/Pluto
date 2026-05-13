@@ -265,6 +265,106 @@ function SemanticColors() {
         { name: 'overlay/ghost', var: '--pluto-color-overlay-ghost', desc: 'Ghost tint' },
       ],
     },
+    {
+      label: 'Action — Primary',
+      description: '7 states — default, hover, active, disabled, text, subtle, subtle-hover',
+      tokens: [
+        { name: 'action/primary/default',      var: '--pluto-color-action-primary-default',      desc: 'CTA fill' },
+        { name: 'action/primary/hover',         var: '--pluto-color-action-primary-hover',         desc: 'Hover' },
+        { name: 'action/primary/active',        var: '--pluto-color-action-primary-active',        desc: 'Pressed' },
+        { name: 'action/primary/disabled',      var: '--pluto-color-action-primary-disabled',      desc: 'Disabled fill' },
+        { name: 'action/primary/text',          var: '--pluto-color-action-primary-text',          desc: '⚠ Dark on golden 6:1' },
+        { name: 'action/primary/subtle',        var: '--pluto-color-action-primary-subtle',        desc: 'Ghost bg' },
+        { name: 'action/primary/subtle-hover',  var: '--pluto-color-action-primary-subtle-hover',  desc: 'Ghost hover' },
+      ],
+    },
+    {
+      label: 'Action — Secondary',
+      description: '7 states — warm slate variant',
+      tokens: [
+        { name: 'action/secondary/default',      var: '--pluto-color-action-secondary-default' },
+        { name: 'action/secondary/hover',         var: '--pluto-color-action-secondary-hover' },
+        { name: 'action/secondary/active',        var: '--pluto-color-action-secondary-active' },
+        { name: 'action/secondary/disabled',      var: '--pluto-color-action-secondary-disabled' },
+        { name: 'action/secondary/text',          var: '--pluto-color-action-secondary-text',     desc: 'On secondary' },
+        { name: 'action/secondary/subtle',        var: '--pluto-color-action-secondary-subtle' },
+        { name: 'action/secondary/subtle-hover',  var: '--pluto-color-action-secondary-subtle-hover' },
+      ],
+    },
+    {
+      label: 'Action — Ghost',
+      description: '7 states — transparent fill with visible border',
+      tokens: [
+        { name: 'action/ghost/default',      var: '--pluto-color-action-ghost-default',      desc: 'Transparent' },
+        { name: 'action/ghost/hover',         var: '--pluto-color-action-ghost-hover',         desc: 'Subtle fill' },
+        { name: 'action/ghost/active',        var: '--pluto-color-action-ghost-active' },
+        { name: 'action/ghost/disabled',      var: '--pluto-color-action-ghost-disabled' },
+        { name: 'action/ghost/text',          var: '--pluto-color-action-ghost-text',          desc: 'Label color' },
+        { name: 'action/ghost/subtle',        var: '--pluto-color-action-ghost-subtle' },
+        { name: 'action/ghost/subtle-hover',  var: '--pluto-color-action-ghost-subtle-hover' },
+      ],
+    },
+    {
+      label: 'Action — Destructive',
+      description: '7 states — coral rose danger variant',
+      tokens: [
+        { name: 'action/destructive/default',      var: '--pluto-color-action-destructive-default' },
+        { name: 'action/destructive/hover',         var: '--pluto-color-action-destructive-hover' },
+        { name: 'action/destructive/active',        var: '--pluto-color-action-destructive-active' },
+        { name: 'action/destructive/disabled',      var: '--pluto-color-action-destructive-disabled' },
+        { name: 'action/destructive/text',          var: '--pluto-color-action-destructive-text',   desc: 'On danger fill' },
+        { name: 'action/destructive/subtle',        var: '--pluto-color-action-destructive-subtle' },
+        { name: 'action/destructive/subtle-hover',  var: '--pluto-color-action-destructive-subtle-hover' },
+      ],
+    },
+    {
+      label: 'Status — Success',
+      description: '6 variants — emerald feedback tokens',
+      tokens: [
+        { name: 'status/success/bg',          var: '--pluto-color-status-success-bg',          desc: 'Light tint bg' },
+        { name: 'status/success/bg-strong',   var: '--pluto-color-status-success-bg-strong',   desc: 'Bold fill' },
+        { name: 'status/success/text',        var: '--pluto-color-status-success-text',        desc: '4.5:1 on bg' },
+        { name: 'status/success/text-strong', var: '--pluto-color-status-success-text-strong', desc: 'On bold fill' },
+        { name: 'status/success/border',      var: '--pluto-color-status-success-border' },
+        { name: 'status/success/icon',        var: '--pluto-color-status-success-icon' },
+      ],
+    },
+    {
+      label: 'Status — Warning',
+      description: '6 variants — orange feedback tokens',
+      tokens: [
+        { name: 'status/warning/bg',          var: '--pluto-color-status-warning-bg' },
+        { name: 'status/warning/bg-strong',   var: '--pluto-color-status-warning-bg-strong' },
+        { name: 'status/warning/text',        var: '--pluto-color-status-warning-text' },
+        { name: 'status/warning/text-strong', var: '--pluto-color-status-warning-text-strong' },
+        { name: 'status/warning/border',      var: '--pluto-color-status-warning-border' },
+        { name: 'status/warning/icon',        var: '--pluto-color-status-warning-icon' },
+      ],
+    },
+    {
+      label: 'Status — Danger',
+      description: '6 variants — coral rose feedback tokens',
+      tokens: [
+        { name: 'status/danger/bg',          var: '--pluto-color-status-danger-bg' },
+        { name: 'status/danger/bg-strong',   var: '--pluto-color-status-danger-bg-strong' },
+        { name: 'status/danger/text',        var: '--pluto-color-status-danger-text' },
+        { name: 'status/danger/text-strong', var: '--pluto-color-status-danger-text-strong' },
+        { name: 'status/danger/border',      var: '--pluto-color-status-danger-border' },
+        { name: 'status/danger/icon',        var: '--pluto-color-status-danger-icon' },
+      ],
+    },
+    {
+      label: 'Status — Info',
+      description: '6 variants — sky blue feedback tokens',
+      tokens: [
+        { name: 'status/info/bg',          var: '--pluto-color-status-info-bg' },
+        { name: 'status/info/bg-strong',   var: '--pluto-color-status-info-bg-strong' },
+        { name: 'status/info/text',        var: '--pluto-color-status-info-text' },
+        { name: 'status/info/text-strong', var: '--pluto-color-status-info-text-strong' },
+        { name: 'status/info/border',      var: '--pluto-color-status-info-border' },
+        { name: 'status/info/icon',        var: '--pluto-color-status-info-icon' },
+      ],
+    },
   ];
 
   return (
@@ -289,165 +389,6 @@ function SemanticColors() {
   );
 }
 
-// ─── Section 3: Action Tokens ─────────────────────────────────────────────────
-
-function ActionColors() {
-  const variants = [
-    { label: 'Primary',     prefix: 'action-primary' },
-    { label: 'Secondary',   prefix: 'action-secondary' },
-    { label: 'Ghost',       prefix: 'action-ghost' },
-    { label: 'Destructive', prefix: 'action-destructive' },
-  ];
-  const states = ['default', 'hover', 'active', 'disabled', 'text', 'subtle', 'subtle-hover'];
-
-  return (
-    <div style={{ padding: '24px', fontFamily: 'var(--pluto-font-family-sans)', background: 'var(--pluto-color-background-default)', minHeight: '100vh' }}>
-      <h1 style={{ fontSize: '24px', fontWeight: 700, marginBottom: '8px', color: 'var(--pluto-color-text-heading)' }}>
-        Action Tokens
-      </h1>
-      <p style={{ fontSize: '14px', color: 'var(--pluto-color-text-secondary)', marginBottom: '40px' }}>
-        28 tokens — 4 variants × 7 states. Used for buttons, links, and interactive elements.
-      </p>
-
-      {variants.map(({ label, prefix }) => (
-        <div key={prefix} style={{ marginBottom: '40px' }}>
-          <h3 style={{ fontSize: '13px', fontWeight: 700, marginBottom: '12px', textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--pluto-color-text-default)' }}>
-            {label}
-          </h3>
-          <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap' }}>
-            {states.map((state) => (
-              <Swatch
-                key={state}
-                name={state}
-                cssVar={`--pluto-color-${prefix}-${state}`}
-                desc={state === 'text' && prefix === 'action-primary' ? '⚠ A11y: dark on golden' : undefined}
-              />
-            ))}
-          </div>
-
-          {/* Live button preview */}
-          <div style={{ marginTop: '16px', display: 'flex', gap: '12px', alignItems: 'center', flexWrap: 'wrap' }}>
-            <button
-              style={{
-                padding: '8px 20px',
-                background: `var(--pluto-color-${prefix}-default)`,
-                color: `var(--pluto-color-${prefix}-text)`,
-                border: `1px solid var(--pluto-color-${prefix}-default)`,
-                borderRadius: '6px',
-                fontSize: '14px',
-                fontWeight: 600,
-                cursor: 'pointer',
-                fontFamily: 'var(--pluto-font-family-sans)',
-              }}
-            >
-              {label} Button
-            </button>
-            <button
-              style={{
-                padding: '8px 20px',
-                background: `var(--pluto-color-${prefix}-subtle)`,
-                color: `var(--pluto-color-${prefix}-default)`,
-                border: `1px solid var(--pluto-color-${prefix}-default)`,
-                borderRadius: '6px',
-                fontSize: '14px',
-                fontWeight: 600,
-                cursor: 'pointer',
-                fontFamily: 'var(--pluto-font-family-sans)',
-              }}
-            >
-              {label} Subtle
-            </button>
-            <button
-              style={{
-                padding: '8px 20px',
-                background: `var(--pluto-color-${prefix}-disabled)`,
-                color: `var(--pluto-color-text-disabled)`,
-                border: `1px solid var(--pluto-color-border-disabled)`,
-                borderRadius: '6px',
-                fontSize: '14px',
-                fontWeight: 600,
-                cursor: 'not-allowed',
-                fontFamily: 'var(--pluto-font-family-sans)',
-              }}
-              disabled
-            >
-              Disabled
-            </button>
-          </div>
-        </div>
-      ))}
-    </div>
-  );
-}
-
-// ─── Section 4: Status Tokens ─────────────────────────────────────────────────
-
-function StatusColors() {
-  const statuses = [
-    { label: 'Success', prefix: 'status-success' },
-    { label: 'Warning', prefix: 'status-warning' },
-    { label: 'Danger',  prefix: 'status-danger' },
-    { label: 'Info',    prefix: 'status-info' },
-  ];
-  const variants = ['bg', 'bg-strong', 'text', 'text-strong', 'border', 'icon'];
-
-  return (
-    <div style={{ padding: '24px', fontFamily: 'var(--pluto-font-family-sans)', background: 'var(--pluto-color-background-default)', minHeight: '100vh' }}>
-      <h1 style={{ fontSize: '24px', fontWeight: 700, marginBottom: '8px', color: 'var(--pluto-color-text-heading)' }}>
-        Status Tokens
-      </h1>
-      <p style={{ fontSize: '14px', color: 'var(--pluto-color-text-secondary)', marginBottom: '40px' }}>
-        24 tokens — 4 statuses × 6 variants. Used for badges, alerts, and inline feedback.
-        Switch themes to verify dark mode adaptations.
-      </p>
-
-      {statuses.map(({ label, prefix }) => (
-        <div key={prefix} style={{ marginBottom: '48px' }}>
-          <h3 style={{ fontSize: '13px', fontWeight: 700, marginBottom: '12px', textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--pluto-color-text-default)' }}>
-            {label}
-          </h3>
-          <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap', marginBottom: '20px' }}>
-            {variants.map((v) => (
-              <Swatch
-                key={v}
-                name={v}
-                cssVar={`--pluto-color-${prefix}-${v}`}
-              />
-            ))}
-          </div>
-
-          {/* Live alert preview */}
-          <div
-            style={{
-              padding: '12px 16px',
-              background: `var(--pluto-color-${prefix}-bg)`,
-              border: `1px solid var(--pluto-color-${prefix}-border)`,
-              borderLeft: `4px solid var(--pluto-color-${prefix}-icon)`,
-              borderRadius: '6px',
-              display: 'flex',
-              gap: '10px',
-              alignItems: 'flex-start',
-              maxWidth: '480px',
-            }}
-          >
-            <span style={{ fontSize: '16px' }}>
-              {label === 'Success' ? '✓' : label === 'Warning' ? '⚠' : label === 'Danger' ? '✕' : 'ℹ'}
-            </span>
-            <div>
-              <div style={{ fontSize: '13px', fontWeight: 600, color: `var(--pluto-color-${prefix}-text)`, marginBottom: '2px' }}>
-                {label} Alert
-              </div>
-              <div style={{ fontSize: '12px', color: `var(--pluto-color-${prefix}-text)` }}>
-                This is a {label.toLowerCase()} message using semantic status tokens.
-              </div>
-            </div>
-          </div>
-        </div>
-      ))}
-    </div>
-  );
-}
-
 // ─── Story Definitions ────────────────────────────────────────────────────────
 
 const meta: Meta = {
@@ -457,7 +398,7 @@ const meta: Meta = {
     docs: {
       description: {
         component:
-          'Three-tier color system: Primitive → Semantic → Component. 116 semantic tokens across 8 groups. All tokens adapt across Light, Dark, and High Contrast themes.',
+          'Three-tier color system: Primitive → Semantic → Component. 116 semantic tokens across 8 groups (background, surface, text, icon, border, overlay, action, status). All tokens adapt across Light, Dark, and High Contrast themes via the toolbar.',
       },
     },
   },
@@ -469,7 +410,7 @@ export const Primitives: StoryObj = {
   render: () => <ColorFoundation />,
   name: 'Primitive Palette',
   parameters: {
-    docs: { description: { story: 'Raw color scales — Warm Cream neutrals, Golden Yellow primary, Warm Slate secondary, Emerald success, Orange warning, Coral Rose danger, Sky Blue info.' } },
+    docs: { description: { story: 'Raw color scales — Warm Cream neutrals, Golden Yellow primary, Warm Slate secondary, Emerald success, Orange warning, Coral Rose danger, Sky Blue info. Never use these in components directly.' } },
   },
 };
 
@@ -477,22 +418,6 @@ export const Semantic: StoryObj = {
   render: () => <SemanticColors />,
   name: 'Semantic Tokens (116)',
   parameters: {
-    docs: { description: { story: 'All 116 semantic color tokens: background (11), surface (9), text (17), icon (10), border (15), overlay (2). Switch themes to see live adaptation.' } },
-  },
-};
-
-export const Actions: StoryObj = {
-  render: () => <ActionColors />,
-  name: 'Action Tokens (28)',
-  parameters: {
-    docs: { description: { story: '4 action variants × 7 states = 28 tokens. Includes live button previews for each variant.' } },
-  },
-};
-
-export const Status: StoryObj = {
-  render: () => <StatusColors />,
-  name: 'Status Tokens (24)',
-  parameters: {
-    docs: { description: { story: '4 statuses × 6 variants = 24 tokens. Includes live alert previews.' } },
+    docs: { description: { story: 'All 116 semantic tokens in one view: background (11), surface (9), text (17), icon (10), border (15), overlay (2), action (28), status (24). Switch themes in the toolbar to see live adaptation.' } },
   },
 };
