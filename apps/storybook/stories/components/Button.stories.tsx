@@ -63,6 +63,23 @@ const ChevronDown = ({ size = 16 }: { size?: number }) => (
   </svg>
 );
 
+// ─── Icon resolver ────────────────────────────────────────────────────────────
+
+type IconPosition = 'none' | 'left' | 'right';
+
+/** Map an iconPosition value to the correct Button icon props */
+function resolveIconProps(
+  position: IconPosition,
+  variant: string,
+): { iconLeft?: React.ReactNode; iconRight?: React.ReactNode } {
+  const icon = variant === 'destructive' ? <TrashIcon /> : <PlusIcon />;
+  const iconR = <ArrowRight />;
+
+  if (position === 'left')  return { iconLeft: icon };
+  if (position === 'right') return { iconRight: iconR };
+  return {};
+}
+
 // ─── Meta ─────────────────────────────────────────────────────────────────────
 
 const meta: Meta<typeof Button> = {
@@ -89,24 +106,41 @@ const meta: Meta<typeof Button> = {
       options: ['sm', 'md', 'lg'],
       description: 'Height — sm 32px / md 40px / lg 48px',
     },
+    iconPosition: {
+      control: 'select',
+      options: ['none', 'left', 'right'],
+      description: 'Icon placement — left, right, or none (never both)',
+      table: { category: 'Icon' },
+    },
     loading: { control: 'boolean' },
     disabled: { control: 'boolean' },
     children: { control: 'text' },
+    // Hide raw ReactNode props from the controls panel — use iconPosition instead
+    iconLeft:  { table: { disable: true } },
+    iconRight: { table: { disable: true } },
   },
   args: {
     children: 'Button',
     variant: 'primary',
     size: 'md',
-  },
+    iconPosition: 'none',
+  } as React.ComponentProps<typeof Button> & { iconPosition?: IconPosition },
 };
 
 export default meta;
-type Story = StoryObj<typeof Button>;
+type Story = StoryObj<typeof Button & { iconPosition?: IconPosition }>;
 
 // ─── Playground ───────────────────────────────────────────────────────────────
 
 export const Playground: Story = {
-  args: { children: 'Click me', iconLeft: <PlusIcon /> },
+  args: { children: 'Click me', iconPosition: 'left' } as Story['args'],
+  render: ({ iconPosition = 'none', variant = 'primary', ...rest }) => (
+    <Button
+      variant={variant}
+      {...resolveIconProps(iconPosition, variant)}
+      {...rest}
+    />
+  ),
 };
 
 // ─── All Variants ─────────────────────────────────────────────────────────────
@@ -185,14 +219,14 @@ export const IconPositions: Story = {
         <Button variant="ghost">Learn more</Button>
       </Row>
       <Row label="Icon left">
-        <Button variant="primary"  iconLeft={<PlusIcon />}>Create new</Button>
+        <Button variant="primary"   iconLeft={<PlusIcon />}>Create new</Button>
         <Button variant="secondary" iconLeft={<DownloadIcon />}>Export</Button>
-        <Button variant="ghost"    iconLeft={<PlusIcon />}>Add field</Button>
+        <Button variant="ghost"     iconLeft={<PlusIcon />}>Add field</Button>
       </Row>
       <Row label="Icon right">
-        <Button variant="primary"  iconRight={<ArrowRight />}>Get started</Button>
+        <Button variant="primary"   iconRight={<ArrowRight />}>Get started</Button>
         <Button variant="secondary" iconRight={<ChevronDown />}>More options</Button>
-        <Button variant="ghost"    iconRight={<ArrowRight />}>See all</Button>
+        <Button variant="ghost"     iconRight={<ArrowRight />}>See all</Button>
       </Row>
     </div>
   ),
@@ -228,26 +262,41 @@ export const States: Story = {
   parameters: { controls: { disable: true } },
 };
 
-// ─── Single Controls ──────────────────────────────────────────────────────────
+// ─── Single-control stories ────────────────────────────────────────────────────
 
 export const Primary: Story = {
-  args: { variant: 'primary', children: 'Save changes', iconLeft: <DownloadIcon /> },
+  args: { variant: 'primary', children: 'Save changes', iconPosition: 'left' } as Story['args'],
+  render: ({ iconPosition = 'left', variant = 'primary', ...rest }) => (
+    <Button variant={variant} {...resolveIconProps(iconPosition, variant)} {...rest} />
+  ),
 };
 
 export const Secondary: Story = {
-  args: { variant: 'secondary', children: 'Cancel', iconLeft: <ChevronDown /> },
+  args: { variant: 'secondary', children: 'Cancel', iconPosition: 'right' } as Story['args'],
+  render: ({ iconPosition = 'right', variant = 'secondary', ...rest }) => (
+    <Button variant={variant} {...resolveIconProps(iconPosition, variant)} {...rest} />
+  ),
 };
 
 export const Ghost: Story = {
-  args: { variant: 'ghost', children: 'Learn more', iconRight: <ArrowRight /> },
+  args: { variant: 'ghost', children: 'Learn more', iconPosition: 'right' } as Story['args'],
+  render: ({ iconPosition = 'right', variant = 'ghost', ...rest }) => (
+    <Button variant={variant} {...resolveIconProps(iconPosition, variant)} {...rest} />
+  ),
 };
 
 export const Destructive: Story = {
-  args: { variant: 'destructive', children: 'Delete record', iconLeft: <TrashIcon /> },
+  args: { variant: 'destructive', children: 'Delete record', iconPosition: 'left' } as Story['args'],
+  render: ({ iconPosition = 'left', variant = 'destructive', ...rest }) => (
+    <Button variant={variant} {...resolveIconProps(iconPosition, variant)} {...rest} />
+  ),
 };
 
 export const Loading: Story = {
-  args: { variant: 'primary', children: 'Saving…', loading: true },
+  args: { variant: 'primary', children: 'Saving…', loading: true, iconPosition: 'none' } as Story['args'],
+  render: ({ iconPosition = 'none', variant = 'primary', ...rest }) => (
+    <Button variant={variant} {...resolveIconProps(iconPosition, variant)} {...rest} />
+  ),
 };
 
 // ─── Helper ───────────────────────────────────────────────────────────────────
