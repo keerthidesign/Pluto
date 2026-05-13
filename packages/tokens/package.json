@@ -28,7 +28,7 @@
   "scripts": {
     "build": "node style-dictionary.config.js",
     "build:watch": "nodemon --watch src --ext json --exec 'node style-dictionary.config.js'",
-    "typecheck": "tsc --noEmit",
+    "typecheck": "echo 'No TS sources in @pluto/tokens (JSON only)' && exit 0",
     "clean": "rimraf dist",
     "validate": "node scripts/validate.mjs",
     "lint:tokens": "node scripts/lint-tokens.mjs"
