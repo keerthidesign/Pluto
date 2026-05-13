@@ -68,7 +68,7 @@ const ChevronDown = ({ size = 16 }: { size?: number }) => (
 type IconPosition = 'none' | 'left' | 'right';
 
 // Icon size per button size token
-const iconSizeMap: Record<string, number> = { sm: 12, md: 16, lg: 16 };
+const iconSizeMap: Record<string, number> = { sm: 14, md: 16, lg: 20 };
 
 /** Map an iconPosition value to the correct Button icon props */
 function resolveIconProps(
@@ -194,9 +194,9 @@ export const Sizes: Story = {
   render: () => (
     <div style={{ display: 'flex', flexDirection: 'column', gap: 24 }}>
       <Row label="sm — 32px">
-        <Button size="sm" variant="primary" iconLeft={<PlusIcon size={12} />}>Add item</Button>
+        <Button size="sm" variant="primary" iconLeft={<PlusIcon size={14} />}>Add item</Button>
         <Button size="sm" variant="primary">Label only</Button>
-        <Button size="sm" variant="primary" iconRight={<ArrowRight size={12} />}>Next</Button>
+        <Button size="sm" variant="primary" iconRight={<ArrowRight size={14} />}>Next</Button>
       </Row>
       <Row label="md — 40px (default)">
         <Button size="md" variant="primary" iconLeft={<PlusIcon size={16} />}>Add item</Button>
@@ -204,9 +204,9 @@ export const Sizes: Story = {
         <Button size="md" variant="primary" iconRight={<ArrowRight size={16} />}>Next</Button>
       </Row>
       <Row label="lg — 48px">
-        <Button size="lg" variant="primary" iconLeft={<PlusIcon size={16} />}>Add item</Button>
+        <Button size="lg" variant="primary" iconLeft={<PlusIcon size={20} />}>Add item</Button>
         <Button size="lg" variant="primary">Label only</Button>
-        <Button size="lg" variant="primary" iconRight={<ArrowRight size={16} />}>Next</Button>
+        <Button size="lg" variant="primary" iconRight={<ArrowRight size={20} />}>Next</Button>
       </Row>
     </div>
   ),
