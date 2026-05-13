@@ -1,4 +1,5 @@
 import type { StorybookConfig } from '@storybook/react-vite';
+import type { InlineConfig } from 'vite';
 
 const config: StorybookConfig = {
   stories: [
@@ -27,6 +28,14 @@ const config: StorybookConfig = {
     defaultName: 'Docs',
   },
   staticDirs: ['../public'],
+  viteFinal: async (config: InlineConfig) => {
+    // When building for GitHub Pages, set the base path to the repo name
+    // so all assets load correctly from https://keerthidesign.github.io/Pluto/
+    if (process.env.GITHUB_ACTIONS) {
+      config.base = '/Pluto/';
+    }
+    return config;
+  },
   typescript: {
     reactDocgen: 'react-docgen-typescript',
     reactDocgenTypescriptOptions: {
