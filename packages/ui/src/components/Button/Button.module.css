@@ -1,0 +1,152 @@
+/* ── Button ─────────────────────────────────────────────────────────────────── */
+
+.btn {
+  /* Layout */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  white-space: nowrap;
+  text-decoration: none;
+  border: 1px solid transparent;
+  cursor: pointer;
+  outline: none;
+  position: relative;
+  font-family: inherit;
+  transition:
+    background-color 120ms ease,
+    border-color 120ms ease,
+    color 120ms ease,
+    box-shadow 120ms ease,
+    opacity 120ms ease;
+}
+
+/* Focus ring — WCAG 2.4.11 */
+.btn:focus-visible {
+  box-shadow:
+    0 0 0 2px var(--pluto-color-background-default),
+    0 0 0 4px var(--pluto-color-border-focus);
+}
+
+/* ── Sizes ─────────────────────────────────────────────────────────────────── */
+
+.sm {
+  height: 32px;
+  padding: 0 12px;
+  gap: 6px;
+  border-radius: var(--pluto-radius-sm);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.2px;
+  line-height: 1;
+}
+
+.md {
+  height: 40px;
+  padding: 0 16px;
+  gap: 8px;
+  border-radius: var(--pluto-radius-md);
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.1px;
+  line-height: 1;
+}
+
+.lg {
+  height: 48px;
+  padding: 0 20px;
+  gap: 8px;
+  border-radius: var(--pluto-radius-md);
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0;
+  line-height: 1;
+}
+
+/* ── Variants ──────────────────────────────────────────────────────────────── */
+
+/* Primary */
+.primary {
+  background-color: var(--pluto-color-action-primary-background);
+  color: var(--pluto-color-action-primary-text);
+  border-color: transparent;
+}
+.primary:hover:not(:disabled) {
+  background-color: var(--pluto-color-action-primary-background-hover);
+}
+.primary:active:not(:disabled) {
+  background-color: var(--pluto-color-action-primary-background-pressed);
+}
+
+/* Secondary */
+.secondary {
+  background-color: var(--pluto-color-action-secondary-background);
+  color: var(--pluto-color-action-secondary-text);
+  border-color: var(--pluto-color-action-secondary-border);
+}
+.secondary:hover:not(:disabled) {
+  background-color: var(--pluto-color-action-secondary-background-hover);
+  border-color: var(--pluto-color-action-secondary-border-hover);
+}
+.secondary:active:not(:disabled) {
+  background-color: var(--pluto-color-action-secondary-background-pressed);
+}
+
+/* Ghost */
+.ghost {
+  background-color: var(--pluto-color-action-ghost-background);
+  color: var(--pluto-color-action-ghost-text);
+  border-color: transparent;
+}
+.ghost:hover:not(:disabled) {
+  background-color: var(--pluto-color-action-ghost-background-hover);
+}
+.ghost:active:not(:disabled) {
+  background-color: var(--pluto-color-action-ghost-background-pressed);
+}
+
+/* Destructive */
+.destructive {
+  background-color: var(--pluto-color-action-destructive-background);
+  color: var(--pluto-color-action-destructive-text);
+  border-color: var(--pluto-color-action-destructive-border);
+}
+.destructive:hover:not(:disabled) {
+  background-color: var(--pluto-color-action-destructive-background-hover);
+}
+.destructive:active:not(:disabled) {
+  background-color: var(--pluto-color-action-destructive-background-pressed);
+}
+
+/* ── States ────────────────────────────────────────────────────────────────── */
+
+.disabled,
+.btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+/* ── Icon & Label ──────────────────────────────────────────────────────────── */
+
+.icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.label {
+  display: inline-block;
+}
+
+/* ── Spinner ───────────────────────────────────────────────────────────────── */
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.spinner {
+  animation: spin 700ms linear infinite;
+  flex-shrink: 0;
+}

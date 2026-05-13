@@ -12,7 +12,8 @@
     "@pluto/foundations": "workspace:*",
     "@pluto/tokens": "workspace:*",
     "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "react-dom": "^18.3.1",
+    "@pluto/ui": "workspace:*"
   },
   "devDependencies": {
     "@pluto/eslint-config": "workspace:*",
